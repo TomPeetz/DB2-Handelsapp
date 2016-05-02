@@ -17,8 +17,7 @@
         </activity>
         <activity
             android:name=".Register"
-            android:label="@style/AppTheme">
-        </activity>
+            android:label="@style/AppTheme"></activity>
     </application>
 
 </manifest>
