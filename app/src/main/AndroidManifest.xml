@@ -19,7 +19,8 @@
             android:name=".Register"
             android:label="@style/AppTheme" />
         <activity android:name=".profile" />
-        <activity android:name=".lager"></activity>
+        <activity android:name=".lager" />
+        <activity android:name=".Gebaude"></activity>
     </application>
 
 </manifest>
