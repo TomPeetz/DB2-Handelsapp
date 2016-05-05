@@ -14,7 +14,19 @@ import static java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE;
 public class JDBC_Connection {
 
     public static void main(String args[]) {
-        ArrayList[] ergebnis = doSelect("SELECT * FROM Rohstoffe", null);
+        // -> für DML Tests
+        /*
+        String[] values = new String[]{"Golderz", "Abgebautes Material, aus dem Gold gewonnen werden kann", "0,5", "1", "0"};
+        System.out.println("Anzahl der veränderten Spalten: \t" + doDML(
+                "INSERT INTO ROHSTOFFE (Rohstoffname, Rohstoffbezeichnung, Bot_Verkaufspreis, Bot_Einkaufspreis, Startwert)" +
+                "VALUES (?, ?, ?, ?, ?)", values)
+        );
+        */
+
+        // -> für DQL Tests
+        /*
+        String[] values = new String[]{"1"};
+        ArrayList[] ergebnis = doSelect("SELECT * FROM Rohstoffe WHERE Rohstoff_ID = ?", values);
         ArrayList row;
         for (int i = 0; i < ergebnis.length; i++) {
             row = ergebnis[i];
@@ -22,6 +34,38 @@ public class JDBC_Connection {
                 System.out.print(row.get(k) + "\t");
             }
             System.out.println();
+        }
+        */
+    }
+
+    public static int doDML(String query, String[] values) {
+        Connection con = connect();
+        try {
+            PreparedStatement ps = con.prepareStatement(query);
+            if (values != null) {
+                for (int i = 0; i < values.length; i++) {
+                    try {
+                        int k = Integer.parseInt(values[i]);
+                        ps.setInt(i + 1, k);
+                    } catch (NumberFormatException e) {
+                        try {
+                            Date d = java.sql.Date.valueOf(values[i]);
+                            ps.setDate(i + 1, d);
+                        } catch (IllegalArgumentException iae) {
+                            ps.setString(i + 1, values[i]);
+                        }
+                    }
+                }
+            }
+            int ergebnis = ps.executeUpdate();
+//            con.commit();
+            ps.close();
+            close(con);
+            return ergebnis;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            close(con);
+            return -1;
         }
     }
 
