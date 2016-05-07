@@ -36,6 +36,24 @@ public class game_ui extends AppCompatActivity {
                     startActivity(i);
                 }
             });
+
+            buttonM=(ImageButton)findViewById(R.id.btnLager);
+            buttonM.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), Markt.class);
+                    startActivity(i);
+                }
+            });
+
+            buttonG=(ImageButton)findViewById(R.id.btnLager);
+            buttonG.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), Gebaude.class);
+                    startActivity(i);
+                }
+            });
         }
     }
 

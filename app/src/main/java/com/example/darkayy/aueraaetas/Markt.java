@@ -5,15 +5,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TabHost;
 
-public class Gebaude extends AppCompatActivity {
-
-
+public class Markt extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+
+        tabHost.setup();
+
+        TabHost.TabSpec tabSpec = tabHost.newTabSpec("lokaleHaendler");
+        tabSpec.setContent(R.id.lokaleHaendler);
+        tabSpec.setIndicator("Lokale Händler");
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("angeboteErstellen");
+        tabSpec.setContent(R.id.angeboteErstellen);
+        tabSpec.setIndicator("Angebote erstellen");
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("angeboteSuchen");
+        tabSpec.setContent(R.id.angeboteSuchen);
+        tabSpec.setIndicator("Angebote suchen");
+        tabHost.addTab(tabSpec);
+
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gebaude);
+        setContentView(R.layout.activity_markt);
 
         ImageButton buttonP;
         ImageButton buttonL;

@@ -20,7 +20,9 @@
             android:label="@style/AppTheme" />
         <activity android:name=".profile" />
         <activity android:name=".lager" />
-        <activity android:name=".Gebaude"></activity>
+        <activity android:name=".Gebaude" />
+        <activity android:name=".Markt" />
+        <activity android:name=".AngeboteSuchen"></activity>
     </application>
 
 </manifest>

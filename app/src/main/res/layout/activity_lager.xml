@@ -150,13 +150,14 @@
         android:text="Lager"
         android:id="@+id/txtLagertitel"
         android:textColor="#f1fcead3"
-        android:layout_marginRight="106dp"
-        android:layout_marginEnd="106dp"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/txtForschung"
-        android:layout_toStartOf="@+id/txtForschung"
         android:layout_marginTop="13dp"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnProfile"
+        android:layout_toStartOf="@+id/btnProfile"
+        android:textAlignment="center" />
 
     <ScrollView
         android:layout_width="wrap_content"
