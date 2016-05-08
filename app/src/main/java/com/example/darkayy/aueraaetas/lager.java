@@ -6,23 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class lager extends AppCompatActivity {
+public class Lager extends AppCompatActivity {
+
+
+    ImageButton buttonP;
+    ImageButton buttonL;
+    ImageButton buttonG;
+    ImageButton buttonM;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lager);
 
-        ImageButton buttonP;
-        ImageButton buttonL;
-        ImageButton buttonG;
-        ImageButton buttonM;
 
         buttonP=(ImageButton)findViewById(R.id.btnProfile);
         buttonP.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), profile.class);
+                Intent i = new Intent(getApplicationContext(), Profil.class);
                 startActivity(i);
             }
         });
@@ -31,12 +34,12 @@ public class lager extends AppCompatActivity {
         buttonL.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), lager.class);
+                Intent i = new Intent(getApplicationContext(), Lager.class);
                 startActivity(i);
             }
         });
 
-        buttonM=(ImageButton)findViewById(R.id.btnLager);
+        buttonM=(ImageButton)findViewById(R.id.btnMarkt);
         buttonM.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -45,7 +48,7 @@ public class lager extends AppCompatActivity {
             }
         });
 
-        buttonG=(ImageButton)findViewById(R.id.btnLager);
+        buttonG=(ImageButton)findViewById(R.id.btnGebaude);
         buttonG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
