@@ -7,15 +7,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.darkayy.aueraaetas.profile"
-    android:background="@drawable/Prototyp2">
+    tools:context=".Profil"
+    android:background="@drawable/backgroundetc">
 
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnProfile"
-        android:background="@drawable/Profile"
+        android:background="@drawable/profil"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -45,7 +45,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/Lageretc" />
+        android:background="@drawable/menuepkte" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnGebaude"
-        android:background="@drawable/Lageretc"
+        android:background="@drawable/menuepkte"
         android:layout_below="@+id/txtLager"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnMarkt"
-        android:background="@drawable/Lageretc"
+        android:background="@drawable/menuepkte"
         android:layout_below="@+id/txtGebaude"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -122,7 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnForschung"
-        android:background="@drawable/Lageretc"
+        android:background="@drawable/menuepkte"
         android:layout_below="@+id/txtMarkt"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -150,7 +150,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/Profilbild" />
+        android:background="@drawable/profilbildobama" />
 
     <Button
         style="?android:attr/buttonStyleSmall"

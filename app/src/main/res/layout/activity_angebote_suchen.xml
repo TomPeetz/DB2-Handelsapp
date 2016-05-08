@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.darkayy.aueraaetas.AngeboteSuchen"
-    android:background="@drawable/Prototyp2">
+    android:background="@drawable/backgroundetc">
 
     <EditText
         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView25"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView26"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -184,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView27"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView28"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -294,7 +294,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView29"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -349,7 +349,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView30"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -404,7 +404,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView31"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -459,7 +459,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView32"
                     android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
+                    android:background="@drawable/rohstoff"
                     android:layout_marginLeft="5dp" />
 
                 <TextView
@@ -485,50 +485,6 @@
                     android:layout_marginLeft="5dp" />
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Name"
-                    android:id="@+id/textView99"
-                    android:layout_column="0"
-                    android:textColor="#f1fcead3"
-                    android:textSize="17dp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView33"
-                    android:layout_column="1"
-                    android:background="@drawable/Rohstoffbild"
-                    android:layout_marginLeft="5dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Rohstoff"
-                    android:id="@+id/textView100"
-                    android:layout_column="2"
-                    android:textColor="#f1fcead3"
-                    android:textSize="17dp"
-                    android:layout_marginLeft="5dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Menge"
-                    android:id="@+id/textView102"
-                    android:layout_column="4"
-                    android:textColor="#f1fcead3"
-                    android:textSize="17dp"
-                    android:layout_marginLeft="5dp" />
-            </TableRow>
         </TableLayout>
     </ScrollView>
 </RelativeLayout>

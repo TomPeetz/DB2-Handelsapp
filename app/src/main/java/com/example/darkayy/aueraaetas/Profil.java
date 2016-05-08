@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Gebaude extends AppCompatActivity {
+
+public class Profil extends AppCompatActivity {
 
     ImageButton buttonP;
     ImageButton buttonL;
@@ -16,9 +17,7 @@ public class Gebaude extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gebaude);
-
-
+        setContentView(R.layout.activity_profile);
 
         buttonP=(ImageButton)findViewById(R.id.btnProfile);
         buttonP.setOnClickListener(new View.OnClickListener(){

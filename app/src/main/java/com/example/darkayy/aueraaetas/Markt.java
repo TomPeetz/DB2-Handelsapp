@@ -9,8 +9,17 @@ import android.widget.TabHost;
 
 public class Markt extends AppCompatActivity {
 
+    ImageButton buttonP;
+    ImageButton buttonL;
+    ImageButton buttonG;
+    ImageButton buttonM;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_markt);
 
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
 
@@ -32,19 +41,13 @@ public class Markt extends AppCompatActivity {
         tabHost.addTab(tabSpec);
 
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_markt);
 
-        ImageButton buttonP;
-        ImageButton buttonL;
-        ImageButton buttonG;
-        ImageButton buttonM;
 
         buttonP=(ImageButton)findViewById(R.id.btnProfile);
         buttonP.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), profile.class);
+                Intent i = new Intent(getApplicationContext(), Profil.class);
                 startActivity(i);
             }
         });
@@ -53,12 +56,12 @@ public class Markt extends AppCompatActivity {
         buttonL.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), lager.class);
+                Intent i = new Intent(getApplicationContext(), Lager.class);
                 startActivity(i);
             }
         });
 
-        buttonM=(ImageButton)findViewById(R.id.btnLager);
+        buttonM=(ImageButton)findViewById(R.id.btnMarkt);
         buttonM.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -67,7 +70,7 @@ public class Markt extends AppCompatActivity {
             }
         });
 
-        buttonG=(ImageButton)findViewById(R.id.btnLager);
+        buttonG=(ImageButton)findViewById(R.id.btnGebaude);
         buttonG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
