@@ -1,4 +1,4 @@
-/**
+package com.example.darkayy.aueraaetas; /**
  * Created by Tom on 01.05.2016.
  */
 

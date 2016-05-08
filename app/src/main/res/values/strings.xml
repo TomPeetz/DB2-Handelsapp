@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Auera Aetas</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="registerShort">Register</string>
+    <string name="registerLong">Register new Account</string>
+    <string name="charakterName">Charaktername</string>
+    <string name="register">Register new Account</string>
+    <string name="repeat">Re</string>
+    <string name="errorExistingUser">User existiert bereits!</string>
+    <string name="errorWrongPasswordOrUsername">Falsches Passwort/Username</string>
 </resources>
