@@ -1,5 +1,6 @@
 package com.example.darkayy.aueraaetas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -41,10 +42,10 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 JDBC_Connection jdbc = new JDBC_Connection();
 
-                if(!email1.getText().equals(email2.getText())){
+                if(!email1.getText().toString().equals(email2.getText().toString())){
                     textview.setText("E-Mail Adresse stimmt nicht überein.");
                     textview.setVisibility(View.VISIBLE);
-                } else if (!pw1.getText().equals(pw2.getText())){
+                } else if (!pw1.getText().toString().equals(pw2.getText().toString())){
                     textview.setText("Passwort stimmt nicht überein.");
                     textview.setVisibility(View.VISIBLE);
                 } else {
@@ -55,7 +56,6 @@ public class Register extends AppCompatActivity {
                     values[1] = email1.getText().toString();
                     values[2] = generateHash(pw1.getText().toString() + salt);
                     values[3] = salt;
-                    /* Disabled until Databse has salt value
                     if(JDBC_Connection.doDML(query, values) == 1){
                         textview.setVisibility(View.INVISIBLE);
                         Intent i = new Intent(getApplicationContext(), Login.class);
@@ -64,7 +64,6 @@ public class Register extends AppCompatActivity {
                         textview.setText("Fehler: User existiert bereits!");
                         textview.setVisibility(View.VISIBLE);
                     }
-                    */
                 }
             }
         });

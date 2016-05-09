@@ -15,13 +15,13 @@ public class JDBC_Connection {
 
     public static void main(String args[]) {
         // -> für DML Tests
-        /*
+        ///*
         String[] values = new String[]{"Golderz", "Abgebautes Material, aus dem Gold gewonnen werden kann", "0,5", "1", "0"};
         System.out.println("Anzahl der veränderten Spalten: \t" + doDML(
                 "INSERT INTO ROHSTOFFE (Rohstoffname, Rohstoffbezeichnung, Bot_Verkaufspreis, Bot_Einkaufspreis, Startwert)" +
                 "VALUES (?, ?, ?, ?, ?)", values)
         );
-        */
+       // */
 
         // -> für DQL Tests
         /*
