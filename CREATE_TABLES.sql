@@ -12,8 +12,8 @@ CREATE TABLE Spieler (
   Spieler_ID NUMBER GENERATED ALWAYS AS IDENTITY primary key,
   Charaktername VARCHAR2(45) NOT NULL,
   EMAIL VARCHAR2(45) NOT NULL,
-  Passwort VARCHAR(45) NOT NULL,
-  Salt VARCHAR(45) NOT NULL,
+  Passwort VARCHAR(300) NOT NULL,
+  Salt VARCHAR(150) NOT NULL,
   Profilepicture VARCHAR(80),
   last_login DATE NOT NULL,
   gesperrt number(1)

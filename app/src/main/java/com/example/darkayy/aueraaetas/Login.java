@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+import com.example.darkayy.aueraaetas.webapi.API_Exception;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -40,11 +43,24 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //ToDo: Hole den Salt aus der Datenbank vom aktuellen Nutzer
-                String[] values = new String[1];
-                values[0] = email.getText().toString();
-                ArrayList[] salt = JDBC_Connection.doSelect("SELECT salt FROM spieler WHERE email = ?", values);
+                String username = email.getText().toString();
+                API_Connection con = new API_Connection();
+                ArrayList<String> params = new ArrayList<String>();
+                params.add(API_Connection.APIKEY);
+                params.add(username);
+                ArrayList<String> result = null;
+                try {
+                    result = con.query(API_Connection.GETSALT, params);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
                 //ToDo: Kombiniere Salt mit PW
-                String text = pw.getText().toString() + salt[0].get(0);
+                String text = null;
+                text = pw.getText().toString() + result.get(0);
+                System.out.println(text);
+
+
                 //ToDo: SHA-256 Hash aus beiden genieren und mit der Datenbank abgleichen
                 try {
                     MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -52,19 +68,27 @@ public class Login extends AppCompatActivity {
                     byte[] digest = md.digest();
                     //Formatieren
                     String pwhash = String.format("%064x", new java.math.BigInteger(1, digest));
-                    //ToDo: PW Abgleichen
-                    ArrayList[] hash = JDBC_Connection.doSelect("SELECT passwort FROM spieler WHERE email = ?", values);
-                    if(hash[0].get(0).equals(pwhash)){
-                        //ToDo: Login
-                        error.setVisibility(View.INVISIBLE);
-                    } else {
-                        error.setVisibility(View.VISIBLE);
+                    System.out.println("Passwort: " + pwhash);
+                    //ToDo: PW Abgleichen & API_Connection in Callable umwandeln
+                    params = new ArrayList<String>();
+                    params.add(API_Connection.APIKEY);
+                    params.add(username);
+                    params.add(pwhash);
+                    try {
+                        result = con.query(API_Connection.LOGIN, params);
+                    } catch (API_Exception e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Arraylist Groesse: " + result.size());
+                    for(String s:result){
+                        System.out.println(s);
                     }
                 } catch (NoSuchAlgorithmException e) {
                     e.printStackTrace();
                 } catch (UnsupportedEncodingException u){
                     u.printStackTrace();
                 }
+
             }
         });
     }

@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+import com.example.darkayy.aueraaetas.webapi.API_Exception;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -40,8 +43,6 @@ public class Register extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                JDBC_Connection jdbc = new JDBC_Connection();
-
                 if(!email1.getText().toString().equals(email2.getText().toString())){
                     textview.setText("E-Mail Adresse stimmt nicht überein.");
                     textview.setVisibility(View.VISIBLE);
@@ -49,20 +50,33 @@ public class Register extends AppCompatActivity {
                     textview.setText("Passwort stimmt nicht überein.");
                     textview.setVisibility(View.VISIBLE);
                 } else {
-                    String query = "INSERT INTO spieler (Charaktername, EMAIL, Passwort, salt) + VALUES (?, ?, ?, ?)";
+
+                    String name = accountname.getText().toString();
+                    String email = email1.getText().toString();
                     String salt = generateSalt();
-                    String values[] = new String[4];
-                    values[0] = accountname.getText().toString();
-                    values[1] = email1.getText().toString();
-                    values[2] = generateHash(pw1.getText().toString() + salt);
-                    values[3] = salt;
-                    if(JDBC_Connection.doDML(query, values) == 1){
-                        textview.setVisibility(View.INVISIBLE);
+                    String pwhash = generateHash(pw1.getText().toString() + salt);
+
+                    System.out.println(name + ", " + email + ", " + pwhash + ", " + salt);
+                    ArrayList<String> params = new ArrayList<String>();
+                    API_Connection con = new API_Connection();
+
+                    params.add(API_Connection.APIKEY);
+                    params.add(name);
+                    params.add(email);
+                    params.add(pwhash);
+                    params.add(salt);
+
+                    ArrayList<String> result = null;
+                    try {
+                        result = con.query(API_Connection.REGISTER, params);
+                    } catch (API_Exception e) {
+                        textview.setText("Benutzername/E-Mail bereits registriert!");
+                        textview.setVisibility(View.VISIBLE);
+                        e.printStackTrace();
+                    }
+                    if(result.size() != 0){
                         Intent i = new Intent(getApplicationContext(), Login.class);
                         startActivity(i);
-                    } else {
-                        textview.setText("Fehler: User existiert bereits!");
-                        textview.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -73,6 +87,7 @@ public class Register extends AppCompatActivity {
         byte[] salt = new byte[32];
         r.nextBytes(salt);
         String encodedSalt = Base64.encodeToString(salt, Base64.DEFAULT);
+        encodedSalt = encodedSalt.replaceAll("/","a");
         return encodedSalt;
     }
     private  String generateHash(String pw){
