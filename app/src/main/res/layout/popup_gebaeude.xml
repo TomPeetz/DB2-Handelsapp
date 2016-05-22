@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#d9b49b">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Gebäudename"
+        android:id="@+id/txtGebaeudename"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Dies ist ein Beispiel für die Gebäudeinformationen. Kosten, Baudauer, Rohstoffe etc etc"
+        android:id="@+id/textView8"
+        android:textColor="#925c4d"
+        android:layout_below="@+id/txtGebaeudename"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gebäude kaufen"
+        android:id="@+id/btnGebaeudekaufen"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="125dp"
+        android:background="#7a5343"
+        android:textColor="#f1fcead3"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
+</RelativeLayout>

@@ -167,17 +167,20 @@
         android:layout_alignTop="@+id/btnLager"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/btnLager"
-        android:layout_toLeftOf="@+id/btnLager"
+        android:layout_toStartOf="@+id/txtForschung"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="60dp">
+        android:layout_toLeftOf="@+id/txtForschung"
+        android:layout_above="@+id/txtGroesse">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:stretchColumns="1,2"
+            android:layout_alignTop="@+id/scrollView"
             android:layout_toStartOf="@+id/txtForschung"
-            android:layout_toLeftOf="@+id/txtForschung"
-            android:layout_alignTop="@+id/btnLager">
+            android:layout_alignRight="@+id/txtGroesse"
+            android:layout_alignEnd="@+id/txtGroesse"
+            android:id="@+id/tableLayout">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -559,7 +562,8 @@
         android:layout_above="@+id/scrollView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#fdf4ef" />
+        android:textColor="#fdf4ef"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -581,9 +585,8 @@
         android:id="@+id/txtGroesse"
         android:textColor="#fdf4ef"
         android:layout_alignTop="@+id/btnForschung"
-        android:layout_alignRight="@+id/textView39"
-        android:layout_alignEnd="@+id/textView39"
-        android:layout_marginTop="15dp" />
+        android:layout_toLeftOf="@+id/txtProfil"
+        android:layout_toStartOf="@+id/txtProfil" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -594,12 +597,12 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/txtGroesse"
         android:layout_alignEnd="@+id/txtGroesse"
-        android:textSize="10dp"
+        android:textSize="16dp"
         android:clickable="true"
         android:layout_below="@+id/txtGroesse"
-        android:layout_alignLeft="@+id/txtGroesse"
-        android:layout_alignStart="@+id/txtGroesse"
         android:background="@android:color/transparent"
-        android:textColor="#f1fcead3" />
+        android:textColor="#f1fcead3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

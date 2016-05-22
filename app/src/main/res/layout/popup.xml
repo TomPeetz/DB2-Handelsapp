@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#d9b49b">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lager erweitern"
+        android:id="@+id/txtLagerErweitern"
+        android:layout_marginTop="31dp"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stage1"
+        android:id="@+id/txtStage1"
+        android:layout_marginBottom="47dp"
+        android:layout_above="@+id/button31"
+        android:layout_alignLeft="@+id/txtStage2"
+        android:layout_alignStart="@+id/txtStage2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preis"
+        android:id="@+id/btnPreis"
+        android:background="#7a5343"
+        android:textColor="#f1fcead3"
+        android:layout_alignBottom="@+id/txtStage1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stage2"
+        android:id="@+id/txtStage2"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtStage3"
+        android:layout_alignStart="@+id/txtStage3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preis"
+        android:id="@+id/button31"
+        android:background="#7a5343"
+        android:textColor="#f1fcead3"
+        android:layout_above="@+id/txtStage3"
+        android:layout_alignLeft="@+id/button32"
+        android:layout_alignStart="@+id/button32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stage3"
+        android:id="@+id/txtStage3"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/txtStage2"
+        android:layout_toLeftOf="@+id/button31"
+        android:layout_toStartOf="@+id/button31"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preis"
+        android:id="@+id/button32"
+        android:background="#7a5343"
+        android:textColor="#f1fcead3"
+        android:layout_alignBottom="@+id/txtStage3"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

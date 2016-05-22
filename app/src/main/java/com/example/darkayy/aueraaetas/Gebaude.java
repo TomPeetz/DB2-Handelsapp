@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Gebaude extends AppCompatActivity {
@@ -12,6 +13,7 @@ public class Gebaude extends AppCompatActivity {
     ImageButton buttonL;
     ImageButton buttonG;
     ImageButton buttonM;
+    Button btnPopup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,16 @@ public class Gebaude extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Gebaude.class);
+                startActivity(i);
+            }
+        });
+
+        btnPopup=(Button)findViewById(R.id.btnGoldmine);
+        btnPopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), PopGebaeude.class);
                 startActivity(i);
             }
         });
