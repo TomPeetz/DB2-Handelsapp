@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class Markt extends AppCompatActivity {
 
@@ -16,6 +19,8 @@ public class Markt extends AppCompatActivity {
     ImageButton buttonL;
     ImageButton buttonG;
     ImageButton buttonM;
+
+    ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +91,63 @@ public class Markt extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+    }
+
+    public void fillLokaleHaendler(ArrayList<String> arrayList){
+
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGolderzEinkauf));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGolderzVerkauf));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKohleEinkauf));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKohleVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenerzEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenerzVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBaumstammEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBaumstammVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnSteinEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnSteinVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLehmEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLehmVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGetreideEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGetreideVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFischEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFischVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFleischEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFleischVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWolleEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWolleVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGoldbarrenEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGoldbarrenVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenbarrenEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenbarrenVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrettEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrettVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnZiegelsteinEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnZiegelsteinVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnMehlEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnMehlVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLeinenEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLeinenVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWaffenEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWaffenVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWerkzeugeEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWerkzeugeVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFassEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFassVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrotEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrotVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnTuecherEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnTuecherVk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKleidungEk));
+        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKleidungVk));
+
+
+        for(int i= 0; i < lokaleHaendlerButtons.size(); i ++){
+
+            lokaleHaendlerButtons.get(i).setText(arrayList.get(i).toString());
+
+        }
+
 
     }
 }

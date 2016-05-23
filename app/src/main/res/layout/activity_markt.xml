@@ -168,8 +168,8 @@
         android:layout_alignTop="@+id/txtProfil"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/btnLager"
-        android:layout_toStartOf="@+id/btnLager">
+        android:layout_toStartOf="@+id/txtForschung"
+        android:layout_toLeftOf="@+id/txtForschung">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                     android:layout_height="match_parent">
 
                     <ScrollView
-                        android:layout_width="match_parent"
+                        android:layout_width="296dp"
                         android:layout_height="match_parent"
                         android:id="@+id/scrollView3" >
 
@@ -245,7 +245,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView18"
+                                    android:id="@+id/imageGolderz"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -253,8 +253,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView51"
+                                    android:text="Golderz"
+                                    android:id="@+id/txtGolderz"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -264,7 +264,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/btnEinkauf"
+                                    android:id="@+id/btnGolderzEinkauf"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -274,7 +274,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/btnVerkauf"
+                                    android:id="@+id/btnGolderzVerkauf"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -288,7 +288,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView19"
+                                    android:id="@+id/imageKohle"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -296,8 +296,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView52"
+                                    android:text="Kohle"
+                                    android:id="@+id/txtKohle"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -307,7 +307,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button12"
+                                    android:id="@+id/btnKohleEinkauf"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -317,7 +317,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button13"
+                                    android:id="@+id/btnKohleVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -330,7 +330,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView20"
+                                    android:id="@+id/imageEisenerz"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -338,8 +338,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView53"
+                                    android:text="Eisenerz"
+                                    android:id="@+id/txtEisenerz"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -349,7 +349,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button14"
+                                    android:id="@+id/btnEisenerzEk"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -359,7 +359,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button15"
+                                    android:id="@+id/btnEisenerzVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -372,7 +372,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView21"
+                                    android:id="@+id/imageBaumstamm"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -380,8 +380,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView54"
+                                    android:text="Baumstamm"
+                                    android:id="@+id/txtBaumstamm"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -391,7 +391,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button16"
+                                    android:id="@+id/btnBaumstammEk"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -401,7 +401,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button17"
+                                    android:id="@+id/btnBaumstammVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -414,7 +414,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView22"
+                                    android:id="@+id/imageStein"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -422,8 +422,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView55"
+                                    android:text="Stein"
+                                    android:id="@+id/txtStein"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -433,7 +433,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button18"
+                                    android:id="@+id/btnSteinEk"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -443,7 +443,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button19"
+                                    android:id="@+id/btnSteinVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -456,7 +456,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView23"
+                                    android:id="@+id/imageLehm"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -464,8 +464,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView56"
+                                    android:text="Lehm"
+                                    android:id="@+id/txtLehm"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -475,7 +475,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button20"
+                                    android:id="@+id/btnLehmEk"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -485,7 +485,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button21"
+                                    android:id="@+id/btnLehmVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -498,7 +498,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView24"
+                                    android:id="@+id/imageGetreide"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -506,8 +506,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView57"
+                                    android:text="Getreide"
+                                    android:id="@+id/txtGetreide"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -517,7 +517,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button22"
+                                    android:id="@+id/btnGetreideEk"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -527,7 +527,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button23"
+                                    android:id="@+id/btnGetreideVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -540,7 +540,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView17"
+                                    android:id="@+id/imageFisch"
                                     android:layout_column="0"
                                     android:background="@drawable/rohstoff" />
 
@@ -548,8 +548,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff"
-                                    android:id="@+id/textView58"
+                                    android:text="Fisch"
+                                    android:id="@+id/txtFisch"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
                                     android:textSize="15dp" />
@@ -559,7 +559,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="12Gold"
-                                    android:id="@+id/button24"
+                                    android:id="@+id/btnFischEk"
                                     android:layout_column="3"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
@@ -569,11 +569,600 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="10Gold"
-                                    android:id="@+id/button25"
+                                    android:id="@+id/btnFischVk"
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageFleisch"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Fleisch"
+                                    android:id="@+id/txtFleisch"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnFleischEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnFleischVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageWolle"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Wolle"
+                                    android:id="@+id/txtWolle"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnWolleEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnWolleVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableLayout>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageGoldbarren"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Goldbarren"
+                                    android:id="@+id/txtGoldbarren"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnGoldbarrenEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnGoldbarrenVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageEisenbarren"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Eisenbarren"
+                                    android:id="@+id/txtEisenbarren"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnEisenbarrenEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnEisenbarrenVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageBrett"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Brett"
+                                    android:id="@+id/txtBrett"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnBrettEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnBrettVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageZiegelstein"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Ziegelstein"
+                                    android:id="@+id/txtZiegelstein"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnZiegelsteinEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnZiegelsteinVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageMehl"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Mehl"
+                                    android:id="@+id/txtMehl"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnMehlEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnMehlVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageLeinen"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Leinen"
+                                    android:id="@+id/txtLeinen"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnLeinenEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnLeinenVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageWaffen"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Waffen"
+                                    android:id="@+id/txtWaffen"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="22Gold"
+                                    android:id="@+id/btnWaffenEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnWaffenVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageWerkzeuge"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Werkzeuge"
+                                    android:id="@+id/txtWerkzeuge"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnWerkzeugeEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnWerkzeugeVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageFass"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Fass"
+                                    android:id="@+id/txtFass"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnFassEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnFassVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageBrot"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Brot"
+                                    android:id="@+id/txtBrot"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnBrotEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnBrotVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageTuecher"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Tücher"
+                                    android:id="@+id/txtTuecher"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12Gold"
+                                    android:id="@+id/btnTuecherEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnTuecherVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageKleidung"
+                                    android:layout_column="0"
+                                    android:background="@drawable/rohstoff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Kleidung"
+                                    android:id="@+id/txtKleidung"
+                                    android:layout_column="1"
+                                    android:textColor="#f1fcead3"
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2Gold"
+                                    android:id="@+id/btnKleidungEk"
+                                    android:layout_column="3"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10Gold"
+                                    android:id="@+id/btnKleidungVk"
+                                    android:layout_column="6"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="#f1fcead3" />
+                            </TableRow>
+
                         </TableLayout>
                     </ScrollView>
                 </LinearLayout>

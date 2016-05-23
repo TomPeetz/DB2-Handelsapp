@@ -189,14 +189,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageGold"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView3"
+                    android:text="Golderz"
+                    android:id="@+id/txtGolderz"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3" />
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView4"
+                    android:id="@+id/txtGoldMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3"
                     android:textAlignment="textStart" />
@@ -220,14 +220,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageKohle"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView5"
+                    android:text="Kohle"
+                    android:id="@+id/txtKohle"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView21"
+                    android:id="@+id/txtKohleMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -251,14 +251,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageEisenerz"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView23"
+                    android:text="Eisenerz"
+                    android:id="@+id/txtEisenerz"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -270,7 +270,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView22"
+                    android:id="@+id/txtEisenerzMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -282,14 +282,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imageBaumstamm"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Getreide"
-                    android:id="@+id/textView6"
+                    android:id="@+id/txtBaumstamm"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3" />
@@ -299,7 +299,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView24"
+                    android:id="@+id/txtBaumstammMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -311,14 +311,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView6"
+                    android:id="@+id/imageStein"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView7"
+                    android:text="Stein"
+                    android:id="@+id/txtStein"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3" />
@@ -328,7 +328,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView25"
+                    android:id="@+id/txtSteinMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -340,14 +340,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView10"
+                    android:id="@+id/imageLehm"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView11"
+                    android:text="Lehm"
+                    android:id="@+id/txtLehm"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -359,7 +359,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView12"
+                    android:id="@+id/txtLehmMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -371,14 +371,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView11"
+                    android:id="@+id/imageGetreide"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Getreide"
-                    android:id="@+id/textView13"
+                    android:id="@+id/txtGetreide"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -390,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView14"
+                    android:id="@+id/txtGetreideMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -402,14 +402,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView12"
+                    android:id="@+id/imageFisch"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView15"
+                    android:text="Fisch"
+                    android:id="@+id/txtFisch"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -421,7 +421,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView16"
+                    android:id="@+id/txtFischMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -433,14 +433,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView13"
+                    android:id="@+id/imageFleisch"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView17"
+                    android:text="Fleisch"
+                    android:id="@+id/txtFleisch"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -452,7 +452,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView18"
+                    android:id="@+id/txtFleischMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -464,14 +464,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView15"
+                    android:id="@+id/imageWolle"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView29"
+                    android:text="Wolle"
+                    android:id="@+id/txtWolle"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -483,7 +483,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView30"
+                    android:id="@+id/txtWolleMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -495,14 +495,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView16"
+                    android:id="@+id/imageGoldbarren"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView31"
+                    android:text="Goldbarren"
+                    android:id="@+id/txtGoldbarren"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -514,7 +514,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView32"
+                    android:id="@+id/txtGoldbarrenMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -526,14 +526,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView14"
+                    android:id="@+id/imageEisenbarren"
                     android:layout_column="0"
                     android:background="@drawable/rohstoff" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
-                    android:id="@+id/textView19"
+                    android:text="Eisenbarren"
+                    android:id="@+id/txtEisenbarren"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
                     android:textColor="#f1fcead3"
@@ -545,7 +545,317 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="25"
-                    android:id="@+id/textView20"
+                    android:id="@+id/txtEisenbarrenMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageBrett"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Brett"
+                    android:id="@+id/txtBrett"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtBrettMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageZiegelstein"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Getreide"
+                    android:id="@+id/txtZiegelstein"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtZiegelsteinMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageMehl"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Mehl"
+                    android:id="@+id/txtMehl"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtMehlMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageLeinen"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Leinen"
+                    android:id="@+id/txtLeinen"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtLeinenMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageWaffen"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Waffen"
+                    android:id="@+id/txtWaffen"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtWaffenMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageWerkzeuge"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Werkzeuge"
+                    android:id="@+id/txtWerkzeuge"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtWerkzeugeMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageFass"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Fass"
+                    android:id="@+id/txtFass"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtFassMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageBrot"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Brot"
+                    android:id="@+id/txtBrot"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtBrotMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageTuecher"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tuecher"
+                    android:id="@+id/txtTuecher"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtTuecherMenge"
+                    android:layout_column="3"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageKleidung"
+                    android:layout_column="0"
+                    android:background="@drawable/rohstoff" />
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Kleidung"
+                    android:id="@+id/txtKleidung"
+                    android:layout_column="1"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#f1fcead3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25"
+                    android:id="@+id/txtKleidungMenge"
                     android:layout_column="3"
                     android:textColor="#f1fcead3" />
             </TableRow>
