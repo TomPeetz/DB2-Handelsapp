@@ -24,6 +24,7 @@ public class GameUi extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent i = new Intent(getApplicationContext(), Profil.class);
                     startActivity(i);
+
                 }
             });
 

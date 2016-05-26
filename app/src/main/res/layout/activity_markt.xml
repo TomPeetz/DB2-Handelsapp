@@ -617,7 +617,7 @@
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
-                            <TableLayout
+                            <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
@@ -657,7 +657,7 @@
                                     android:layout_column="6"
                                     android:background="@android:color/transparent"
                                     android:textColor="#f1fcead3" />
-                            </TableLayout>
+                            </TableRow>
 
                             <TableRow
                                 android:layout_width="match_parent"
@@ -1187,7 +1187,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editText8"
+                        android:id="@+id/editTextBieteAn"
                         android:hint="Rohstoffname"
                         android:textColor="#f1fcead3"
                         android:layout_below="@+id/txtBieteAn"
@@ -1199,12 +1199,12 @@
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:ems="10"
-                        android:id="@+id/editText9"
+                        android:id="@+id/editTextMengeBieteAn"
                         android:hint="Menge"
                         android:textColor="#f1fcead3"
                         android:layout_alignTop="@+id/editText8"
                         android:layout_toRightOf="@+id/editText8"
-                        android:maxWidth="100dp"
+                        android:maxWidth="60dp"
                         android:layout_marginRight="80dp" />
 
                     <TextView
@@ -1222,7 +1222,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editText10"
+                        android:id="@+id/editTextRohstoffMochteHaben"
                         android:hint="Rohstoffname"
                         android:textColor="#f1fcead3"
                         android:layout_below="@+id/txtMoechteHaben"
@@ -1234,10 +1234,10 @@
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:ems="10"
-                        android:id="@+id/editText11"
+                        android:id="@+id/editMochteHaben"
                         android:hint="Menge"
                         android:textColor="#f1fcead3"
-                        android:maxWidth="100dp"
+                        android:maxWidth="60dp"
                         android:layout_below="@+id/txtMoechteHaben"
                         android:layout_toRightOf="@+id/editText10"
                         android:layout_toEndOf="@+id/editText10"
@@ -1248,7 +1248,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Transaktion veröffentlichen"
-                        android:id="@+id/btntransaktion"
+                        android:id="@+id/btnTransaktionVeroeffentlichen"
                         android:layout_below="@+id/editText11"
                         android:layout_alignRight="@+id/editText11"
                         android:layout_alignEnd="@+id/editText11"
@@ -1480,7 +1480,8 @@
 
                         <TableLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:stretchColumns="*">
 
                             <TableRow
                                 android:layout_width="match_parent"
@@ -1491,7 +1492,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/txtName"
+                                    android:id="@+id/txtName0"
                                     android:layout_column="0"
                                     android:textColor="#fdf4ef"
                                     android:textSize="17dp" />
@@ -1499,7 +1500,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView25"
+                                    android:id="@+id/imageView0"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1509,19 +1510,8 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/txtRohstoff"
+                                    android:id="@+id/txtRohstoffSuche0"
                                     android:layout_column="2"
-                                    android:textColor="#fdf4ef"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Preis"
-                                    android:id="@+id/txtPreis"
-                                    android:layout_column="3"
                                     android:textColor="#fdf4ef"
                                     android:textSize="17dp"
                                     android:layout_marginLeft="5dp" />
@@ -1530,13 +1520,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/txtMenge"
-                                    android:layout_column="4"
+                                    android:text="Preis"
+                                    android:id="@+id/txtPreis0"
+                                    android:layout_column="3"
                                     android:textColor="#fdf4ef"
                                     android:textSize="17dp"
                                     android:layout_marginLeft="5dp" />
 
+
                             </TableRow>
 
                             <TableRow
@@ -1548,7 +1539,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView71"
+                                    android:id="@+id/txtName1"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1556,7 +1547,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView26"
+                                    android:id="@+id/imageView1"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1566,7 +1557,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView72"
+                                    android:id="@+id/txtRohstoffSuche1"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
@@ -1577,21 +1568,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Preis"
-                                    android:id="@+id/btnPreis"
+                                    android:id="@+id/btnPreis1"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
                                     android:background="@android:color/transparent" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView74"
-                                    android:layout_column="4"
-                                    android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
                             </TableRow>
 
                             <TableRow
@@ -1603,7 +1584,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView75"
+                                    android:id="@+id/txtName2"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1611,7 +1592,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView27"
+                                    android:id="@+id/imageView2"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1621,7 +1602,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView76"
+                                    android:id="@+id/txtRohstoffSuche2"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
@@ -1632,21 +1613,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Preis"
-                                    android:id="@+id/button26"
+                                    android:id="@+id/btnPreis2"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
                                     android:background="@android:color/transparent" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView78"
-                                    android:layout_column="4"
-                                    android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
+
                             </TableRow>
 
                             <TableRow
@@ -1658,7 +1630,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView79"
+                                    android:id="@+id/txtName3"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1666,7 +1638,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView28"
+                                    android:id="@+id/imageView3"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1676,7 +1648,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView80"
+                                    android:id="@+id/txtRohstoffSuche3"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
@@ -1687,21 +1659,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Preis"
-                                    android:id="@+id/button27"
+                                    android:id="@+id/btnPreis3"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
                                     android:background="@android:color/transparent" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView82"
-                                    android:layout_column="4"
-                                    android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
                             </TableRow>
 
                             <TableRow
@@ -1713,7 +1675,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView83"
+                                    android:id="@+id/txtName4"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1721,7 +1683,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView29"
+                                    android:id="@+id/imageView4"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1731,7 +1693,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView84"
+                                    android:id="@+id/txtRohstoffSuche4"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
@@ -1742,21 +1704,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Preis"
-                                    android:id="@+id/button28"
+                                    android:id="@+id/btnPreis4"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
                                     android:background="@android:color/transparent" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView86"
-                                    android:layout_column="4"
-                                    android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
+
                             </TableRow>
 
                             <TableRow
@@ -1768,7 +1721,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView87"
+                                    android:id="@+id/txtName5"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1776,7 +1729,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView30"
+                                    android:id="@+id/imageView5"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1786,7 +1739,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView88"
+                                    android:id="@+id/txtRohstoffSuche5"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
@@ -1797,21 +1750,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Preis"
-                                    android:id="@+id/button29"
+                                    android:id="@+id/btnPreis5"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
                                     android:background="@android:color/transparent" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView90"
-                                    android:layout_column="4"
-                                    android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
                             </TableRow>
 
                             <TableRow
@@ -1823,7 +1766,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView91"
+                                    android:id="@+id/txtName6"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1831,7 +1774,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView31"
+                                    android:id="@+id/imageView6"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1841,7 +1784,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView92"
+                                    android:id="@+id/txtRohstoffSuche6"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
@@ -1852,21 +1795,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Preis"
-                                    android:id="@+id/button30"
+                                    android:id="@+id/btnPreis6"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
                                     android:background="@android:color/transparent" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView94"
-                                    android:layout_column="4"
-                                    android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
+
                             </TableRow>
 
                             <TableRow
@@ -1878,7 +1812,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView95"
+                                    android:id="@+id/txtName7"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1886,7 +1820,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView32"
+                                    android:id="@+id/imageView7"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp" />
@@ -1896,22 +1830,23 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView96"
+                                    android:id="@+id/txtRohstoffSuche7"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
                                     android:layout_marginLeft="5dp" />
 
-                                <TextView
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView98"
-                                    android:layout_column="4"
+                                    android:text="Preis"
+                                    android:id="@+id/btnPreis7"
+                                    android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
+                                    android:background="@android:color/transparent" />
+
+
                             </TableRow>
 
                             <TableRow
@@ -1923,7 +1858,7 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Name"
-                                    android:id="@+id/textView99"
+                                    android:id="@+id/txtName8"
                                     android:layout_column="0"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp" />
@@ -1931,7 +1866,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/imageView33"
+                                    android:id="@+id/imageView8"
                                     android:layout_column="1"
                                     android:background="@drawable/rohstoff"
                                     android:layout_marginLeft="5dp"
@@ -1942,22 +1877,22 @@
                                     android:layout_height="wrap_content"
                                     android:textAppearance="?android:attr/textAppearanceSmall"
                                     android:text="Rohstoff"
-                                    android:id="@+id/textView100"
+                                    android:id="@+id/txtRohstoffSuche8"
                                     android:layout_column="2"
                                     android:textColor="#f1fcead3"
                                     android:textSize="17dp"
                                     android:layout_marginLeft="5dp" />
 
-                                <TextView
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceSmall"
-                                    android:text="Menge"
-                                    android:id="@+id/textView102"
-                                    android:layout_column="4"
+                                    android:text="Preis"
+                                    android:id="@+id/btnPreis8"
+                                    android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="17dp"
-                                    android:layout_marginLeft="5dp" />
+                                    android:background="@android:color/transparent" />
+
                             </TableRow>
                         </TableLayout>
                     </ScrollView>
@@ -1965,6 +1900,29 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Home"
+        android:id="@+id/txtHome"
+        android:layout_alignBottom="@+id/btnProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnHome"
+        android:layout_alignEnd="@+id/btnHome"
+        android:textColor="#f1fcead3"
+        android:textAlignment="center" />
 
 
 </RelativeLayout>

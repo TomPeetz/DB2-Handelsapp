@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class Profil extends AppCompatActivity {
@@ -13,6 +14,7 @@ public class Profil extends AppCompatActivity {
     ImageButton buttonL;
     ImageButton buttonG;
     ImageButton buttonM;
+    ImageButton buttonH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,5 +56,19 @@ public class Profil extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        buttonH=(ImageButton)findViewById(R.id.btnHome);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), GameUi.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    public void setCharaktername(String s){
+        TextView temp = (TextView)findViewById(R.id.txtCharaktername);
+        temp.setText(s);
     }
 }

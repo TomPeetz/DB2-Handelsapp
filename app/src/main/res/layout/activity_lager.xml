@@ -898,6 +898,29 @@
         android:layout_toLeftOf="@+id/txtProfil"
         android:layout_toStartOf="@+id/txtProfil" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Home"
+        android:id="@+id/txtHome"
+        android:layout_alignBottom="@+id/btnProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnHome"
+        android:layout_alignEnd="@+id/btnHome"
+        android:textColor="#f1fcead3"
+        android:textAlignment="center" />
+
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"

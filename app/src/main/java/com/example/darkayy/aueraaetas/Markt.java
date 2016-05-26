@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -15,12 +16,20 @@ import java.util.ArrayList;
 
 public class Markt extends AppCompatActivity {
 
-    ImageButton buttonP;
-    ImageButton buttonL;
-    ImageButton buttonG;
-    ImageButton buttonM;
+    private ImageButton buttonP;
+    private ImageButton buttonL;
+    private ImageButton buttonG;
+    private ImageButton buttonM;
+    private ImageButton buttonH;
 
-    ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
+    private ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
+    private ArrayList<TextView> angeboteSuchenName = new ArrayList<TextView>();
+    private ArrayList<TextView> angeboteSuchenMenge = new ArrayList<TextView>();
+    private ArrayList<TextView> angeboteSuchenRohstoff = new ArrayList<TextView>();
+    private ArrayList<Button> angeboteSuchenBtns= new ArrayList<Button>();
+
+    private Button transaktion;
+    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,10 +101,47 @@ public class Markt extends AppCompatActivity {
             }
         });
 
+        buttonH=(ImageButton)findViewById(R.id.btnHome);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), GameUi.class);
+                startActivity(i);
+            }
+        });
+
+        fillArrays();
+
+        transaktion = (Button)findViewById(R.id.btnTransaktionVeroeffentlichen);
+        transaktion.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                transaktionBtnSet("hansWurst");
+            }
+        });
+
     }
+
+    /*
+    Die ArrayList von dem SELECT:
+    SELECT Bot_Einkaufspreis, Bot_Verkaufspreis FROM Rohstoffe;
+
+     */
 
     public void fillLokaleHaendler(ArrayList<String> arrayList){
 
+        for(int i= 0; i < lokaleHaendlerButtons.size(); i ++){
+
+            lokaleHaendlerButtons.get(i).setText(arrayList.get(i).toString());
+
+        }
+
+
+    }
+
+    public void fillArrays(){
+
+        /*lokale Händler*/
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGolderzEinkauf));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGolderzVerkauf));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKohleEinkauf));
@@ -141,12 +187,66 @@ public class Markt extends AppCompatActivity {
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKleidungEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKleidungVk));
 
+        //angebote Suchen
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName1));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche1));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName2));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche2));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName3));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche3));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName4));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche4));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName5));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche5));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName6));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche6));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName7));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche7));
+        angeboteSuchenName.add((TextView)findViewById(R.id.txtName8));
+        angeboteSuchenRohstoff.add((TextView)findViewById(R.id.txtRohstoffSuche8));
 
-        for(int i= 0; i < lokaleHaendlerButtons.size(); i ++){
 
-            lokaleHaendlerButtons.get(i).setText(arrayList.get(i).toString());
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis1));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis2));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis3));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis4));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis5));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis6));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis7));
+        angeboteSuchenBtns.add((Button)findViewById(R.id.btnPreis8));
 
+    }
+
+    public void transaktionBtnSet(final String spielerName){
+
+        TextView name = angeboteSuchenName.get(counter);
+        TextView rohstoff = angeboteSuchenRohstoff.get(counter);
+
+       Button preis = angeboteSuchenBtns.get(counter);
+
+
+                EditText rohstoffAngebot = (EditText)findViewById(R.id.editTextBieteAn);
+                EditText mengeAngebot = (EditText)findViewById(R.id.editTextMengeBieteAn);
+                EditText rohstoffFord = (EditText)findViewById(R.id.editTextRohstoffMochteHaben);
+                EditText mengeFord = (EditText)findViewById(R.id.editMochteHaben);
+                name.setText(spielerName);
+                String temp1 = mengeAngebot.getText().toString() + " " + rohstoffAngebot.getText();
+                rohstoff.setText(temp1);
+                String temp = mengeFord.getText().toString() + " " +  rohstoffFord.getText();
+                preis.setText(temp);
+
+                rohstoffAngebot.setText("");
+                mengeAngebot.setText("");
+                rohstoffFord.setText("");
+                mengeFord.setText("");
+
+        if( counter == 7){
+            counter = 0;
         }
+        else{
+            counter += 1;
+        }
+
 
 
     }

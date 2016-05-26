@@ -147,10 +147,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
+        android:background="@drawable/profilbildobama"
+        android:layout_above="@+id/btnChangeProfilepic"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/profilbildobama" />
+        android:layout_alignParentStart="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -158,29 +158,24 @@
         android:layout_height="wrap_content"
         android:text="Profilbild ändern"
         android:id="@+id/btnChangeProfilepic"
-        android:layout_below="@+id/imageView"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:clickable="true"
         android:background="@android:color/transparent"
         android:textColor="#f1fcead3"
         android:textSize="12dp"
-        android:layout_alignBottom="@+id/textView2" />
+        android:layout_alignTop="@+id/btnGebaude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Charaktername"
-        android:id="@+id/txtSpielername"
+        android:id="@+id/txtCharaktername"
         android:textColor="#f1fcead3"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/txtProfil"
         android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="15dp" />
+        android:layout_toEndOf="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -189,9 +184,9 @@
         android:text="Ranking:"
         android:id="@+id/txtRanking"
         android:textColor="#f1fcead3"
-        android:layout_below="@+id/txtProfil"
-        android:layout_alignLeft="@+id/txtSpielername"
-        android:layout_alignStart="@+id/txtSpielername" />
+        android:layout_below="@+id/txtCharaktername"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -199,10 +194,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Platz 23444"
         android:id="@+id/textView"
+        android:textColor="#f1b39771"
         android:layout_below="@+id/txtRanking"
-        android:layout_alignLeft="@+id/txtRanking"
-        android:layout_alignStart="@+id/txtRanking"
-        android:textColor="#f1b39771" />
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -212,8 +207,31 @@
         android:id="@+id/textView2"
         android:textColor="#f1b39771"
         android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Home"
+        android:id="@+id/txtHome"
+        android:layout_alignBottom="@+id/btnProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnHome"
+        android:layout_alignEnd="@+id/btnHome"
+        android:textColor="#f1fcead3"
+        android:textAlignment="center" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -221,8 +239,25 @@
         android:id="@+id/listCharacter"
         android:layout_toLeftOf="@+id/txtProfil"
         android:layout_toStartOf="@+id/txtProfil"
-        android:layout_below="@+id/txtLager"
         android:layout_above="@+id/txtForschung"
-        android:smoothScrollbar="true" />
+        android:smoothScrollbar="true"
+        android:layout_below="@+id/btnGebaude" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Profil"
+        android:id="@+id/textView3"
+        android:clickable="false"
+        android:textColor="#f1fcead3"
+        android:textSize="25dp"
+        android:elegantTextHeight="false"
+        android:textAlignment="center"
+        android:layout_alignBottom="@+id/btnHome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/txtForschung"
+        android:layout_toStartOf="@+id/txtForschung" />
 
 </RelativeLayout>

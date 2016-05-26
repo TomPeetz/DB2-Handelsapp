@@ -199,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/txtGolderz"
+                    android:id="@+id/txtGoldmineProd"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -208,48 +208,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/txtKostenGolderz"
-                    android:layout_column="2"
-                    android:textColor="#f1fcead3" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button4"
-                    android:layout_column="0"
-                    android:background="@android:color/transparent"
-                    android:textColor="#f1fcead3"
-                    android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Golderz"
-                    android:id="@+id/textView33"
-                    android:layout_column="1"
-                    android:textColor="#f1fcead3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Holz,etc."
-                    android:id="@+id/textView35"
+                    android:id="@+id/txtGoldmineK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -262,8 +221,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button5"
+                    android:text="Goldschmelze"
+                    android:id="@+id/btnGoldschmelze"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -275,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView36"
+                    android:id="@+id/txtGoldschmelzePr"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -284,7 +243,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView37"
+                    android:id="@+id/txtGoldschmelzeK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -297,8 +256,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button6"
+                    android:text="Kohlemine"
+                    android:id="@+id/btnKohlemine"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -310,7 +269,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView38"
+                    android:id="@+id/txtKohlemineP"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -319,7 +278,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView40"
+                    android:id="@+id/txtKohlemineK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -332,8 +291,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button7"
+                    android:text="Eisenmine"
+                    android:id="@+id/btnEisenmine"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -345,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView41"
+                    android:id="@+id/txtEisenmineP"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -354,7 +313,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView42"
+                    android:id="@+id/txtEisenmineK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -367,8 +326,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button8"
+                    android:text="Eisenschmelze"
+                    android:id="@+id/btnEisenschmelze"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -380,7 +339,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView43"
+                    android:id="@+id/txtEisenschmelzeP"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -389,7 +348,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView44"
+                    android:id="@+id/txtEisenschmelzeK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -402,8 +361,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button9"
+                    android:text="Waffenschmiede"
+                    android:id="@+id/btnWaffenschmiede"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -415,7 +374,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView45"
+                    android:id="@+id/txtWaffenschmiedeP"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -424,7 +383,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView46"
+                    android:id="@+id/txtWaffenschmiedeK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -437,8 +396,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button10"
+                    android:text="Werkzeugschmiede"
+                    android:id="@+id/btnWerkzeugschmiede"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -450,7 +409,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView47"
+                    android:id="@+id/txtWerkzeugschmiedeP"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -459,7 +418,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView48"
+                    android:id="@+id/txtWerkzeugschmiedeK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -472,8 +431,8 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goldmine"
-                    android:id="@+id/button11"
+                    android:text="Holzfällerlager"
+                    android:id="@+id/btnHolzfaellerlager"
                     android:layout_column="0"
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
@@ -485,7 +444,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Golderz"
-                    android:id="@+id/textView49"
+                    android:id="@+id/txtHolzfaellerP"
                     android:layout_column="1"
                     android:textColor="#f1fcead3" />
 
@@ -494,7 +453,497 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Holz,etc."
-                    android:id="@+id/textView50"
+                    android:id="@+id/txtHolzfaellerK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sägemühle"
+                    android:id="@+id/btnSaegemuehle"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtSaegeP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtSaegeK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schreiner"
+                    android:id="@+id/btnSchreiner"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtSchreinerP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtSchreinerK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Steinbruch"
+                    android:id="@+id/btnSteinbruch"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtSteinbruchP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtSteinbruchK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lehmgrube"
+                    android:id="@+id/btnLehmgrube"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtLehmgrubeP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtLehmgrubeK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ziegelei"
+                    android:id="@+id/btnZiegelei"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtZiegeleiP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtZiegeleiK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bauernhof"
+                    android:id="@+id/btnBauernhof"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtBauernhofP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtBauernhofK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Windmühle"
+                    android:id="@+id/btnWindmuehle"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtWindP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtWindK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bäcker"
+                    android:id="@+id/btnBaecker"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtBaeckerP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtBaeckerK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fischer"
+                    android:id="@+id/btnFischer"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtFischerP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtFischerK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jäger"
+                    android:id="@+id/btnJaeger"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtJaegerP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtJaegerK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schafsfarm"
+                    android:id="@+id/btnSchafsfarm"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtSchafsfarmP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtSchafsfarmK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weberei(einfach)"
+                    android:id="@+id/btnWebereiE"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtWEbereiEP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtWebereiEK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weberei(mittel)"
+                    android:id="@+id/btnWEbereiM"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtWebereiMP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtWebereiMK"
+                    android:layout_column="2"
+                    android:textColor="#f1fcead3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weberei(fortg)"
+                    android:id="@+id/btnWebereiF"
+                    android:layout_column="0"
+                    android:background="@android:color/transparent"
+                    android:textColor="#f1fcead3"
+                    android:textAlignment="center"
+                    android:layout_marginRight="35dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Golderz"
+                    android:id="@+id/txtWebereiFP"
+                    android:layout_column="1"
+                    android:textColor="#f1fcead3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Holz,etc."
+                    android:id="@+id/txtWebereiFK"
                     android:layout_column="2"
                     android:textColor="#f1fcead3" />
             </TableRow>
@@ -524,6 +973,29 @@
         android:layout_toStartOf="@+id/txtKosten"
         android:layout_marginRight="30dp"
         android:layout_marginEnd="30dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Home"
+        android:id="@+id/txtHome"
+        android:layout_alignBottom="@+id/btnProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnHome"
+        android:layout_alignEnd="@+id/btnHome"
+        android:textColor="#f1fcead3"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="wrap_content"

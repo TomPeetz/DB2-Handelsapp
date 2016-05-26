@@ -31,6 +31,8 @@ public class Lager extends AppCompatActivity {
     ImageButton buttonL;
     ImageButton buttonG;
     ImageButton buttonM;
+    ImageButton buttonH;
+
     Button btnPopup;
     int maxLagerGroesse = 2000;
     ArrayList<TextView> lager = new ArrayList<TextView>();
@@ -90,6 +92,15 @@ public class Lager extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(getApplicationContext(), Pop.class);
+                startActivity(i);
+            }
+        });
+
+        buttonH=(ImageButton)findViewById(R.id.btnHome);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), GameUi.class);
                 startActivity(i);
             }
         });
