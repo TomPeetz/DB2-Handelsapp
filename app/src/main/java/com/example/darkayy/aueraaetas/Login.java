@@ -19,6 +19,7 @@ public class Login extends AppCompatActivity {
 
     Button button;
     Button login;
+    Button test;
     TextView email;
     TextView pw;
     TextView error;
@@ -31,6 +32,7 @@ public class Login extends AppCompatActivity {
         email = (TextView)findViewById(R.id.editText_Email);
         pw = (TextView)findViewById(R.id.editText_Password);
         button = (Button)findViewById(R.id.button_register);
+
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -45,6 +47,19 @@ public class Login extends AppCompatActivity {
                 //ToDo: Hole den Salt aus der Datenbank vom aktuellen Nutzer
                 String username = email.getText().toString();
                 API_Connection con = new API_Connection();
+                //Test
+                ArrayList<String> params2 = new ArrayList<String>();
+                params2.add(API_Connection.APIKEY);
+                params2.add("4");
+                try {
+                    ArrayList<String> result = con.query(API_Connection.GETLAGER, params2);
+                    for(String s: result){
+                        System.out.println(s);
+                    }
+                } catch (API_Exception e) {
+                    e.printStackTrace();
+                }
+                //Test
                 ArrayList<String> params = new ArrayList<String>();
                 params.add(API_Connection.APIKEY);
                 params.add(username);

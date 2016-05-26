@@ -15,6 +15,7 @@ public class API_Connection {
     public static final String LOGIN 		= "login.php/{?}/{?}/{?}";
     public static final String GETSALT 		= "login.php/{?}/{?}";
     public static final String REGISTER     = "player.php/new/{?}/{?}/{?}/{?}/{?}";
+    public static final String GETLAGER     = "lager.php/{?}/{?}";
 
     public ArrayList<String> query(final String TYPE, ArrayList<String> params) throws API_Exception{
         if(checkParams(TYPE,params)){

@@ -15,11 +15,24 @@ public class JsonReader {
     public ArrayList<String> parseJson(String json){
         try {
             ArrayList<String> result = new ArrayList<String>();
-            JSONObject jObject = new JSONObject(json);
-            jObject.keys();
-            Iterator<String> test = jObject.keys();
-            while(test.hasNext()){
-                result.add(jObject.getString(test.next()));
+            // Unterscheidung zwischen JSON Arrays ( [{"Rohstoffname":"Golderz","Menge":"20"},{"Rohstoffname":"Kohle","Menge":"5"}] )
+            if(json.startsWith("[")){
+                JSONArray jArray = new JSONArray(json);
+                for(int i = 0; i < jArray.length(); i++){
+                    JSONObject jObject = jArray.getJSONObject(i);
+                    Iterator<String> test = jObject.keys();
+                    while(test.hasNext()){
+                        result.add(jObject.getString(test.next()));
+                    }
+                }
+            // und JSON Objects {"Rohstoffname":"Golderz","Menge":"20"}
+            }else {
+                JSONObject jObject = new JSONObject(json);
+                Iterator<String> test = jObject.keys();
+                while(test.hasNext()){
+                    result.add(jObject.getString(test.next()));
+                }
+
             }
             return result;
         } catch (JSONException e) {
@@ -27,5 +40,4 @@ public class JsonReader {
         }
         return null;
     }
-
 }

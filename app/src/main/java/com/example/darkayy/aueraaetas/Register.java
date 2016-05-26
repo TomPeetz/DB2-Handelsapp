@@ -38,8 +38,6 @@ public class Register extends AppCompatActivity {
         pw1=(TextView)findViewById(R.id.editText_reg_pw);
         pw2=(TextView)findViewById(R.id.editText_reg_pwre);
         button=(Button)findViewById(R.id.button_RegisterAcc);
-
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
