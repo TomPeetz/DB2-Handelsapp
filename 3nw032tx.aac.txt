@@ -1,0 +1,45 @@
+﻿Merge branch 'Login/Register'
+
+# Conflicts:
+#	.idea/.name
+#	.idea/gradle.xml
+#	.idea/modules.xml
+#	app/src/main/java/com/example/darkayy/aueraaetas/MainMenu.java
+#	app/src/main/res/values/strings.xml
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   .idea/.name
+#	modified:   .idea/gradle.xml
+#	deleted:    .idea/vcs.xml
+#	modified:   CREATE_TABLES.sql
+#	modified:   app/src/main/AndroidManifest.xml
+#	deleted:    app/src/main/java/JDBC_Connection.java
+#	new file:   app/src/main/java/com/example/darkayy/aueraaetas/Login.java
+#	modified:   app/src/main/java/com/example/darkayy/aueraaetas/Register.java
+#	new file:   app/src/main/java/com/example/darkayy/aueraaetas/util/JsonReader.java
+#	new file:   app/src/main/java/com/example/darkayy/aueraaetas/util/Playerdata.java
+#	new file:   app/src/main/java/com/example/darkayy/aueraaetas/webapi/API_Connection.java
+#	new file:   app/src/main/java/com/example/darkayy/aueraaetas/webapi/API_Exception.java
+#	new file:   app/src/main/java/com/example/darkayy/aueraaetas/webapi/API_Query.java
+#	renamed:    app/src/main/res/layout/activity_main_menu.xml -> app/src/main/res/layout-v17/activity_login.xml
+#	new file:   app/src/main/res/layout-v17/activity_register.xml
+#	new file:   app/src/main/res/layout/activity_login.xml
+#	modified:   app/src/main/res/layout/activity_register.xml
+#	modified:   app/src/main/res/values/colors.xml
+#	modified:   app/src/main/res/values/strings.xml
+#	modified:   app/src/main/res/values/styles.xml
+#
+
