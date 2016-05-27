@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
 import com.example.darkayy.aueraaetas.util.Playerdata;
 import com.example.darkayy.aueraaetas.webapi.API_Connection;
 import com.example.darkayy.aueraaetas.webapi.API_Exception;
@@ -29,7 +30,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class Lager extends AppCompatActivity {
-
+    String s = "[{\"Lager_Rohstoff_id\":\"1\",\"Rohstoffname\":\"Golderz\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"2\",\"Rohstoffname\":\"Kohle\",\"Menge\":\"300\"},{\"Lager_Rohstoff_id\":\"3\",\"Rohstoffname\":\"Eisenerz\",\"Menge\":\"2\"},{\"Lager_Rohstoff_id\":\"4\",\"Rohstoffname\":\"Baumstamm\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"5\",\"Rohstoffname\":\"Stein\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"6\",\"Rohstoffname\":\"Lehm\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"7\",\"Rohstoffname\":\"Getreide\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"8\",\"Rohstoffname\":\"Fisch\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"9\",\"Rohstoffname\":\"Fleisch\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"10\",\"Rohstoffname\":\"Wolle\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"11\",\"Rohstoffname\":\"Goldbarren\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"12\",\"Rohstoffname\":\"Eisenbarren\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"13\",\"Rohstoffname\":\"Brett\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"14\",\"Rohstoffname\":\"Ziegelstein\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"15\",\"Rohstoffname\":\"Mehl\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"16\",\"Rohstoffname\":\"Leinen\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"17\",\"Rohstoffname\":\"Waffen\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"18\",\"Rohstoffname\":\"Werkzeuge\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"19\",\"Rohstoffname\":\"Fass\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"20\",\"Rohstoffname\":\"Brot\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"21\",\"Rohstoffname\":\"T\\u00fccher\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"22\",\"Rohstoffname\":\"Kleidung\",\"Menge\":\"5\"}]";
 
     ImageButton buttonP;
     ImageButton buttonL;
@@ -50,8 +51,8 @@ public class Lager extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lager);
-
-
+        System.out.println(s);
+        Lagerbestand.getLagerbestand();
 
 
         buttonP = (ImageButton) findViewById(R.id.btnProfile);
