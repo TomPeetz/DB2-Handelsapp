@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Baumstamm kaufen"
+        android:id="@+id/txtTitel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="im Lager:"
+        android:id="@+id/txtimLager"
+        android:layout_below="@+id/txtTitel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="12 Baumstamm"
+        android:id="@+id/txtimLagerinput"
+        android:layout_below="@+id/txtimLager"
+        android:layout_centerHorizontal="true"
+        android:textColor="#4e3103" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="11 Gold"
+        android:id="@+id/txtGold"
+        android:layout_below="@+id/txtimLagerinput"
+        android:layout_centerHorizontal="true"
+        android:textColor="#4e3103" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/editTextMenge"
+        android:hint="Menge"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Baumstämme für 12 Gold "
+        android:id="@+id/txtRohstoffFuer"
+        android:layout_below="@+id/editTextMenge"
+        android:layout_alignLeft="@+id/editTextMenge"
+        android:layout_alignStart="@+id/editTextMenge"
+        android:layout_alignRight="@+id/editTextMenge"
+        android:layout_alignEnd="@+id/editTextMenge"
+        android:textColor="#4e3103" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kaufen"
+        android:id="@+id/btnKaufen"
+        android:background="#7a5343"
+        android:textColor="#f1fcead3"
+        android:layout_below="@+id/txtRohstoffFuer"
+        android:layout_marginTop="42dp"
+        android:layout_alignRight="@+id/txtRohstoffFuer"
+        android:layout_alignEnd="@+id/txtRohstoffFuer"
+        android:layout_alignLeft="@+id/txtRohstoffFuer"
+        android:layout_alignStart="@+id/txtRohstoffFuer" />
+
+</RelativeLayout>

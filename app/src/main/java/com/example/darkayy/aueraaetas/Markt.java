@@ -23,6 +23,8 @@ public class Markt extends AppCompatActivity {
     private ImageButton buttonH;
 
     private ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
+    private ArrayList<Button> lokaleHaendlerButtonsEk = new ArrayList<Button>();
+    private ArrayList<TextView> lokaleHaendlerTxts = new ArrayList<TextView>();
     private ArrayList<TextView> angeboteSuchenName = new ArrayList<TextView>();
     private ArrayList<TextView> angeboteSuchenMenge = new ArrayList<TextView>();
     private ArrayList<TextView> angeboteSuchenRohstoff = new ArrayList<TextView>();
@@ -120,6 +122,9 @@ public class Markt extends AppCompatActivity {
             }
         });
 
+        setLokaleHaendlerButtonsEk();
+        setLokaleHaendlerButtonsVk();
+
     }
 
     /*
@@ -142,50 +147,73 @@ public class Markt extends AppCompatActivity {
     public void fillArrays(){
 
         /*lokale Händler*/
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGolderzEinkauf));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnGolderzEinkauf));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGolderzVerkauf));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKohleEinkauf));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnKohleEinkauf));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKohleVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenerzEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnEisenerzEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenerzVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBaumstammEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnBaumstammEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBaumstammVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnSteinEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnSteinEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnSteinVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLehmEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnLehmEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLehmVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGetreideEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnGetreideEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGetreideVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFischEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnFischEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFischVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFleischEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnFleischEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFleischVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWolleEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnWolleEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWolleVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGoldbarrenEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnGoldbarrenEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnGoldbarrenVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenbarrenEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnEisenbarrenEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnEisenbarrenVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrettEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnBrettEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrettVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnZiegelsteinEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnZiegelsteinEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnZiegelsteinVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnMehlEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnMehlEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnMehlVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLeinenEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnLeinenEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnLeinenVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWaffenEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnWaffenEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWaffenVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWerkzeugeEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnWerkzeugeEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnWerkzeugeVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFassEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnFassEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnFassVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrotEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnBrotEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnBrotVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnTuecherEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnTuecherEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnTuecherVk));
-        lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKleidungEk));
+        lokaleHaendlerButtonsEk.add((Button)findViewById(R.id.btnKleidungEk));
         lokaleHaendlerButtons.add((Button)findViewById(R.id.btnKleidungVk));
+
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtGolderz));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtKohle));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtEisenerz));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtBaumstamm));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtStein));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtLehm));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtGetreide));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtFisch));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtFleisch));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtWolle));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtGoldbarren));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtEisenbarren));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtBrett));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtZiegelstein));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtMehl));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtLeinen));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtWaffen));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtWerkzeuge));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtFass));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtBrot));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtTuecher));
+        lokaleHaendlerTxts.add((TextView)findViewById(R.id.txtKleidung));
 
         //angebote Suchen
         angeboteSuchenName.add((TextView)findViewById(R.id.txtName1));
@@ -245,6 +273,56 @@ public class Markt extends AppCompatActivity {
         }
         else{
             counter += 1;
+        }
+
+
+
+    }
+
+    public void setLokaleHaendlerButtonsEk(){
+
+        for(int i = 0; i < lokaleHaendlerButtonsEk.size(); i ++){
+
+            final String name = lokaleHaendlerTxts.get(i).getText().toString();
+            final int kosten = i + 1;
+            final String kostenS = "kaufen";
+            lokaleHaendlerButtonsEk.get(i).setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), PopUpMarktLokaleHaendler.class);
+
+                    intent.putExtra("Rohstoffname",name);
+                    intent.putExtra("Rohstoffkosten", kosten);
+                    intent.putExtra("RohstoffkostenK",kostenS);
+
+                    startActivity(intent);
+                }
+            });
+        }
+
+
+
+    }
+
+    public void setLokaleHaendlerButtonsVk(){
+
+        for(int i = 0; i < lokaleHaendlerButtons.size(); i ++){
+
+            final String name = lokaleHaendlerTxts.get(i).getText().toString();
+            final int kosten = i + 1;
+            final String kostenS = "verkaufen";
+            lokaleHaendlerButtons.get(i).setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), PopUpMarktLokaleHaendler.class);
+
+                    intent.putExtra("Rohstoffname",name);
+                    intent.putExtra("Rohstoffkosten", kosten);
+                    intent.putExtra("RohstoffkostenK",kostenS);
+
+                    startActivity(intent);
+                }
+            });
         }
 
 
