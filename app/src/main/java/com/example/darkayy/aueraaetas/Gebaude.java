@@ -41,6 +41,7 @@ public class Gebaude extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), Profil.class);
                 startActivity(i);
 
+
             }
         });
 
@@ -50,6 +51,7 @@ public class Gebaude extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Lager.class);
                 startActivity(i);
+
             }
         });
 
@@ -59,6 +61,7 @@ public class Gebaude extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Markt.class);
                 startActivity(i);
+
             }
         });
 
@@ -68,6 +71,7 @@ public class Gebaude extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Gebaude.class);
                 startActivity(i);
+
             }
         });
 
@@ -78,6 +82,7 @@ public class Gebaude extends AppCompatActivity {
 
                 Intent i = new Intent(getApplicationContext(), PopGebaeude.class);
                 startActivity(i);
+
             }
         });
 
@@ -87,6 +92,7 @@ public class Gebaude extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), GameUi.class);
                 startActivity(i);
+
             }
         });
 

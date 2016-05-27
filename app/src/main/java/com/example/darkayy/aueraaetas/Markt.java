@@ -284,7 +284,7 @@ public class Markt extends AppCompatActivity {
         for(int i = 0; i < lokaleHaendlerButtonsEk.size(); i ++){
 
             final String name = lokaleHaendlerTxts.get(i).getText().toString();
-            final int kosten = i + 1;
+            final String kosten = lokaleHaendlerButtonsEk.get(i).getText().toString();
             final String kostenS = "kaufen";
             lokaleHaendlerButtonsEk.get(i).setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -292,7 +292,7 @@ public class Markt extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PopUpMarktLokaleHaendler.class);
 
                     intent.putExtra("Rohstoffname",name);
-                    intent.putExtra("Rohstoffkosten", kosten);
+                    intent.putExtra("Kosten", kosten);
                     intent.putExtra("RohstoffkostenK",kostenS);
 
                     startActivity(intent);
@@ -309,7 +309,7 @@ public class Markt extends AppCompatActivity {
         for(int i = 0; i < lokaleHaendlerButtons.size(); i ++){
 
             final String name = lokaleHaendlerTxts.get(i).getText().toString();
-            final int kosten = i + 1;
+            final String kosten = lokaleHaendlerButtons.get(i).getText().toString();
             final String kostenS = "verkaufen";
             lokaleHaendlerButtons.get(i).setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -317,7 +317,7 @@ public class Markt extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PopUpMarktLokaleHaendler.class);
 
                     intent.putExtra("Rohstoffname",name);
-                    intent.putExtra("Rohstoffkosten", kosten);
+                    intent.putExtra("Kosten",kosten);
                     intent.putExtra("RohstoffkostenK",kostenS);
 
                     startActivity(intent);

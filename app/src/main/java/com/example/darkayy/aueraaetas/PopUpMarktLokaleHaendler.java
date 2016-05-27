@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,11 +18,14 @@ import java.security.spec.ECField;
  */
 public class PopUpMarktLokaleHaendler extends Activity{
 
+    Button btnJa;
+    Button btnNein;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.popup);
+        setContentView(R.layout.markt_lokalehaendler);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -31,36 +36,44 @@ public class PopUpMarktLokaleHaendler extends Activity{
         getWindow().setLayout((int)(width *.7),(int)(height*.7));
 
 
+
         Intent i = getIntent();
-        final String rohstoffname = i.getStringExtra("Rohstoffname");
-        int rohstoffid = i.getIntExtra("Rohstoffkosten", 0);
+        String rohstoffname = i.getStringExtra("Rohstoffname");
         String rohstoffkostenS = i.getStringExtra("RohstoffkostenK");
-
-        //rohstoffkosten müssen noch über die Id geholt werden
-        final int rohstoffkosten = 23;
-
+        String kosten = i.getStringExtra("Kosten");
 
         TextView name = (TextView)findViewById(R.id.txtTitel);
-        name.setText(rohstoffname + rohstoffkostenS);
-        final EditText menge = (EditText)findViewById(R.id.editTextMenge);
-        final TextView kosten = (TextView)findViewById(R.id.txtRohstoffFuer);
-        menge.addTextChangedListener(new TextWatcher() {
+        name.setText(rohstoffname + " " + rohstoffkostenS);
+
+        TextView wollenSie = (TextView)findViewById(R.id.txtWollenSieRohstoffe);
+        wollenSie.setText("Wollen Sie 1" + rohstoffname);
+
+        TextView fuerKaufen = (TextView)findViewById(R.id.txtFuerGoldKaufen);
+        fuerKaufen.setText("für" + kosten + " " + rohstoffkostenS + "?");
+
+        btnJa = (Button)findViewById(R.id.btnJa);
+        btnJa.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                int temp = Integer.parseInt(menge.getText().toString());
-                int kostet = rohstoffkosten * (temp);
-                kosten.setText(rohstoffname + "für" + kostet + " Gold." );
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Markt.class);
+                startActivity(i);
+                finish();
+                //Update Lager mit Rohstoff Id
             }
         });
+
+
+        btnNein = (Button)findViewById(R.id.btnNein);
+        btnNein.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Markt.class);
+                startActivity(i);
+                finish();
+
+                //Update Lager mit Rohstoff Id
+            }
+        });
+
     }
 }

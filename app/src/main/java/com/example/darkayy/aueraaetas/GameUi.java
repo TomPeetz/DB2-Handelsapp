@@ -25,6 +25,7 @@ public class GameUi extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), Profil.class);
                     startActivity(i);
 
+
                 }
             });
 
@@ -34,6 +35,7 @@ public class GameUi extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent i = new Intent(getApplicationContext(), Lager.class);
                     startActivity(i);
+
                 }
             });
 
@@ -43,6 +45,7 @@ public class GameUi extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent i = new Intent(getApplicationContext(), Markt.class);
                     startActivity(i);
+
                 }
             });
 
@@ -52,6 +55,7 @@ public class GameUi extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent i = new Intent(getApplicationContext(), Gebaude.class);
                     startActivity(i);
+
                 }
             });
         }
