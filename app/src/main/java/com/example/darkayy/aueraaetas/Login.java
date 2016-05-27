@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Playerdata;
 import com.example.darkayy.aueraaetas.webapi.API_Connection;
 import com.example.darkayy.aueraaetas.webapi.API_Exception;
 
@@ -44,7 +45,8 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //ToDo: Hole den Salt aus der Datenbank vom aktuellen Nutzer
+                //Hole den Salt aus der Datenbank vom aktuellen Nutzer
+
                 String username = email.getText().toString();
                 API_Connection con = new API_Connection();
                 //Test
@@ -70,13 +72,15 @@ public class Login extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                //ToDo: Kombiniere Salt mit PW
+                //Kombiniere Salt mit PW
+
                 String text = null;
                 text = pw.getText().toString() + result.get(0);
                 System.out.println(text);
 
 
-                //ToDo: SHA-256 Hash aus beiden genieren und mit der Datenbank abgleichen
+                //SHA-256 Hash aus beiden genieren und mit der Datenbank abgleichen
+
                 try {
                     MessageDigest md = MessageDigest.getInstance("SHA-256");
                     md.update(text.getBytes("UTF-8"));
@@ -94,9 +98,14 @@ public class Login extends AppCompatActivity {
                     } catch (API_Exception e) {
                         e.printStackTrace();
                     }
-                    System.out.println("Arraylist Groesse: " + result.size());
-                    for(String s:result){
-                        System.out.println(s);
+                    // Wenn Login erfolgreich war
+                    if(!result.isEmpty()){
+                        //ToDo: GameUi View öffnen!
+                        createPlayerdata(result);
+                        if(Playerdata.isValid()){
+                            Intent i = new Intent(getApplicationContext(), GameUi.class);
+                            startActivity(i);
+                        }
                     }
                 } catch (NoSuchAlgorithmException e) {
                     e.printStackTrace();
@@ -106,5 +115,18 @@ public class Login extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void createPlayerdata(ArrayList<String> spielerdaten){
+        int count = 0;
+        String id = spielerdaten.get(count++);
+        String username = spielerdaten.get(count++);
+        String email = spielerdaten.get(count++);
+        String  pwhash = spielerdaten.get(count++);
+        String  salt = spielerdaten.get(count++);
+        String  lastLogin = spielerdaten.get(count++);
+        String isBanned = spielerdaten.get(count++);
+        String  profilePic = spielerdaten.get(count++);
+        Playerdata.createPlayerdata(id,username,email,pwhash,salt,lastLogin,isBanned,profilePic);
     }
 }
