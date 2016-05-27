@@ -25,6 +25,10 @@ public class Playerdata {
         return id;
     }
 
+    public static String getUsername() {
+        return username;
+    }
+
     public static String getEmail() {
         return email;
     }

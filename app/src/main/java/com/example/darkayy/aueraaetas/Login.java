@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
                 params2.add(API_Connection.APIKEY);
                 params2.add("4");
                 try {
-                    ArrayList<String> result = con.query(API_Connection.GETLAGER, params2);
+                    ArrayList<String> result = con.query(API_Connection.GETRESOURCES, params2);
                     for(String s: result){
                         System.out.println(s);
                     }

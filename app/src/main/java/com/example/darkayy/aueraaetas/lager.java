@@ -20,6 +20,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Playerdata;
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+import com.example.darkayy.aueraaetas.webapi.API_Exception;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -105,9 +109,35 @@ public class Lager extends AppCompatActivity {
             }
         });
 
+        API_Connection con = new API_Connection();
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(API_Connection.APIKEY);
+        params.add("" + Playerdata.getId());
+        try {
+            ArrayList<String> result = con.query(API_Connection.GETMENGEN,params);
+            for (String s : result){
+                System.out.print(s + ", ");
+            }
+            fillMenge(result);
+            fillLagerCounter(result);
+        } catch (API_Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
+    /* ToDo: Verbesserungsvorschlag für Später:
+             Buttons Dynamisch genieren anhand des Datenbankoutputs.
 
+             Button myButton = new Button(this);
+             myButton.setText("Push Me");
+
+             LinearLayout ll = (LinearLayout)findViewById(R.id.buttonlayout);
+             LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+             ll.addView(myButton, lp);
+
+             Tut mir leid Leo *wegduck* ;D
+     */
     public void fillLager(ArrayList a) {
         select = a;
         lagerG.add((TextView) findViewById(R.id.txtGolderz));
@@ -177,7 +207,7 @@ public class Lager extends AppCompatActivity {
         txt.setText(menge + "/" + maxLagerGroesse);
     }
 
-    public void fillMenge(ArrayList a) {
+    public void fillMenge(ArrayList<String> a) {
         select = a;
         lager.add((TextView) findViewById(R.id.txtGoldMenge));
         lager.add((TextView) findViewById(R.id.txtKohleMenge));
@@ -210,6 +240,7 @@ public class Lager extends AppCompatActivity {
             for (int i = 0; i < lager.size(); i++) {
                 lager.get(i).setText(select.get(i).toString());
             }
+
         }
 
 
