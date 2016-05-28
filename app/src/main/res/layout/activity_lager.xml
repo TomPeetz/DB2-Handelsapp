@@ -192,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageGold"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/golderz" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -223,7 +223,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageKohle"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/kohle" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -254,7 +254,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageEisenerz"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/eisenerz" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -285,11 +285,11 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageBaumstamm"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/baumstamm" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
+                    android:text="Baumstamm"
                     android:id="@+id/txtBaumstamm"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
@@ -314,7 +314,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageStein"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/stein" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -343,7 +343,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageLehm"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/lehm" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -374,7 +374,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageGetreide"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/getreide" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -405,7 +405,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageFisch"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/fisch" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -467,7 +467,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageWolle"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/wolle" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -498,7 +498,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageGoldbarren"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/goldbarren" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -529,7 +529,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageEisenbarren"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/eisenbarren" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -560,7 +560,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageBrett"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/brett" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -591,7 +591,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageZiegelstein"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/ziegelstein" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -622,7 +622,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageMehl"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/mehl" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -653,7 +653,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageLeinen"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/leinen" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -684,7 +684,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageWaffen"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/waffen" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -715,7 +715,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageWerkzeuge"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/werkzeuge" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -746,7 +746,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageFass"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/fass" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -777,7 +777,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageBrot"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/brot" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -808,7 +808,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageTuecher"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/tuecher" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -839,7 +839,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageKleidung"
                     android:layout_column="0"
-                    android:background="@drawable/rohstoff" />
+                    android:background="@drawable/kleidung" />
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
