@@ -124,8 +124,8 @@ public class Lagerbestand {
      */
     public static Resource getRohstoff(String name){
         for(Resource s: resources){
-            System.out.println("Suche: " + s.getName());
             if(s.getName().equals(name)){
+                System.out.println("LAGERBESTAND: " + s.getName() + " gefunden!");
                 return s;
             }
         }
@@ -138,11 +138,20 @@ public class Lagerbestand {
      */
     public static Resource getRohstoff(int id){
         for(Resource s: resources){
-            System.out.println("Suche: " + s.getName());
             if(s.getId()==id){
                 return s;
             }
         }
         return null;
+    }
+
+    public static int getNahrung(){
+        int amount = 0;
+        Resource fisch = getRohstoff("Fisch");
+        Resource fleisch = getRohstoff("Fleisch");
+        Resource brot = getRohstoff("Brot");
+        amount = (fleisch.getMenge() * 1) + (fisch.getMenge() * 2) + (brot.getMenge() * 3);
+        System.out.println("LAGERBESTAND: Menge Nahrung errechnet... Menge: " + amount );
+        return amount;
     }
 }

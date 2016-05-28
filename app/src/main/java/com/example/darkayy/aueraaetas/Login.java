@@ -51,8 +51,8 @@ public class Login extends AppCompatActivity {
                 //ToDo: Neuer Login!
                 if(Playerdata.login(username,password)){
                     Lagerbestand.getLagerbestand();
-                    Thread t1 = new Thread(new UpdateLager());
-                    t1.run();
+                    //Thread t1 = new Thread(new UpdateLager());
+                    //t1.run();
                     Intent i = new Intent(getApplicationContext(), GameUi.class);
                     startActivity(i);
                 }

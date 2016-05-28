@@ -12,7 +12,10 @@ public class UpdateLager implements Runnable {
     public void run() {
         API_Connection con = new API_Connection();
         while (true) {
-            con.query(API_Connection.UPDATEROHSTOFFEFROMTIME,new String[]{Integer.toString(Playerdata.getId())});
+            /*
+                ToDo: Nicht ganz genauso! Lagerbestand.getLagerbestand() abrufen und hier einen Timer reinbauen!
+             */
+            //con.query(API_Connection.UPDATEROHSTOFFEFROMTIME,new String[]{Integer.toString(Playerdata.getId())});
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {

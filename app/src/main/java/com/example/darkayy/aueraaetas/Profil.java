@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
+import com.example.darkayy.aueraaetas.util.Playerdata;
+import com.example.darkayy.aueraaetas.util.Resource;
+
 
 public class Profil extends AppCompatActivity {
 
@@ -15,12 +19,20 @@ public class Profil extends AppCompatActivity {
     ImageButton buttonG;
     ImageButton buttonM;
     ImageButton buttonH;
+    TextView charaktername;
+    TextView goldbestand;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
+        charaktername = (TextView)findViewById(R.id.txtCharaktername);
+        goldbestand = (TextView)findViewById(R.id.textProfilGoldbestand);
+        final String name = Playerdata.getUsername();
+        charaktername.setText(name);
+        Resource g = Lagerbestand.getRohstoff("Goldbarren");
+        final String gold = ""+g.getMenge();
+        goldbestand.setText(gold + " Goldbarren");
         buttonP=(ImageButton)findViewById(R.id.btnProfile);
         buttonP.setOnClickListener(new View.OnClickListener(){
             @Override
