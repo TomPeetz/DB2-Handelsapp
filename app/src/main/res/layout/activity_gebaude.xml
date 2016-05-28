@@ -139,9 +139,9 @@
         android:textSize="15dp"
         android:elegantTextHeight="false"
         android:textAlignment="center"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtProfil"
-        android:layout_alignEnd="@+id/txtProfil" />
+        android:layout_below="@+id/btnForschung"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -165,11 +165,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/txtForschung"
-        android:layout_toStartOf="@+id/txtForschung"
         android:layout_alignTop="@+id/btnLager"
         android:layout_marginTop="10dp">
 
@@ -192,7 +189,8 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:layout_marginRight="0dp"
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -210,7 +208,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtGoldmineK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -227,7 +226,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -245,7 +244,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtGoldschmelzeK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -262,7 +262,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -280,7 +280,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtKohlemineK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -297,7 +298,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -315,7 +316,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtEisenmineK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -332,7 +334,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -350,7 +352,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtEisenschmelzeK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -367,7 +370,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -385,7 +388,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtWaffenschmiedeK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -402,7 +406,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -420,7 +424,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtWerkzeugschmiedeK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -437,7 +442,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -455,7 +460,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtHolzfaellerK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -472,7 +478,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -490,7 +496,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtSaegeK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -507,7 +514,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -525,7 +532,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtSchreinerK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -542,7 +550,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -560,7 +568,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtSteinbruchK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -577,7 +586,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -595,7 +604,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtLehmgrubeK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -612,7 +622,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -630,7 +640,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtZiegeleiK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -647,7 +658,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -665,7 +676,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtBauernhofK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -682,7 +694,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -700,7 +712,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtWindK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -717,7 +730,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -735,7 +748,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtBaeckerK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -752,7 +766,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -770,7 +784,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtFischerK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -787,7 +802,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -805,7 +820,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtJaegerK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -822,7 +838,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -840,7 +856,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtSchafsfarmK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -857,7 +874,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -875,7 +892,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtWebereiEK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -892,7 +910,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -910,7 +928,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtWebereiMK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
 
             <TableRow
@@ -927,7 +946,7 @@
                     android:background="@android:color/transparent"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
-                    android:layout_marginRight="35dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -945,7 +964,8 @@
                     android:text="Holz,etc."
                     android:id="@+id/txtWebereiFK"
                     android:layout_column="2"
-                    android:textColor="#f1fcead3" />
+                    android:textColor="#f1fcead3"
+                    android:textSize="15dp" />
             </TableRow>
         </TableLayout>
     </ScrollView>
@@ -956,10 +976,13 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Gebäude"
         android:id="@+id/txtGebaeudeTabelle"
+        android:textColor="#fdf4ef"
         android:layout_above="@+id/scrollView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#fdf4ef" />
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2"
+        android:layout_toLeftOf="@+id/textView34"
+        android:layout_toStartOf="@+id/textView34"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -968,11 +991,8 @@
         android:text="Produziert"
         android:id="@+id/textView34"
         android:textColor="#fdf4ef"
-        android:layout_alignTop="@+id/txtKosten"
-        android:layout_toLeftOf="@+id/txtKosten"
-        android:layout_toStartOf="@+id/txtKosten"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
+        android:layout_above="@+id/scrollView2"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"

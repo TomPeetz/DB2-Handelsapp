@@ -127,6 +127,6 @@ public class Login extends AppCompatActivity {
         String  lastLogin = spielerdaten.get(count++);
         String isBanned = spielerdaten.get(count++);
         String  profilePic = spielerdaten.get(count++);
-        Playerdata.createPlayerdata(id,username,email,pwhash,salt,lastLogin,isBanned,profilePic);
+        Playerdata.createPlayerdata("1","username","email","pwhash","salt","lastLogin","0","profilePic");
     }
 }

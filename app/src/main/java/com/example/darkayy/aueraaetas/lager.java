@@ -168,6 +168,11 @@ public class Lager extends AppCompatActivity {
 
     }
 
+
+    /*
+    Füllt einmal
+     */
+
     public void fillLagerCounter(ArrayList<String> a){
         int menge = 0;
         for(int i = 0; i < a.size(); i++){

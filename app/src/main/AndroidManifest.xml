@@ -29,6 +29,8 @@
             android:theme="@style/AppTheme.CustomTheme"></activity>
         <activity android:name=".PopGebaeude"
             android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity android:name="com.example.darkayy.aueraaetas.PopUpMarktLokaleHaendler"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 

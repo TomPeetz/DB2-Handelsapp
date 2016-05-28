@@ -136,12 +136,12 @@
         android:id="@+id/txtForschung"
         android:clickable="false"
         android:textColor="#f1fcead3"
-        android:textSize="15dp"
+        android:textSize="12dp"
         android:elegantTextHeight="false"
         android:textAlignment="center"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtProfil"
-        android:layout_alignEnd="@+id/txtProfil" />
+        android:layout_below="@+id/btnForschung"
+        android:layout_alignLeft="@+id/btnForschung"
+        android:layout_alignStart="@+id/btnForschung" />
 
     <ImageView
         android:layout_width="wrap_content"
