@@ -56,7 +56,6 @@ public class Lager extends AppCompatActivity {
         fillMenge(Lagerbestand.getMengen());
         fillLagerCounter(Lagerbestand.getMengen());
 
-
         buttonP = (ImageButton) findViewById(R.id.btnProfile);
         buttonP.setOnClickListener(new View.OnClickListener() {
             @Override

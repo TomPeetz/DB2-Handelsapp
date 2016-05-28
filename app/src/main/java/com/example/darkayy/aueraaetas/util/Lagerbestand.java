@@ -45,6 +45,20 @@ public class Lagerbestand {
         Resource r = getRohstoff(name);
         r.setMenge(r.getMenge() + wert);
         //ToDo: Lagerbestand in der Datenbank anpassen
+        API_Connection con  = new API_Connection();
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(API_Connection.APIKEY);
+        params.add(""+Playerdata.getId());
+        params.add(""+r.getId());
+        params.add(""+wert);
+        try {
+            JsonResult result = con.query(API_Connection.CHANGEAMOUNT, params);
+            if(!result.isEmpty()){
+                System.out.println("LAGERBESTAND: Erfolgreich geändert.");
+            }
+        } catch (API_Exception e) {
+            e.printStackTrace();
+        }
 
 
     }

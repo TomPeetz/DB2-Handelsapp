@@ -18,7 +18,9 @@ public class API_Connection {
     public static final String GETSALT 		    = "login.php/{?}/{?}";
     public static final String REGISTER         = "player.php/new/{?}/{?}/{?}/{?}/{?}";
     public static final String GETRESOURCES     = "lager.php/resources/{?}/{?}";
+    public static final String CHANGEAMOUNT     = "lager.php/changeamount/{?}/{?}/{?}/{?}";
     public static final String GETMENGEN        = "lager.php/amount/{?}/{?}";
+    public static final String HIGHERGEBLVL        = "gebaeude.php/upgrade/{?}/{?}/{?}";
 
     /**
      * Sendet eine Abfrage an die Webapi.
