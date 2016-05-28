@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ja"
-        android:id="@+id/btnJa"
+        android:id="@+id/btnerweitern"
         android:background="#7a5343"
         android:textColor="#f1fcead3"
         android:layout_below="@+id/txtWollenSieRohstoffe"
@@ -86,7 +86,7 @@
         android:id="@+id/btnNein"
         android:background="#7a5343"
         android:textColor="#f1fcead3"
-        android:layout_alignTop="@+id/btnJa"
+        android:layout_alignTop="@+id/btnerweitern"
         android:layout_alignRight="@+id/txtWollenSieRohstoffe"
         android:layout_alignEnd="@+id/txtWollenSieRohstoffe" />
 

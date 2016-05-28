@@ -14,68 +14,54 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Stage1"
-        android:id="@+id/txtStage1"
-        android:layout_marginBottom="47dp"
-        android:layout_above="@+id/btnPreis1"
-        android:layout_alignLeft="@+id/txtStage2"
-        android:layout_alignStart="@+id/txtStage2" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preis"
-        android:id="@+id/btnPreis0"
+        android:text="erweitern"
+        android:id="@+id/btnerweitern"
         android:background="#7a5343"
         android:textColor="#f1fcead3"
-        android:layout_alignBottom="@+id/txtStage1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPicker"
+        android:layout_marginTop="63dp"
+        android:layout_below="@+id/txtLagerErweitern"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Stage2"
-        android:id="@+id/txtStage2"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/txtStage3"
-        android:layout_alignStart="@+id/txtStage3" />
+        android:text="Menge der Erweiterungen"
+        android:id="@+id/textView4"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtLagerErweitern"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preis"
-        android:id="@+id/btnPreis1"
+        android:text="Preis errechnen"
+        android:id="@+id/btnPreisErrechnen"
         android:background="#7a5343"
         android:textColor="#f1fcead3"
-        android:layout_above="@+id/txtStage3"
-        android:layout_alignLeft="@+id/btnPreis2"
-        android:layout_alignStart="@+id/btnPreis2" />
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/numberPicker"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Stage3"
-        android:id="@+id/txtStage3"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/txtStage2"
-        android:layout_toLeftOf="@+id/btnPreis1"
-        android:layout_toStartOf="@+id/btnPreis1"
-        android:layout_marginRight="10dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Preis"
-        android:id="@+id/btnPreis2"
-        android:background="#7a5343"
-        android:textColor="#f1fcead3"
-        android:layout_alignBottom="@+id/txtStage3"
-        android:layout_centerHorizontal="true" />
+        android:text="Kosten: 12 Gold"
+        android:id="@+id/txtKosten"
+        android:layout_below="@+id/btnPreisErrechnen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
 
 </RelativeLayout>

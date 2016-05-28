@@ -3,15 +3,10 @@ package com.example.darkayy.aueraaetas;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import java.security.spec.ECField;
 
 /**
  * Created by leoka on 27.05.2016.
@@ -52,7 +47,7 @@ public class PopUpMarktLokaleHaendler extends Activity{
         TextView fuerKaufen = (TextView)findViewById(R.id.txtFuerGoldKaufen);
         fuerKaufen.setText("für" + kosten + " " + rohstoffkostenS + "?");
 
-        btnJa = (Button)findViewById(R.id.btnJa);
+        btnJa = (Button)findViewById(R.id.btnerweitern);
         btnJa.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

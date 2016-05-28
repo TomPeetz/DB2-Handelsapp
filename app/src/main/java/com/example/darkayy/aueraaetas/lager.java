@@ -235,15 +235,5 @@ public class Lager extends AppCompatActivity {
 
     }
 
-    public void fillLagerPopup(ArrayList arrayList){
-
-        popUp.add((Button) findViewById(R.id.btnPreis0));
-        popUp.add((Button) findViewById(R.id.btnPreis1));
-        popUp.add((Button) findViewById(R.id.btnPreis2));
-
-        for(int i = 0; i < popUp.size(); i++){
-            popUp.get(i).setText(arrayList.get(i).toString());
-        }
-    }
 
 }
