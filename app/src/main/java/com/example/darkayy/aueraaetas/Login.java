@@ -34,7 +34,6 @@ public class Login extends AppCompatActivity {
         email = (TextView)findViewById(R.id.editText_Email);
         pw = (TextView)findViewById(R.id.editText_Password);
         button = (Button)findViewById(R.id.button_register);
-
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -51,8 +50,7 @@ public class Login extends AppCompatActivity {
                 //ToDo: Neuer Login!
                 if(Playerdata.login(username,password)){
                     Lagerbestand.getLagerbestand();
-                    //Thread t1 = new Thread(new UpdateLager());
-                    //t1.run();
+                    startService(new Intent(getApplicationContext(), UpdateLagerService.class));
                     Intent i = new Intent(getApplicationContext(), GameUi.class);
                     startActivity(i);
                 }
