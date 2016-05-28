@@ -20,6 +20,13 @@ public class API_Connection {
     public static final String GETRESOURCES     = "lager.php/resources/{?}/{?}";
     public static final String GETMENGEN        = "lager.php/amount/{?}/{?}";
 
+    /**
+     * Sendet eine Abfrage an die Webapi.
+     * @param TYPE Typ der Abfrage. Typen stehen als Static Variablen in der Klasse bereit.
+     * @param params Werte die übergeben werden sollen. Siehe https://ttheus.nunki.uberspace.de/webapi/src/public/ für Hilfe.
+     * @return JsonResult der Abfrage zur Weiterverarbeitung.
+     * @throws API_Exception Exception wenn Ergebnismenge leer. Geht leider nicht ganz...
+     */
     public JsonResult query(final String TYPE, ArrayList<String> params) throws API_Exception{
         if(checkParams(TYPE,params)){
             String s  = TYPE;

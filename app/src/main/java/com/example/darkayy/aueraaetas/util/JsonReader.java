@@ -18,6 +18,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class JsonReader {
+    /**
+     * Parsed einen String im JSON Format.
+     * @param json String der Geparsed werden soll.
+     * @return JsonResult zur Weiterverarbeitung.
+     */
     public JsonResult parseJson(String json){
         try {
             JsonResult result = new JsonResult();

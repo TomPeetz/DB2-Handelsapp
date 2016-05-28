@@ -7,12 +7,24 @@ public class JsonResult {
     private ArrayList<String> namen = new ArrayList<String>();
     private ArrayList<String> data = new ArrayList<String>();
 
+    /**
+     * Fügt einen Ergebnissatz zur Ergebnismenge hinzu. Nur nützlich für die Readerklasse.
+     * @param namen Spaltenname
+     * @param data Ergebnis
+     */
     public void add(String namen, String data){
         this.namen.add(namen);
         this.data.add(data);
         size++;
     }
 
+    /**
+     * Parsed eine Ergebnismenge aus dem kompletten Ergebnissatz und gibt dieses als ArrayList wieder.
+     * Um die komplette Ergebnismenge der Abfrage zu kriegen:
+     * while(!result.isEmpty()) und dann parsen!
+     * @param name Array in dem die Erwarteten Spaltennamen stehen. Bsp: {"id", "name", "menge"} für Rohstoffe
+     * @return Ergebnismenge der Abfrage
+     */
     public ArrayList<String> parseResult(String[] name){
         ArrayList<String> result = new ArrayList<String>();
         for(int i = 0; i < name.length; i++){
@@ -27,7 +39,7 @@ public class JsonResult {
     }
 
 
-    public String getData(String name){
+    private String getData(String name){
         String s = searchSpalte(name);
         for(int i = 0; i < namen.size(); i++){
             if(namen.get(i).equals(s)){
@@ -37,6 +49,11 @@ public class JsonResult {
         return "";
     }
 
+    /**
+     * Sucht eine Spalte in der Ergebnismenge
+     * @param name Gesuchter Spaltenname in der Ergebnismenge
+     * @return Genauer Spaltenname der gesucht wurde. Leer wenn nicht gefunden!
+     */
     public String searchSpalte(String name){
         for(int i = 0; i < namen.size(); i++){
             if(namen.get(i).contains(name)){
@@ -46,13 +63,13 @@ public class JsonResult {
         return "";
     }
 
-    public String getData(int n){
+    private String getData(int n){
         if(n < size()){
             return data.get(n);
         }
         return "";
     }
-    public String getSpalte(int n){
+    private String getSpalte(int n){
         if(n < size()){
             return namen.get(n);
         }
@@ -66,6 +83,9 @@ public class JsonResult {
         return size == 0;
     }
 
+    /**
+     * Gibt kompletten Ergebnissatz in der Console aus.
+     */
     public void printResult(){
         for(int i = 0; i < size(); i++){
             System.out.println(namen.get(i) + ": " + data.get(i));

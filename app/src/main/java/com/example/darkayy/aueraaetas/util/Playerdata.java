@@ -15,6 +15,12 @@ public class Playerdata {
     private static String username, email, pwhash, salt, lastLogin, profilePic;
     private static boolean isBanned;
 
+    /**
+     * Funktion zum einloggen eines Users.
+     * @param username Username
+     * @param pw Passwort als Plaintext
+     * @return true oder false je nachdem ob Login erfolgreich.
+     */
     public static boolean login(String username, String pw){
 
         API_Connection con = new API_Connection();
@@ -47,7 +53,7 @@ public class Playerdata {
         return false;
     }
 
-    public static String generateSHA256Hash(String text){
+    private static String generateSHA256Hash(String text){
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(text.getBytes("UTF-8"));
