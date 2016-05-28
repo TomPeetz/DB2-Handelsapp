@@ -49,6 +49,8 @@ public class Login extends AppCompatActivity {
                 String password = pw.getText().toString();
                 //ToDo: Neuer Login!
                 if(Playerdata.login(username,password)){
+                    Thread t1 = new Thread(new UpdateLager());
+                    t1.run();
                     Intent i = new Intent(getApplicationContext(), GameUi.class);
                     startActivity(i);
                 }
