@@ -186,7 +186,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/menuepkte" />
+        android:background="@drawable/lager" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -209,7 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnGebaude"
-        android:background="@drawable/menuepkte"
+        android:background="@drawable/gebaeude"
         android:layout_below="@+id/txtLager"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -236,7 +236,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnMarkt"
-        android:background="@drawable/menuepkte"
+        android:background="@drawable/markt"
         android:layout_below="@+id/txtGebaude"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -283,5 +283,255 @@
         android:layout_below="@+id/btnForschung"
         android:layout_alignRight="@+id/txtProfil"
         android:layout_alignEnd="@+id/txtProfil" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFischer"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_above="@+id/txtLager"
+        android:layout_toLeftOf="@+id/txtForschung"
+        android:layout_toStartOf="@+id/txtForschung" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Fischer"
+        android:id="@+id/txtFischer"
+        android:layout_alignBottom="@+id/txtLager"
+        android:layout_alignLeft="@+id/btnFischer"
+        android:layout_alignStart="@+id/btnFischer"
+        android:layout_alignRight="@+id/btnFischer"
+        android:layout_alignEnd="@+id/btnFischer"
+        android:textAlignment="center"
+        android:textColor="#35180c" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnJaeger"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_below="@+id/btnFischer"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Jäger"
+        android:id="@+id/txtJaeger"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/btnJaeger"
+        android:layout_toRightOf="@+id/txtrohstoff11"
+        android:layout_alignRight="@+id/btnJaeger"
+        android:layout_alignEnd="@+id/btnJaeger" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSchafsfarm"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_below="@+id/txtFischer"
+        android:layout_alignLeft="@+id/txtFischer"
+        android:layout_alignStart="@+id/txtFischer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Bauernhof"
+        android:id="@+id/txtBauernhof"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/txtJaeger"
+        android:layout_alignRight="@+id/btnSchafsfarm"
+        android:layout_alignEnd="@+id/btnSchafsfarm"
+        android:layout_toRightOf="@+id/txtJaeger"
+        android:layout_toEndOf="@+id/txtJaeger" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGoldabbau"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_above="@+id/imageButton"
+        android:layout_alignRight="@+id/txtBauernhof"
+        android:layout_alignEnd="@+id/txtBauernhof" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gold"
+        android:id="@+id/txtGold"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/btnGoldabbau"
+        android:layout_alignRight="@+id/txtBauernhof"
+        android:layout_alignEnd="@+id/txtBauernhof"
+        android:layout_alignLeft="@+id/btnGoldabbau"
+        android:layout_alignStart="@+id/btnGoldabbau" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnWeberei"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_alignBottom="@+id/txtGebaude"
+        android:layout_toRightOf="@+id/btnHolz"
+        android:layout_toEndOf="@+id/btnHolz" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Weberei"
+        android:id="@+id/txtWeberei"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/btnWeberei"
+        android:layout_alignLeft="@+id/btnWeberei"
+        android:layout_alignStart="@+id/btnWeberei"
+        android:layout_alignRight="@+id/btnWeberei"
+        android:layout_alignEnd="@+id/btnWeberei" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_alignBottom="@+id/txtSteinbruch"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Lehm"
+        android:id="@+id/txtLehm"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton"
+        android:layout_alignLeft="@+id/imageButton"
+        android:layout_alignStart="@+id/imageButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSteinbruch"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_above="@+id/txtSteinbruch"
+        android:layout_alignLeft="@+id/txtSteinbruch"
+        android:layout_alignStart="@+id/txtSteinbruch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Steinbruch"
+        android:id="@+id/txtSteinbruch"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:textSize="12dp"
+        android:layout_alignBottom="@+id/btnKohle"
+        android:layout_toRightOf="@+id/txtrohstoff10"
+        android:layout_toEndOf="@+id/txtrohstoff10" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHolz"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_below="@+id/txtMarkt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Holz"
+        android:id="@+id/txtHolz"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/btnHolz"
+        android:layout_alignLeft="@+id/btnHolz"
+        android:layout_alignStart="@+id/btnHolz"
+        android:layout_alignRight="@+id/btnHolz"
+        android:layout_alignEnd="@+id/btnHolz" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnKohle"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_above="@+id/txtLehm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Kohle"
+        android:id="@+id/txtKohle"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/txtSteinbruch"
+        android:layout_alignRight="@+id/btnKohle"
+        android:layout_alignEnd="@+id/btnKohle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEisen"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_below="@+id/txtWeberei"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Eisen"
+        android:id="@+id/txtEisen"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/btnEisen"
+        android:layout_alignRight="@+id/btnEisen"
+        android:layout_alignEnd="@+id/btnEisen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSchmiede"
+        android:background="@drawable/gebaeudeplatzhalt"
+        android:layout_below="@+id/btnGebaude"
+        android:layout_alignLeft="@+id/txtBauernhof"
+        android:layout_alignStart="@+id/txtBauernhof" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Schmiede"
+        android:id="@+id/txtSchmiede"
+        android:textAlignment="center"
+        android:textColor="#35180c"
+        android:layout_below="@+id/btnSchmiede"
+        android:layout_alignLeft="@+id/btnSchmiede"
+        android:layout_alignStart="@+id/btnSchmiede"
+        android:layout_alignRight="@+id/btnSchmiede"
+        android:layout_alignEnd="@+id/btnSchmiede"
+        android:textSize="13dp" />
 
 </RelativeLayout>
