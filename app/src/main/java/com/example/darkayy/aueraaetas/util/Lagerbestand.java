@@ -31,6 +31,37 @@ public class Lagerbestand {
                 Resource res = new Resource(id,name,menge);
                 resources.add(res);
             }
+            updateTime();
+        } catch (API_Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String getTime(){
+        API_Connection con = new API_Connection();
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(API_Connection.APIKEY);
+        params.add(""+Playerdata.getId());
+        try {
+            JsonResult result = con.query(API_Connection.GETMARKETTIME,params);
+            String[] exp = {"lagerupdate"};
+            ArrayList<String> r = result.parseResult(exp);
+            return r.get(0);
+        } catch (API_Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    private static void updateTime(){
+        API_Connection con = new API_Connection();
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(API_Connection.APIKEY);
+        params.add(""+Playerdata.getId());
+        try {
+            JsonResult result = con.query(API_Connection.SETMARKETTIME,params);
+            String[] exp = {"lagerupdate"};
+            ArrayList<String> r = result.parseResult(exp);
         } catch (API_Exception e) {
             e.printStackTrace();
         }
@@ -53,8 +84,10 @@ public class Lagerbestand {
         params.add(""+wert);
         try {
             JsonResult result = con.query(API_Connection.CHANGEAMOUNT, params);
+            String[] exp = {"menge"};
             if(!result.isEmpty()){
                 System.out.println("LAGERBESTAND: Erfolgreich geändert.");
+                System.out.println("LAGERBESTAND: " + r.getName() + " neuer Stand: " + result.parseResult(exp).get(0));
             }
         } catch (API_Exception e) {
             e.printStackTrace();
@@ -91,7 +124,8 @@ public class Lagerbestand {
      */
     public static Resource getRohstoff(String name){
         for(Resource s: resources){
-            if(s.getName().contains(name)){
+            System.out.println("Suche: " + s.getName());
+            if(s.getName().equals(name)){
                 return s;
             }
         }
@@ -104,6 +138,7 @@ public class Lagerbestand {
      */
     public static Resource getRohstoff(int id){
         for(Resource s: resources){
+            System.out.println("Suche: " + s.getName());
             if(s.getId()==id){
                 return s;
             }

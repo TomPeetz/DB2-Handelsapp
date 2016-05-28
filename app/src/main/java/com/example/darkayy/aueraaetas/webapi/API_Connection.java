@@ -13,14 +13,19 @@ import java.util.concurrent.FutureTask;
  */
 
 public class API_Connection {
-    public static final String APIKEY           = "5eaf0d52648bade4c52b50aa4fe8eb7e95b366f04207cc5f43be90049ec59de0";
-    public static final String LOGIN 		    = "login.php/{?}/{?}/{?}";
-    public static final String GETSALT 		    = "login.php/{?}/{?}";
-    public static final String REGISTER         = "player.php/new/{?}/{?}/{?}/{?}/{?}";
-    public static final String GETRESOURCES     = "lager.php/resources/{?}/{?}";
-    public static final String CHANGEAMOUNT     = "lager.php/changeamount/{?}/{?}/{?}/{?}";
-    public static final String GETMENGEN        = "lager.php/amount/{?}/{?}";
-    public static final String HIGHERGEBLVL        = "gebaeude.php/upgrade/{?}/{?}/{?}";
+    public static final String APIKEY               = "5eaf0d52648bade4c52b50aa4fe8eb7e95b366f04207cc5f43be90049ec59de0";
+    public static final String LOGIN 		        = "login.php/{?}/{?}/{?}";
+    public static final String GETSALT 		        = "login.php/{?}/{?}";
+    public static final String REGISTER             = "player.php/new/{?}/{?}/{?}/{?}/{?}";
+    public static final String GETRESOURCES         = "lager.php/resources/{?}/{?}";
+    public static final String CHANGEAMOUNT         = "lager.php/changeamount/{?}/{?}/{?}/{?}";
+    public static final String GETMENGEN            = "lager.php/amount/{?}/{?}";
+    public static final String GETMARKETTIME        = "lager.php/time/get/{?}/{?}";
+    public static final String SETMARKETTIME        = "lager.php/time/set/{?}/{?}";
+    public static final String HIGHERGEBLVL         = "gebaeude.php/upgrade/{?}/{?}/{?}";
+    public static final String GETBUYPRICE          = "market.php/npc/buy/{?}/{?}";
+    public static final String GETSELLPRICE         = "market.php/npc/sell/{?}/{?}";
+
 
     /**
      * Sendet eine Abfrage an die Webapi.

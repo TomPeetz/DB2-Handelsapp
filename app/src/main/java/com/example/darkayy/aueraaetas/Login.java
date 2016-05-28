@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
 import com.example.darkayy.aueraaetas.util.Playerdata;
 import com.example.darkayy.aueraaetas.webapi.API_Connection;
 import com.example.darkayy.aueraaetas.webapi.API_Exception;
@@ -49,6 +50,7 @@ public class Login extends AppCompatActivity {
                 String password = pw.getText().toString();
                 //ToDo: Neuer Login!
                 if(Playerdata.login(username,password)){
+                    Lagerbestand.getLagerbestand();
                     Intent i = new Intent(getApplicationContext(), GameUi.class);
                     startActivity(i);
                 }
