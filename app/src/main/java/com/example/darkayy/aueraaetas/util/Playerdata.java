@@ -1,5 +1,12 @@
 package com.example.darkayy.aueraaetas.util;
 
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+
 /**
  * Created by Tobias Theus on 13/05/2016.
  */
@@ -7,18 +14,52 @@ public class Playerdata {
     private static int id;
     private static String username, email, pwhash, salt, lastLogin, profilePic;
     private static boolean isBanned;
-    private static boolean isValid = false;
-    public static void createPlayerdata(String id, String username, String email, String pwhash, String salt, String lastLogin, String isBanned, String profilePic){
-        Playerdata.id = Integer.parseInt(id);
-        Playerdata.username = username;
-        Playerdata.email = email;
-        Playerdata.pwhash = pwhash;
-        Playerdata.salt = salt;
-        Playerdata.lastLogin = lastLogin;
-        Playerdata.profilePic = profilePic;
-        Playerdata.isBanned = Boolean.parseBoolean(isBanned);
-        System.out.println("Spieler: " + username + "(" + id +")eingeloggt! E-Mail: " + email + ", Gebannt: " + isBanned);
-        Playerdata.isValid = true;
+
+    public static boolean login(String username, String pw){
+
+        API_Connection con = new API_Connection();
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(API_Connection.APIKEY);
+        params.add(username);
+        JsonResult result = null;
+
+        try {
+            result = con.query(API_Connection.GETSALT, params);
+            String[] exp = {"Salt"};
+            ArrayList<String> salt = result.parseResult(exp);
+            String hash = generateSHA256Hash(pw + salt.get(0));
+            params.add(hash);
+            result = con.query(API_Connection.LOGIN, params);
+            String[] exp2 = {"id", "name", "email", "passw", "salt", "login", "gesperrt", "picture"};
+            ArrayList<String> logindaten = result.parseResult(exp2);
+            Playerdata.id = Integer.parseInt(logindaten.get(0));
+            Playerdata.username = logindaten.get(1);
+            Playerdata.email = logindaten.get(2);
+            Playerdata.pwhash = logindaten.get(3);
+            Playerdata.salt = logindaten.get(4);
+            Playerdata.lastLogin = logindaten.get(5);
+            Playerdata.isBanned = Boolean.parseBoolean(logindaten.get(6));
+            Playerdata.profilePic = logindaten.get(7);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static String generateSHA256Hash(String text){
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            md.update(text.getBytes("UTF-8"));
+            byte[] digest = md.digest();
+            String pwhash = String.format("%064x", new java.math.BigInteger(1, digest));
+            return pwhash;
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     public static int getId() {
@@ -53,7 +94,4 @@ public class Playerdata {
         return isBanned;
     }
 
-    public static boolean isValid() {
-        return isValid;
-    }
 }

@@ -53,6 +53,8 @@ public class Lager extends AppCompatActivity {
         setContentView(R.layout.activity_lager);
         System.out.println(s);
         Lagerbestand.getLagerbestand();
+        fillMenge(Lagerbestand.getMengen());
+        fillLagerCounter(Lagerbestand.getMengen());
 
 
         buttonP = (ImageButton) findViewById(R.id.btnProfile);
@@ -109,23 +111,6 @@ public class Lager extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-        API_Connection con = new API_Connection();
-        ArrayList<String> params = new ArrayList<String>();
-        params.add(API_Connection.APIKEY);
-        params.add("" + Playerdata.getId());
-        try {
-            ArrayList<String> result = con.query(API_Connection.GETMENGEN,params);
-            for (String s : result){
-                System.out.print(s + ", ");
-            }
-            fillMenge(result);
-            fillLagerCounter(result);
-        } catch (API_Exception e) {
-            e.printStackTrace();
-        }
-
-
     }
     /* ToDo: Verbesserungsvorschlag für Später:
              Buttons Dynamisch genieren anhand des Datenbankoutputs.
@@ -139,7 +124,7 @@ public class Lager extends AppCompatActivity {
 
              Tut mir leid Leo *wegduck* ;D
      */
-    public void fillLager(ArrayList a) {
+    public void fillLager(ArrayList<Integer> a) {
         select = a;
         lagerG.add((TextView) findViewById(R.id.txtGolderz));
         lagerG.add((TextView) findViewById(R.id.txtGoldMenge));
@@ -199,16 +184,16 @@ public class Lager extends AppCompatActivity {
 
     }
 
-    public void fillLagerCounter(ArrayList<String> a){
+    public void fillLagerCounter(ArrayList<Integer> a){
         int menge = 0;
         for(int i = 0; i < a.size(); i++){
-            menge += Integer.parseInt(a.get(i));
+            menge += a.get(i);
         }
         TextView txt = (TextView) findViewById(R.id.txtGroesse);
         txt.setText(menge + "/" + maxLagerGroesse);
     }
 
-    public void fillMenge(ArrayList<String> a) {
+    public void fillMenge(ArrayList<Integer> a) {
         select = a;
         lager.add((TextView) findViewById(R.id.txtGoldMenge));
         lager.add((TextView) findViewById(R.id.txtKohleMenge));

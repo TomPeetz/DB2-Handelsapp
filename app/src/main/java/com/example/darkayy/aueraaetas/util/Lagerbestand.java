@@ -17,19 +17,16 @@ public class Lagerbestand {
             ArrayList<String> params = new ArrayList<String>();
             params.add(API_Connection.APIKEY);
             params.add(""+Playerdata.getId());
-            ArrayList<String> result = con.query(API_Connection.GETRESOURCES,params);
-            for(String s:result){
-                System.out.println(s);
-            }
+            JsonResult result = con.query(API_Connection.GETRESOURCES,params);
+            String[] exp = {"id","name","menge"};
+            resources.clear();
             while(!result.isEmpty()){
-                Integer id = Integer.parseInt(result.get(0));
-                String resource = result.get(1);
-                Integer menge = Integer.parseInt(result.get(2));
-                resources.add(new Resource(id,resource,menge));
-                result.remove(0);
-                result.remove(0);
-                result.remove(0);
-                System.out.println("Resource: " + id + ", " + resource + ", " + menge + "Stk. added!");
+                ArrayList<String> r = result.parseResult(exp);
+                int id = Integer.parseInt(r.get(0));
+                String name = r.get(1);
+                int menge = Integer.parseInt(r.get(2));
+                Resource res = new Resource(id,name,menge);
+                resources.add(res);
             }
         } catch (API_Exception e) {
             e.printStackTrace();
@@ -42,6 +39,14 @@ public class Lagerbestand {
 
 
     }
+    public static ArrayList<Integer> getMengen(){
+        ArrayList<Integer> mengen = new ArrayList<Integer>();
+        for(Resource r : resources){
+            mengen.add(r.getMenge());
+        }
+        return mengen;
+    }
+
     public static void changeAmount(int id, int wert){
         Resource r = getRohstoff(id);
         changeAmount(r.getName(), wert);
@@ -49,7 +54,7 @@ public class Lagerbestand {
 
     public static Resource getRohstoff(String name){
         for(Resource s: resources){
-            if(s.getName().equals(name)){
+            if(s.getName().contains(name)){
                 return s;
             }
         }

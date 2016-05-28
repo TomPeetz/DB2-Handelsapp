@@ -31,7 +31,7 @@ public class JsonReader {
                     Iterator<String> test = jObject.keys();
                     while(test.hasNext()){
                         String spalte = test.next();
-                        result.add(spalte, jObject.optString(spalte));
+                        result.add(spalte.toLowerCase(), jObject.optString(spalte));
                     }
                 }
                 // und JSON Objects {"Rohstoffname":"Golderz","Menge":"20"}
@@ -41,7 +41,7 @@ public class JsonReader {
                 Iterator<String> test = jObject.keys();
                 while(test.hasNext()){
                     String spalte = test.next();
-                    result.add(spalte, jObject.optString(spalte));
+                    result.add(spalte.toLowerCase(), jObject.optString(spalte));
                 }
 
             }

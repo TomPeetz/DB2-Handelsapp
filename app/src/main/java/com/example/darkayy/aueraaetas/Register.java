@@ -63,7 +63,7 @@ public class Register extends AppCompatActivity {
                     params.add(email);
                     params.add(pwhash);
                     params.add(salt);
-
+                    /*
                     ArrayList<String> result = null;
                     try {
                         result = con.query(API_Connection.REGISTER, params);
@@ -76,6 +76,7 @@ public class Register extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), Login.class);
                         startActivity(i);
                     }
+                    */
                 }
             }
         });

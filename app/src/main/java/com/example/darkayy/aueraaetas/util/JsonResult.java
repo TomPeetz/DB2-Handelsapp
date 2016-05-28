@@ -16,7 +16,7 @@ public class JsonResult {
     public ArrayList<String> parseResult(String[] name){
         ArrayList<String> result = new ArrayList<String>();
         for(int i = 0; i < name.length; i++){
-            result.add(getData(name[i]));
+            result.add(getData(name[i].toLowerCase()));
         }
         for(int i = 0; i < name.length; i++){
             namen.remove(0);
@@ -64,5 +64,11 @@ public class JsonResult {
     }
     public boolean isEmpty(){
         return size == 0;
+    }
+
+    public void printResult(){
+        for(int i = 0; i < size(); i++){
+            System.out.println(namen.get(i) + ": " + data.get(i));
+        }
     }
 }
