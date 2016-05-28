@@ -45,7 +45,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/menuepkte" />
+        android:background="@drawable/lager" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnGebaude"
-        android:background="@drawable/menuepkte"
+        android:background="@drawable/gebaeude"
         android:layout_below="@+id/txtLager"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnMarkt"
-        android:background="@drawable/menuepkte"
+        android:background="@drawable/markt"
         android:layout_below="@+id/txtGebaude"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
