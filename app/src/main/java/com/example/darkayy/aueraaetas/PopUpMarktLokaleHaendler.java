@@ -41,6 +41,7 @@ public class PopUpMarktLokaleHaendler extends Activity{
         String rohstoffname = i.getStringExtra("Rohstoffname");
         String rohstoffkostenS = i.getStringExtra("RohstoffkostenK");
         String kosten = i.getStringExtra("Kosten");
+        int rohstoffID = i.getIntExtra("RohstoffId", 1);
 
         TextView name = (TextView)findViewById(R.id.txtTitel);
         name.setText(rohstoffname + " " + rohstoffkostenS);
@@ -55,10 +56,11 @@ public class PopUpMarktLokaleHaendler extends Activity{
         btnJa.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                //Update Lager mit Rohstoff Id
                 Intent i = new Intent(getApplicationContext(), Markt.class);
                 startActivity(i);
                 finish();
-                //Update Lager mit Rohstoff Id
+
             }
         });
 
@@ -70,8 +72,6 @@ public class PopUpMarktLokaleHaendler extends Activity{
                 Intent i = new Intent(getApplicationContext(), Markt.class);
                 startActivity(i);
                 finish();
-
-                //Update Lager mit Rohstoff Id
             }
         });
 

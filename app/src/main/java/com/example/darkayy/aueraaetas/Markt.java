@@ -285,7 +285,8 @@ public class Markt extends AppCompatActivity {
 
             final String name = lokaleHaendlerTxts.get(i).getText().toString();
             final String kosten = lokaleHaendlerButtonsEk.get(i).getText().toString();
-            final String kostenS = "kaufen";
+            final String TitelS = "kaufen";
+            final int rohstoffId = i + 1;
             lokaleHaendlerButtonsEk.get(i).setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
@@ -293,7 +294,8 @@ public class Markt extends AppCompatActivity {
 
                     intent.putExtra("Rohstoffname",name);
                     intent.putExtra("Kosten", kosten);
-                    intent.putExtra("RohstoffkostenK",kostenS);
+                    intent.putExtra("RohstoffkostenK",TitelS);
+                    intent.putExtra("RohstoffId", rohstoffId);
 
                     startActivity(intent);
                 }
@@ -310,7 +312,8 @@ public class Markt extends AppCompatActivity {
 
             final String name = lokaleHaendlerTxts.get(i).getText().toString();
             final String kosten = lokaleHaendlerButtons.get(i).getText().toString();
-            final String kostenS = "verkaufen";
+            final String TitelS = "verkaufen";
+            final int rohstoffId = i + 1;
             lokaleHaendlerButtons.get(i).setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
@@ -318,7 +321,8 @@ public class Markt extends AppCompatActivity {
 
                     intent.putExtra("Rohstoffname",name);
                     intent.putExtra("Kosten",kosten);
-                    intent.putExtra("RohstoffkostenK",kostenS);
+                    intent.putExtra("RohstoffkostenK",TitelS);
+                    intent.putExtra("RohstoffId", rohstoffId);
 
                     startActivity(intent);
                 }

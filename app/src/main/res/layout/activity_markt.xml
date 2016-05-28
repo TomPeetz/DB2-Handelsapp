@@ -136,12 +136,14 @@
         android:id="@+id/txtForschung"
         android:clickable="false"
         android:textColor="#f1fcead3"
-        android:textSize="15dp"
+        android:textSize="12dp"
         android:elegantTextHeight="false"
         android:textAlignment="center"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtProfil"
-        android:layout_alignEnd="@+id/txtProfil" />
+        android:layout_below="@+id/btnForschung"
+        android:layout_alignLeft="@+id/btnForschung"
+        android:layout_alignStart="@+id/btnForschung"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -195,6 +197,9 @@
                         android:layout_width="296dp"
                         android:layout_height="match_parent"
                         android:id="@+id/scrollView3" >
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
                         <TableLayout
                             android:layout_width="match_parent"
@@ -257,7 +262,7 @@
                                     android:id="@+id/txtGolderz"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -300,7 +305,7 @@
                                     android:id="@+id/txtKohle"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -342,7 +347,7 @@
                                     android:id="@+id/txtEisenerz"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -384,7 +389,7 @@
                                     android:id="@+id/txtBaumstamm"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -426,7 +431,7 @@
                                     android:id="@+id/txtStein"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -468,7 +473,7 @@
                                     android:id="@+id/txtLehm"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -510,7 +515,7 @@
                                     android:id="@+id/txtGetreide"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -552,7 +557,7 @@
                                     android:id="@+id/txtFisch"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -594,7 +599,7 @@
                                     android:id="@+id/txtFleisch"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -636,7 +641,7 @@
                                     android:id="@+id/txtWolle"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -678,7 +683,7 @@
                                     android:id="@+id/txtGoldbarren"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -720,7 +725,7 @@
                                     android:id="@+id/txtEisenbarren"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -762,7 +767,7 @@
                                     android:id="@+id/txtBrett"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -804,7 +809,7 @@
                                     android:id="@+id/txtZiegelstein"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -846,7 +851,7 @@
                                     android:id="@+id/txtMehl"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -888,7 +893,7 @@
                                     android:id="@+id/txtLeinen"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -930,7 +935,7 @@
                                     android:id="@+id/txtWaffen"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -972,7 +977,7 @@
                                     android:id="@+id/txtWerkzeuge"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -1014,7 +1019,7 @@
                                     android:id="@+id/txtFass"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -1056,7 +1061,7 @@
                                     android:id="@+id/txtBrot"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -1098,7 +1103,7 @@
                                     android:id="@+id/txtTuecher"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -1140,7 +1145,7 @@
                                     android:id="@+id/txtKleidung"
                                     android:layout_column="1"
                                     android:textColor="#f1fcead3"
-                                    android:textSize="15dp" />
+                                    android:textSize="13dp" />
 
                                 <Button
                                     style="?android:attr/buttonStyleSmall"
@@ -1164,7 +1169,9 @@
                             </TableRow>
 
                         </TableLayout>
+                        </HorizontalScrollView>
                     </ScrollView>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -1277,6 +1284,9 @@
                         android:layout_alignParentBottom="true"
                         android:layout_alignRight="@+id/btntransaktion"
                         android:layout_alignEnd="@+id/btntransaktion" >
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
                         <TableLayout
                             android:layout_width="match_parent"
@@ -1432,6 +1442,7 @@
                                     android:layout_marginLeft="10dp" />
                             </TableRow>
                         </TableLayout>
+                        </HorizontalScrollView>
                     </ScrollView>
                 </LinearLayout>
 
@@ -1466,6 +1477,8 @@
                         android:background="#aefad7a2"
                         android:textColor="#471d01" />
 
+
+
                     <ScrollView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1477,6 +1490,10 @@
                         android:layout_alignParentBottom="true"
                         android:layout_alignRight="@+id/btnSuchen"
                         android:layout_alignEnd="@+id/btnSuchen" >
+
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
                         <TableLayout
                             android:layout_width="match_parent"
@@ -1895,6 +1912,7 @@
 
                             </TableRow>
                         </TableLayout>
+                        </HorizontalScrollView>
                     </ScrollView>
                 </LinearLayout>
             </FrameLayout>
