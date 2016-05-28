@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.JsonResult;
 import com.example.darkayy.aueraaetas.webapi.API_Connection;
 import com.example.darkayy.aueraaetas.webapi.API_Exception;
 
@@ -63,8 +64,7 @@ public class Register extends AppCompatActivity {
                     params.add(email);
                     params.add(pwhash);
                     params.add(salt);
-
-                    ArrayList<String> result = null;
+                    JsonResult result = null;
                     try {
                         result = con.query(API_Connection.REGISTER, params);
                     } catch (API_Exception e) {

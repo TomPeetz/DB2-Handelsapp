@@ -1,5 +1,7 @@
 package com.example.darkayy.aueraaetas.webapi;
 
+import com.example.darkayy.aueraaetas.util.JsonResult;
+
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -11,13 +13,23 @@ import java.util.concurrent.FutureTask;
  */
 
 public class API_Connection {
-    public static final String APIKEY       = "5eaf0d52648bade4c52b50aa4fe8eb7e95b366f04207cc5f43be90049ec59de0";
-    public static final String LOGIN 		= "login.php/{?}/{?}/{?}";
-    public static final String GETSALT 		= "login.php/{?}/{?}";
-    public static final String REGISTER     = "player.php/new/{?}/{?}/{?}/{?}/{?}";
-    public static final String GETLAGER     = "lager.php/{?}/{?}";
+    public static final String APIKEY           = "5eaf0d52648bade4c52b50aa4fe8eb7e95b366f04207cc5f43be90049ec59de0";
+    public static final String LOGIN 		    = "login.php/{?}/{?}/{?}";
+    public static final String GETSALT 		    = "login.php/{?}/{?}";
+    public static final String REGISTER         = "player.php/new/{?}/{?}/{?}/{?}/{?}";
+    public static final String GETRESOURCES     = "lager.php/resources/{?}/{?}";
+    public static final String CHANGEAMOUNT     = "lager.php/changeamount/{?}/{?}/{?}/{?}";
+    public static final String GETMENGEN        = "lager.php/amount/{?}/{?}";
+    public static final String HIGHERGEBLVL        = "gebaeude.php/upgrade/{?}/{?}/{?}";
 
-    public ArrayList<String> query(final String TYPE, ArrayList<String> params) throws API_Exception{
+    /**
+     * Sendet eine Abfrage an die Webapi.
+     * @param TYPE Typ der Abfrage. Typen stehen als Static Variablen in der Klasse bereit.
+     * @param params Werte die übergeben werden sollen. Siehe https://ttheus.nunki.uberspace.de/webapi/src/public/ für Hilfe.
+     * @return JsonResult der Abfrage zur Weiterverarbeitung.
+     * @throws API_Exception Exception wenn Ergebnismenge leer. Geht leider nicht ganz...
+     */
+    public JsonResult query(final String TYPE, ArrayList<String> params) throws API_Exception{
         if(checkParams(TYPE,params)){
             String s  = TYPE;
 
@@ -28,11 +40,11 @@ public class API_Connection {
             API_Query query = new API_Query();
             query.prepareStatement(s);
 
-            FutureTask<ArrayList<String>> futureTask1 = new FutureTask<ArrayList<String>>(query);
+            FutureTask<JsonResult> futureTask1 = new FutureTask<JsonResult>(query);
             ExecutorService executor = Executors.newFixedThreadPool(1);
             executor.execute(futureTask1);
             try {
-                ArrayList<String> result = futureTask1.get();
+                JsonResult result = futureTask1.get();
                 if(result.size() == 0)
                     throw new API_Exception("Resultsize empty");
                 return result;
@@ -50,15 +62,15 @@ public class API_Connection {
                 e.printStackTrace();
             }
         }
-        return new ArrayList<String>();
+        return null;
     }
 
-    public ArrayList<String> query(final String TYPE, String[] params){
+    public JsonResult query(final String TYPE, String[] params){
         ArrayList<String> buff = new ArrayList<String>();
         for(int i = 0; i < params.length; i++){
             buff.add(params[i]);
         }
-        ArrayList<String> result = null;
+        JsonResult result = null;
         try {
             result = query(TYPE, buff);
         } catch (Exception e) {

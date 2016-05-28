@@ -5,6 +5,9 @@ package com.example.darkayy.aueraaetas;
     import android.os.Bundle;
     import android.view.View;
     import android.widget.ImageButton;
+    import android.widget.TextView;
+
+    import com.example.darkayy.aueraaetas.util.Playerdata;
 
 public class GameUi extends AppCompatActivity {
 
@@ -12,12 +15,14 @@ public class GameUi extends AppCompatActivity {
         ImageButton buttonL;
         ImageButton buttonG;
         ImageButton buttonM;
+        TextView    txtProfil;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_game_ui);
-
+            txtProfil=(TextView)findViewById(R.id.txtProfil);
+            txtProfil.setText(Playerdata.getUsername());
             buttonP=(ImageButton)findViewById(R.id.btnProfile);
             buttonP.setOnClickListener(new View.OnClickListener(){
                 @Override

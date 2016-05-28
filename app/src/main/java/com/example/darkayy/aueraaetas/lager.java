@@ -1,4 +1,4 @@
-package com.example.darkayy.aueraaetas;
+﻿package com.example.darkayy.aueraaetas;
 
 /**
  * Created by leoka on 22.05.2016.
@@ -20,12 +20,17 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
+import com.example.darkayy.aueraaetas.util.Playerdata;
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+import com.example.darkayy.aueraaetas.webapi.API_Exception;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 public class Lager extends AppCompatActivity {
-
+    String s = "[{\"Lager_Rohstoff_id\":\"1\",\"Rohstoffname\":\"Golderz\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"2\",\"Rohstoffname\":\"Kohle\",\"Menge\":\"300\"},{\"Lager_Rohstoff_id\":\"3\",\"Rohstoffname\":\"Eisenerz\",\"Menge\":\"2\"},{\"Lager_Rohstoff_id\":\"4\",\"Rohstoffname\":\"Baumstamm\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"5\",\"Rohstoffname\":\"Stein\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"6\",\"Rohstoffname\":\"Lehm\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"7\",\"Rohstoffname\":\"Getreide\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"8\",\"Rohstoffname\":\"Fisch\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"9\",\"Rohstoffname\":\"Fleisch\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"10\",\"Rohstoffname\":\"Wolle\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"11\",\"Rohstoffname\":\"Goldbarren\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"12\",\"Rohstoffname\":\"Eisenbarren\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"13\",\"Rohstoffname\":\"Brett\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"14\",\"Rohstoffname\":\"Ziegelstein\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"15\",\"Rohstoffname\":\"Mehl\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"16\",\"Rohstoffname\":\"Leinen\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"17\",\"Rohstoffname\":\"Waffen\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"18\",\"Rohstoffname\":\"Werkzeuge\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"19\",\"Rohstoffname\":\"Fass\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"20\",\"Rohstoffname\":\"Brot\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"21\",\"Rohstoffname\":\"T\\u00fccher\",\"Menge\":\"20\"},{\"Lager_Rohstoff_id\":\"22\",\"Rohstoffname\":\"Kleidung\",\"Menge\":\"5\"}]";
 
     ImageButton buttonP;
     ImageButton buttonL;
@@ -46,9 +51,10 @@ public class Lager extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lager);
-
-
-
+        System.out.println(s);
+        Lagerbestand.getLagerbestand();
+        fillMenge(Lagerbestand.getMengen());
+        fillLagerCounter(Lagerbestand.getMengen());
 
         buttonP = (ImageButton) findViewById(R.id.btnProfile);
         buttonP.setOnClickListener(new View.OnClickListener() {
@@ -104,11 +110,20 @@ public class Lager extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
     }
+    /* ToDo: Verbesserungsvorschlag für Später:
+             Buttons Dynamisch genieren anhand des Datenbankoutputs.
 
-    public void fillLager(ArrayList a) {
+             Button myButton = new Button(this);
+             myButton.setText("Push Me");
+
+             LinearLayout ll = (LinearLayout)findViewById(R.id.buttonlayout);
+             LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+             ll.addView(myButton, lp);
+
+             Tut mir leid Leo *wegduck* ;D
+     */
+    public void fillLager(ArrayList<Integer> a) {
         select = a;
         lagerG.add((TextView) findViewById(R.id.txtGolderz));
         lagerG.add((TextView) findViewById(R.id.txtGoldMenge));
@@ -172,17 +187,16 @@ public class Lager extends AppCompatActivity {
     /*
     Füllt einmal
      */
-
-    public void fillLagerCounter(ArrayList<String> a){
+    public void fillLagerCounter(ArrayList<Integer> a){
         int menge = 0;
         for(int i = 0; i < a.size(); i++){
-            menge += Integer.parseInt(a.get(i));
+            menge += a.get(i);
         }
         TextView txt = (TextView) findViewById(R.id.txtGroesse);
         txt.setText(menge + "/" + maxLagerGroesse);
     }
 
-    public void fillMenge(ArrayList a) {
+    public void fillMenge(ArrayList<Integer> a) {
         select = a;
         lager.add((TextView) findViewById(R.id.txtGoldMenge));
         lager.add((TextView) findViewById(R.id.txtKohleMenge));
@@ -215,6 +229,7 @@ public class Lager extends AppCompatActivity {
             for (int i = 0; i < lager.size(); i++) {
                 lager.get(i).setText(select.get(i).toString());
             }
+
         }
 
 
