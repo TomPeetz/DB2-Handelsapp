@@ -10,6 +10,10 @@ public class Gebaeude {
     String typ;
 
 
+
+    int level;
+
+
     public Gebaeude(int id, String name, String beschreibung, String typ, int baudauer, int produktionsdauer, int rohstoff_id_prodziert_gelagert) {
         this.id = id;
         this.name = name;
@@ -20,6 +24,13 @@ public class Gebaeude {
         this.rohstoff_id_prodziert_gelagert = rohstoff_id_prodziert_gelagert;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 
     public void setTyp(String typ) {
         this.typ = typ;
