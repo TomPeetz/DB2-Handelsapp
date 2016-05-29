@@ -26,6 +26,8 @@ public class API_Connection {
     public static final String GETBUYPRICE          = "market.php/npc/buy/{?}/{?}";
     public static final String GETSELLPRICE         = "market.php/npc/sell/{?}/{?}";
     public static final String UPDATERESOURCES      = "lager.php/update/{?}";
+    public static final String GETGEBAEUDE          = "gebaeude.php/{?}";
+    public static final String NEWGEBAEUDE          = "gebaeude.php/new/{?}/{?}/{?}";
 
     /**
      * Sendet eine Abfrage an die Webapi.
