@@ -23,10 +23,12 @@ public class UpdateLagerService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent workIntent) {
+        API_Connection con = new API_Connection();
         while(true){
+            con.query(API_Connection.UPDATERESOURCES, new String[]{Integer.toString(Playerdata.getId())});
             Lagerbestand.getLagerbestand();
             System.out.println("UPDATESERVICE: Lagerbestand geupdatet! Bis in 5 Minuten sheesh!" );
-            SystemClock.sleep(300000);
+            SystemClock.sleep(10000);
         }
     }
 }
