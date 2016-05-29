@@ -7,6 +7,7 @@ package com.example.darkayy.aueraaetas;
     import android.widget.ImageButton;
     import android.widget.TextView;
 
+    import com.example.darkayy.aueraaetas.util.Gebaeudeverwaltung;
     import com.example.darkayy.aueraaetas.util.Lagerbestand;
     import com.example.darkayy.aueraaetas.util.Playerdata;
     import com.example.darkayy.aueraaetas.util.Resource;
@@ -31,7 +32,7 @@ public class GameUi extends AppCompatActivity {
             setContentView(R.layout.activity_game_ui);
             txtProfil=(TextView)findViewById(R.id.txtProfil);
             //ToDo: Findet aus irgendeinem Grund die TextViews nicht ;( Hab aber auch nie Glück...
-
+            Lagerbestand.getLagerbestand();
             nahrung = (TextView)findViewById(R.id.txtrohstoff00);
             stein = (TextView)findViewById(R.id.txtrohstoff10);
             gold = (TextView)findViewById(R.id.txtrohstoff01);
@@ -98,6 +99,7 @@ public class GameUi extends AppCompatActivity {
 
                 }
             });
+            Gebaeudeverwaltung.getGebaeude();
         }
     }
 

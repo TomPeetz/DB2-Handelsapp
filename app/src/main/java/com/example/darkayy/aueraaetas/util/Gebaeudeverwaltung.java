@@ -10,11 +10,12 @@ import java.util.ArrayList;
  */
 public class Gebaeudeverwaltung {
     private static ArrayList<Gebaeude> gebaeude = new ArrayList<Gebaeude>();
+    private static ArrayList<Besitz> besitz = new ArrayList<Besitz>();
 
     public static void getGebaeude() {
         API_Connection con = new API_Connection();
         JsonResult result = con.query(API_Connection.GETGEBAEUDE, new String[]{API_Connection.APIKEY});
-        String[] exp = {"ID", "Name", "Beschreibung", "Typ", "Baudauer", "Produktionsdauer", "RohstoffID"};
+        String[] exp = {"Gebaeude_id", "Name", "Beschreibung", "Typ", "Baudauer", "Produktionsdauer", "gelagert"};
         gebaeude.clear();
         while(!result.isEmpty()) {
             ArrayList<String> r = result.parseResult(exp);
@@ -27,12 +28,56 @@ public class Gebaeudeverwaltung {
                                         Integer.parseInt(r.get(6)));
             gebaeude.add(geb);
         }
+        for(Gebaeude g:gebaeude){
+            System.out.println("GEBAEUDEVERWALTUNG: " + g.getName());
+        }
     }
 
-    public static void geb4PlayerAnlegen(int playerID) {
+    public static void getBesitz(){
+        API_Connection con = new API_Connection();
+        String id =  ""+Playerdata.getId();
+        String[] params = {API_Connection.APIKEY, id};
+        JsonResult res = con.query(API_Connection.GETBESITZ, params);
+        String[] exp = {"id", "level"};
+        besitz.clear();
+        while(!res.isEmpty()) {
+            ArrayList<String> r = res.parseResult(exp);
+            Besitz b = new Besitz(Integer.parseInt(r.get(0)), Integer.parseInt(r.get(1)));
+            besitz.add(b);
+        }
+    }
+
+    public static void produziereRohstoffe(int time){
+        for(Besitz b:besitz){
+            Gebaeude g = findBuilding(b.getId());
+            if(g != null){
+                if(time == 0){
+                    if(g.getProduktionsdauer() == 900){
+                        int rohstoffid = g.rohstoff_id_prodziert_gelagert;
+                        Lagerbestand.changeAmount(rohstoffid, 1);
+                    }
+                } else {
+                    int rohstoffid = g.rohstoff_id_prodziert_gelagert;
+                    Lagerbestand.changeAmount(rohstoffid, 1);
+                }
+            }
+        }
+    }
+
+    private static Gebaeude findBuilding(int id){
+        for(Gebaeude g : gebaeude){
+            if(g.getId() == id){
+                return g;
+            }
+        }
+        return null;
+    }
+
+    public static void geb4PlayerAnlegen() {
+        Gebaeudeverwaltung.getGebaeude();
         API_Connection con = new API_Connection();
         for (Gebaeude geb: gebaeude) {
-            con.query(API_Connection.NEWGEBAEUDE, new String[]{API_Connection.APIKEY, Integer.toString(playerID),Integer.toString(geb.getId())});
+            con.query(API_Connection.NEWGEBAEUDE, new String[]{API_Connection.APIKEY, Integer.toString(Playerdata.getId()),Integer.toString(geb.getId())});
         }
     }
 }

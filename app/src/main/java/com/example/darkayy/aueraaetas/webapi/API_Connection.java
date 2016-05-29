@@ -14,21 +14,23 @@ import java.util.concurrent.FutureTask;
 
 public class API_Connection {
     public static final String APIKEY               = "5eaf0d52648bade4c52b50aa4fe8eb7e95b366f04207cc5f43be90049ec59de0";
-    public static final String LOGIN 		        = "login.php/{?}/{?}/{?}";
-    public static final String GETSALT 		        = "login.php/{?}/{?}";
-    public static final String REGISTER             = "player.php/new/{?}/{?}/{?}/{?}/{?}";
-    public static final String GETRESOURCES         = "lager.php/resources/{?}/{?}";
-    public static final String CHANGEAMOUNT         = "lager.php/changeamount/{?}/{?}/{?}/{?}";
-    public static final String GETMENGEN            = "lager.php/amount/{?}/{?}";
-    public static final String GETMARKETTIME        = "lager.php/time/get/{?}/{?}";
-    public static final String SETMARKETTIME        = "lager.php/time/set/{?}/{?}";
-    public static final String HIGHERGEBLVL         = "gebaeude.php/upgrade/{?}/{?}/{?}/{?}";
-    public static final String GETBUYPRICE          = "market.php/npc/buy/{?}/{?}";
-    public static final String GETSELLPRICE         = "market.php/npc/sell/{?}/{?}";
-    public static final String UPDATERESOURCES      = "lager.php/update/{?}";
-    public static final String GETGEBAEUDE          = "gebaeude.php/{?}";
-    public static final String NEWGEBAEUDE          = "gebaeude.php/new/{?}/{?}/{?}";
-
+    public static final String LOGIN 		        = "login.php/";
+    public static final String GETSALT 		        = "login.php/";
+    public static final String REGISTER             = "player.php/new/";
+    public static final String GETRESOURCES         = "lager.php/resources/";
+    public static final String CHANGEAMOUNT         = "lager.php/changeamount/";
+    public static final String GETMENGEN            = "lager.php/amount/";
+    public static final String GETMARKETTIME        = "lager.php/time/get";
+    public static final String SETMARKETTIME        = "lager.php/time/set/";
+    public static final String HIGHERGEBLVL         = "gebaeude.php/upgrade/";
+    public static final String GETBUYPRICE          = "market.php/npc/buy/";
+    public static final String GETSELLPRICE         = "market.php/npc/sell/";
+    public static final String UPDATERESOURCES      = "lager.php/update/";
+    public static final String GETGEBAEUDE          = "gebaeude.php/";
+    public static final String NEWGEBAEUDE          = "gebaeude.php/new/";
+    public static final String PWGEN                = "player.php/pwgen/";       //APIKEY - PW - SALT
+    public static final String NEWRESOURCE          = "lager.php/new/";
+    public static final String GETBESITZ            = "gebaeude.php/besitz/";
     /**
      * Sendet eine Abfrage an die Webapi.
      * @param TYPE Typ der Abfrage. Typen stehen als Static Variablen in der Klasse bereit.
@@ -37,13 +39,16 @@ public class API_Connection {
      * @throws API_Exception Exception wenn Ergebnismenge leer. Geht leider nicht ganz...
      */
     public JsonResult query(final String TYPE, ArrayList<String> params) throws API_Exception{
-        if(checkParams(TYPE,params)){
             String s  = TYPE;
 
-
+            System.out.println("Parameterliste: " + params.size());
+            int count = 0;
             for(String x: params){
-                s = s.replaceFirst("\\{\\?\\}", x);
+                //s = s.replaceFirst("\\{\\?\\}", x);
+                s = s + x + "/";
             }
+            s = s.substring(0, s.length()-1);
+            System.out.println(s);
             API_Query query = new API_Query();
             query.prepareStatement(s);
 
@@ -62,13 +67,6 @@ public class API_Connection {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
-            try {
-                throw new Exception("Parameter Liste falsch!");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
         return null;
     }
 

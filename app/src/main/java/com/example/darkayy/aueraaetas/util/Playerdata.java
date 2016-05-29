@@ -33,7 +33,12 @@ public class Playerdata {
             result = con.query(API_Connection.GETSALT, params);
             String[] exp = {"Salt"};
             ArrayList<String> salt = result.parseResult(exp);
-            String hash = generateSHA256Hash(pw + salt.get(0));
+            String[] par = {API_Connection.APIKEY, pw, salt.get(0)};
+            result = con.query(API_Connection.PWGEN, par);
+            String[] exp3 = {"pw", "salt"};
+            ArrayList<String> pwhash = result.parseResult(exp3);
+            String hash = pwhash.get(0);
+            System.out.println("PLAYERDATA: " + username + ", " + pw + ", " + salt.get(0) + ", " + hash );
             params.add(hash);
             result = con.query(API_Connection.LOGIN, params);
             String[] exp2 = {"id", "name", "email", "passw", "salt", "login", "gesperrt", "picture"};
@@ -53,12 +58,13 @@ public class Playerdata {
         return false;
     }
 
-    private static String generateSHA256Hash(String text){
+    public static String generateSHA256Hash(String text){
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(text.getBytes("UTF-8"));
             byte[] digest = md.digest();
             String pwhash = String.format("%064x", new java.math.BigInteger(1, digest));
+            System.out.println("PW GENERATED: " + pwhash);
             return pwhash;
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();

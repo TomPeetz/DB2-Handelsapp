@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Gebaeudeverwaltung;
 import com.example.darkayy.aueraaetas.util.JsonResult;
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
+import com.example.darkayy.aueraaetas.util.Playerdata;
 import com.example.darkayy.aueraaetas.webapi.API_Connection;
 import com.example.darkayy.aueraaetas.webapi.API_Exception;
 
@@ -52,10 +55,10 @@ public class Register extends AppCompatActivity {
 
                     String name = accountname.getText().toString();
                     String email = email1.getText().toString();
-                    String salt = generateSalt();
-                    String pwhash = generateHash(pw1.getText().toString() + salt);
-
-                    System.out.println(name + ", " + email + ", " + pwhash + ", " + salt);
+                    String klarpw = pw1.getText().toString();
+                    String[] pwsalt = generateSaltAndPW(klarpw);
+                    String salt = pwsalt[1];
+                    String pwhash = pwsalt[0];
                     ArrayList<String> params = new ArrayList<String>();
                     API_Connection con = new API_Connection();
 
@@ -66,41 +69,36 @@ public class Register extends AppCompatActivity {
                     params.add(salt);
                     JsonResult result = null;
                     try {
+                        System.out.print("REGISTER: Regestriere - Spieledaten: " );
+                        for(String s: params){
+                            System.out.print(s + ", ");
+                        }
                         result = con.query(API_Connection.REGISTER, params);
                     } catch (API_Exception e) {
                         textview.setText("Benutzername/E-Mail bereits registriert!");
                         textview.setVisibility(View.VISIBLE);
                         e.printStackTrace();
                     }
-                    if(result.size() != 0){
-                        Intent i = new Intent(getApplicationContext(), Login.class);
-                        startActivity(i);
+                    System.out.println("REGISTER: " + name + ", " + pw1.getText().toString());
+                    if(Playerdata.login(name,klarpw)){
+                        Gebaeudeverwaltung.geb4PlayerAnlegen();
+                        if(Lagerbestand.createResources()){
+                            startService(new Intent(getApplicationContext(), UpdateLagerService.class));
+                            Intent i = new Intent(getApplicationContext(), GameUi.class);
+                            startActivity(i);
+                        }
                     }
                 }
             }
         });
     }
-    private String generateSalt(){
-        final Random r = new SecureRandom();
-        byte[] salt = new byte[32];
-        r.nextBytes(salt);
-        String encodedSalt = Base64.encodeToString(salt, Base64.DEFAULT);
-        encodedSalt = encodedSalt.replaceAll("/","a");
-        return encodedSalt;
-    }
-    private  String generateHash(String pw){
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            md.update(pw.getBytes("UTF-8"));
-            byte[] digest = md.digest();
-            //Formatieren
-            String pwhash = String.format("%064x", new java.math.BigInteger(1, digest));
-            return pwhash;
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException u){
-            u.printStackTrace();
-        }
-        return null;
+    private String[] generateSaltAndPW(String pw){
+        API_Connection con = new API_Connection();
+        String[] params = {API_Connection.APIKEY, pw, "NULL"};
+        JsonResult result = con.query(API_Connection.PWGEN, params);
+        String[] exp = {"pw","salt"};
+        ArrayList<String> res = result.parseResult(exp);
+        String[] pwhash = {res.get(0), res.get(1)};
+        return pwhash;
     }
 }

@@ -54,6 +54,7 @@ public class Lagerbestand {
     }
 
     private static void updateTime(){
+        /*
         API_Connection con = new API_Connection();
         ArrayList<String> params = new ArrayList<String>();
         params.add(API_Connection.APIKEY);
@@ -65,6 +66,7 @@ public class Lagerbestand {
         } catch (API_Exception e) {
             e.printStackTrace();
         }
+        */
     }
 
     /**
@@ -153,5 +155,13 @@ public class Lagerbestand {
         amount = (fleisch.getMenge() * 1) + (fisch.getMenge() * 2) + (brot.getMenge() * 3);
         System.out.println("LAGERBESTAND: Menge Nahrung errechnet... Menge: " + amount );
         return amount;
+    }
+
+    public static boolean createResources(){
+        API_Connection con = new API_Connection();
+        String id = ""+Playerdata.getId();
+        String[] params = {API_Connection.APIKEY, id};
+        JsonResult res = con.query(API_Connection.NEWRESOURCE, params);
+        return res.isEmpty() == false;
     }
 }
