@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Playerdata;
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+
 /**
  * Created by leoka on 22.05.2016.
  */
@@ -55,7 +58,8 @@ public class Pop extends Activity{
 
             @Override
             public void onClick(View v) {
-
+                API_Connection con = new API_Connection();
+                con.query(API_Connection.HIGHERGEBLVL, new String[]{Integer.toString(Playerdata.getId()), "Lager", Integer.toString(picker.getValue())});
             }
         });
     }

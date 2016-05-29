@@ -22,7 +22,7 @@ public class API_Connection {
     public static final String GETMENGEN            = "lager.php/amount/{?}/{?}";
     public static final String GETMARKETTIME        = "lager.php/time/get/{?}/{?}";
     public static final String SETMARKETTIME        = "lager.php/time/set/{?}/{?}";
-    public static final String HIGHERGEBLVL         = "gebaeude.php/upgrade/{?}/{?}/{?}";
+    public static final String HIGHERGEBLVL         = "gebaeude.php/upgrade/{?}/{?}/{?}/{?}";
     public static final String GETBUYPRICE          = "market.php/npc/buy/{?}/{?}";
     public static final String GETSELLPRICE         = "market.php/npc/sell/{?}/{?}";
 
