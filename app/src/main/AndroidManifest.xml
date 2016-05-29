@@ -26,7 +26,6 @@
         <activity android:name=".Gebaude" />
         <activity android:name=".GameUi" />
         <activity android:name=".Markt" />
-        <activity android:name=".AngeboteSuchen" />
 
         <activity android:name=".Pop"
             android:theme="@style/AppTheme.CustomTheme"></activity>
