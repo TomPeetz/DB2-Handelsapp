@@ -55,5 +55,10 @@ public class PopGebaeude extends Activity {
     protected void buyGebaeude(String name) {
         API_Connection con = new API_Connection();
         con.query(API_Connection.HIGHERGEBLVL, new String[]{Integer.toString(Playerdata.getId()), name, "1"});
+        try {
+            this.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
     }
 }

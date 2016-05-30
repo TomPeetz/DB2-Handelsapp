@@ -12,7 +12,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"

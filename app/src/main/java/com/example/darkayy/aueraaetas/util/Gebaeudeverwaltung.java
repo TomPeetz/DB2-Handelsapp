@@ -12,6 +12,10 @@ public class Gebaeudeverwaltung {
     private static ArrayList<Gebaeude> gebaeude = new ArrayList<Gebaeude>();
     private static ArrayList<Besitz> besitz = new ArrayList<Besitz>();
 
+    public static ArrayList<Gebaeude> getGebaeudeList() {
+        return gebaeude;
+    }
+
     public static void getGebaeude() {
         API_Connection con = new API_Connection();
         JsonResult result = con.query(API_Connection.GETGEBAEUDE, new String[]{API_Connection.APIKEY});

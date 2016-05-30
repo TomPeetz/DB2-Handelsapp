@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Gebaeude;
+import com.example.darkayy.aueraaetas.util.Gebaeudeverwaltung;
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -75,7 +79,7 @@ public class Gebaude extends AppCompatActivity {
             }
         });
 
-        btnPopup=(Button)findViewById(R.id.btnGoldmine);
+        /*btnPopup=(Button)findViewById(R.id.btnGoldmine);
         btnPopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +88,7 @@ public class Gebaude extends AppCompatActivity {
                 startActivity(i);
 
             }
-        });
+        });*/
 
         buttonH=(ImageButton)findViewById(R.id.btnHome);
         buttonH.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +101,12 @@ public class Gebaude extends AppCompatActivity {
         });
 
         fillArrays();
-        //setBtns(infos);
+        ArrayList<String> gebInfos = new ArrayList<String>();
+        ArrayList<Gebaeude> gebaeude = Gebaeudeverwaltung.getGebaeudeList();
+        for (Gebaeude g: gebaeude) {
+            gebInfos.add(g.getBeschreibung());
+        }
+        setBtns(gebInfos);
 
 
     }
