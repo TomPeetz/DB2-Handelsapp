@@ -1,7 +1,9 @@
 package com.example.darkayy.aueraaetas;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -52,13 +54,10 @@ public class PopGebaeude extends Activity {
         });
     }
 
+
     protected void buyGebaeude(String name) {
         API_Connection con = new API_Connection();
         con.query(API_Connection.HIGHERGEBLVL, new String[]{Integer.toString(Playerdata.getId()), name, "1"});
-        try {
-            this.finalize();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
+
     }
 }
