@@ -71,7 +71,7 @@ public class PopUpMarktLokaleHaendler extends Activity{
         } catch (API_Exception e) {
             e.printStackTrace();
         }
-        //Kaufen oder verkaufen für die Logik
+        //Kaufen oder verkaufen f?r die Logik
 
 
         int rohstoffID = i.getIntExtra("RohstoffId", 1);
@@ -83,15 +83,15 @@ public class PopUpMarktLokaleHaendler extends Activity{
         wollenSie.setText("Wollen Sie 1" + rohstoffname);
 
         TextView fuerKaufen = (TextView)findViewById(R.id.txtFuerGoldKaufen);
-        fuerKaufen.setText("für " + kosten + " " + rohstoffkostenS + "?");
+        fuerKaufen.setText("f?r " + kosten + " " + rohstoffkostenS + "?");
 
         btnJa = (Button)findViewById(R.id.btnerweitern);
         btnJa.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 //Update Lager mit Rohstoff Id
-                //ToDo: Warum zur HÖLLE findet er den Rohstoff nicht xD!
-                //Antwort: Lager war nicht geupdatet ich fühle mich doof....
+                //ToDo: Warum zur H?LLE findet er den Rohstoff nicht xD!
+                //Antwort: Lager war nicht geupdatet ich f?hle mich doof....
 
                 System.out.println("Testabruf: " + Lagerbestand.getRohstoff(1).getName());
                 int id = Lagerbestand.getRohstoff(rohstoffname).getId();
@@ -107,14 +107,14 @@ public class PopUpMarktLokaleHaendler extends Activity{
                         JsonResult res = con.query(API_Connection.GETBUYPRICE, params);
                         String[] exp = {"preis"};
                         int preis = -1*Integer.parseInt(res.parseResult(exp).get(0));
-                        System.out.println("Kaufe: " + other.getName() + " für " + preis + " Goldbarren");
+                        System.out.println("Kaufe: " + other.getName() + " f?r " + preis + " Goldbarren");
                         Lagerbestand.changeAmount(gold.getId(), preis);
                         Lagerbestand.changeAmount(other.getId(), 1);
                     } else {
                         JsonResult res = con.query(API_Connection.GETSELLPRICE, params);
                         String[] exp = {"preis"};
                         int preis = Integer.parseInt(res.parseResult(exp).get(0));
-                        System.out.println("Verkaufe: " + other.getName() + " für " + preis + " Goldbarren");
+                        System.out.println("Verkaufe: " + other.getName() + " f?r " + preis + " Goldbarren");
                         Lagerbestand.changeAmount(gold.getId(), preis);
                         Lagerbestand.changeAmount(other.getId(), -1);
                     }

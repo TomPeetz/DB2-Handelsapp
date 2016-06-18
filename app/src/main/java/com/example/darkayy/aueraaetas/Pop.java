@@ -39,7 +39,7 @@ public class Pop extends Activity{
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width *.7),(int)(height*.7));
+        getWindow().setLayout((int)(width *.9),(int)(height*.9));
 
         btnPreis = (Button)findViewById(R.id.btnPreisErrechnen);
         btnPreis.setOnClickListener(new View.OnClickListener(){

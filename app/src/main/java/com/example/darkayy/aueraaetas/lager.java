@@ -108,7 +108,7 @@ public class Lager extends AppCompatActivity {
             }
         });
     }
-    /* ToDo: Verbesserungsvorschlag für Später:
+    /* ToDo: Verbesserungsvorschlag fÃ¼r SpÃ¤ter:
              Buttons Dynamisch genieren anhand des Datenbankoutputs.
 
              Button myButton = new Button(this);
@@ -182,7 +182,7 @@ public class Lager extends AppCompatActivity {
 
 
     /*
-    Füllt einmal
+    FÃ¼llt einmal
      */
     public void fillLagerCounter(ArrayList<Integer> a){
         int menge = 0;

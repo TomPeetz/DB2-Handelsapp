@@ -11,4 +11,5 @@
     <string name="repeat">Re</string>
     <string name="errorExistingUser">User existiert bereits!</string>
     <string name="errorWrongPasswordOrUsername">Falsches Passwort/Username</string>
+    <string name="title_activity_emp">emp</string>
 </resources>
