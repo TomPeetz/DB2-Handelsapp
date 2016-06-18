@@ -12,6 +12,7 @@ public class Lagerbestand {
     private static ArrayList<Resource> resources = new ArrayList<Resource>();
 
     /**
+
      * Gleicht den Lagerbestand mit der Datenbank ab.
      */
     public static void getLagerbestand(){
@@ -163,5 +164,9 @@ public class Lagerbestand {
         String[] params = {API_Connection.APIKEY, id};
         JsonResult res = con.query(API_Connection.NEWRESOURCE, params);
         return res.isEmpty() == false;
+    }
+
+    public static ArrayList<Resource> getResources() {
+        return resources;
     }
 }

@@ -6,12 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.JsonResult;
+import com.example.darkayy.aueraaetas.util.Lagerbestand;
+import com.example.darkayy.aueraaetas.util.Playerdata;
+import com.example.darkayy.aueraaetas.util.Resource;
+import com.example.darkayy.aueraaetas.webapi.API_Connection;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Markt extends AppCompatActivity {
@@ -21,6 +30,13 @@ public class Markt extends AppCompatActivity {
     private ImageButton buttonG;
     private ImageButton buttonM;
     private ImageButton buttonH;
+
+    //Transaktion erstellen
+    private Spinner spinner;
+    private Spinner spinner2;
+    private EditText editText;
+    private EditText editText2;
+    private Button btn;
 
     private ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
     private ArrayList<Button> lokaleHaendlerButtonsEk = new ArrayList<Button>();
@@ -112,15 +128,95 @@ public class Markt extends AppCompatActivity {
             }
         });
 
+        spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayList<String> list2 = new ArrayList<String>();
+        ArrayList<Resource> list = Lagerbestand.getResources();
+        for(int i = 0; i < list.size(); i ++){
+            list2.add(list.get(i).getName());
+        }
+        ArrayAdapter<String> adp2=new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,list2);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adp2);
+
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
+
+        ArrayAdapter<String> adp1=new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,list2);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adp1);
+
+
         fillArrays();
 
         transaktion = (Button)findViewById(R.id.btnTransaktionVeroeffentlichen);
         transaktion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                transaktionBtnSet("hansWurst");
+                int rohstoffBiete = Lagerbestand.getRohstoff(spinner.getSelectedItem().toString()).getId();
+                int rohstoffMoechte = Lagerbestand.getRohstoff(spinner2.getSelectedItem().toString()).getId();
+
+                editText = (EditText)findViewById(R.id.editTextMengeBieteAn);
+                editText2 = (EditText)findViewById(R.id.editTextMoechte);
+
+                String mengeBieteAn = editText.getText().toString();
+                String mengeMoechte = editText2.getText().toString();
+
+                System.out.println(rohstoffBiete + "  " + rohstoffMoechte);
+
+                if(Lagerbestand.getRohstoff(rohstoffBiete).getMenge() < Integer.parseInt(mengeBieteAn)){
+                    Intent i = new Intent(getApplicationContext(), PopupKevin.class);
+                    startActivity(i);
+                }
+
+                API_Connection con = new API_Connection();
+                String [] s = {API_Connection.APIKEY, "" + Playerdata.getId(), "" + rohstoffBiete, "" +rohstoffMoechte, mengeBieteAn, mengeMoechte};
+                JsonResult res = con.query(API_Connection.TRANSAKTIONVEROEFFENTLICHEN, s);
+                System.out.println(res.isEmpty());
+                con.query(API_Connection.TRANSAKTIONVEROEFFENTLICHEN, s);
+
+                setAngeboteSuchenText();
             }
         });
+
+
+        API_Connection con2 = new API_Connection();
+        String [] s = {API_Connection.APIKEY, "" + Playerdata.getId()};
+        con2.query(API_Connection.GETTRANSAKTION, s);
+
+        JsonResult res = con2.query(API_Connection.GETTRANSAKTION, s);
+        if(res == null){
+            System.out.println("Keine Transaktionen vorhanden");
+        }
+        String[] exp1 = {"Transaktion_id"};
+        ArrayList<String> result = new ArrayList<String>();
+        while(!res.isEmpty()) {
+            result.add(res.parseResult(exp1).toString());
+        }
+
+        res = con2.query(API_Connection.GETTRANSAKTION, s);
+        String[] exp = {"Spieler_ID_Verkaeufer"};
+        ArrayList<String> result1 = new ArrayList<String>();
+        while(!res.isEmpty()) {
+            result1.add(res.parseResult(exp).toString());
+        }
+
+        for(int i = 0; i < angeboteSuchenRohstoff.size(); i++){
+            final String temp = result.get(i);
+            final String temp2 = result1.get(i);
+            angeboteSuchenBtns.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), PopupMarkt.class);
+                    i.putExtra("ID", temp);
+                    i.putExtra("SpielerID", temp2);
+                    startActivity(i);
+                }
+            });
+
+        }
+
+
 
         setLokaleHaendlerButtonsEk();
         setLokaleHaendlerButtonsVk();
@@ -245,65 +341,89 @@ public class Markt extends AppCompatActivity {
 
     }
 
-    public void transaktionBtnSet(final String spielerName){
-
-        TextView name = angeboteSuchenName.get(counter);
-        TextView rohstoff = angeboteSuchenRohstoff.get(counter);
-
-       Button preis = angeboteSuchenBtns.get(counter);
+    public void setAngeboteSuchenText(){
 
 
-                EditText rohstoffAngebot = (EditText)findViewById(R.id.editTextBieteAn);
-                EditText mengeAngebot = (EditText)findViewById(R.id.editTextMengeBieteAn);
-                EditText rohstoffFord = (EditText)findViewById(R.id.editTextRohstoffMochteHaben);
-                EditText mengeFord = (EditText)findViewById(R.id.editMochteHaben);
-                name.setText(spielerName);
-                String temp1 = mengeAngebot.getText().toString() + " " + rohstoffAngebot.getText();
-                rohstoff.setText(temp1);
-                String temp = mengeFord.getText().toString() + " " +  rohstoffFord.getText();
-                preis.setText(temp);
+        API_Connection con2 = new API_Connection();
+        String [] s = {API_Connection.APIKEY, "" + Playerdata.getId()};
 
-                rohstoffAngebot.setText("");
-                mengeAngebot.setText("");
-                rohstoffFord.setText("");
-                mengeFord.setText("");
 
-        if( counter == 7){
-            counter = 0;
-        }
-        else{
-            counter += 1;
+        con2.query(API_Connection.GETTRANSAKTION, s);
+        JsonResult res = con2.query(API_Connection.GETTRANSAKTION, s);
+        System.out.println(res.isEmpty());
+
+        String[] exp = {"Spieler_ID_Verkaeufer"};
+        ArrayList<String> result1 = new ArrayList<String>();
+        while(!res.isEmpty()) {
+            result1.add(res.parseResult(exp).toString());
         }
 
+        res = con2.query(API_Connection.GETTRANSAKTION, s);
+        if(res == null){
+            System.out.println("Keine Transaktionen vorhanden");
+        }
+        String[] exp1 = {"Rohstoff_ID_Angebot"};
+        ArrayList<String> result2 = new ArrayList<String>();
+        while(!res.isEmpty()) {
+            result1.add(res.parseResult(exp1).toString());
+        }
+
+        res = con2.query(API_Connection.GETTRANSAKTION, s);
+        if(res == null){
+            System.out.println("Keine Transaktionen vorhanden");
+        }
+        String[] exp2 = {"Rohstoff_ID_Gefordert"};
+        ArrayList<String> result3 = new ArrayList<String>();
+        while(!res.isEmpty()) {
+            result1.add(res.parseResult(exp2).toString());
+        }
+
+        res = con2.query(API_Connection.GETTRANSAKTION, s);
+        if(res == null){
+            System.out.println("Keine Transaktionen vorhanden");
+        }
+        String[] exp3 = {"Gefordert_Menge"};
+        ArrayList<String> result4 = new ArrayList<String>();
+        while(!res.isEmpty()) {
+            result1.add(res.parseResult(exp3).toString());
+        }
+
+        for(int i = 0 ; i< result1.size(); i++){
+            angeboteSuchenName.get(i).setText(result1.get(i));
+        }
+        for(int i = 0 ; i< result3.size(); i++){
+            angeboteSuchenBtns.get(i).setText(result3.get(i));
+        }
+        for(int i = 0 ; i< result4.size(); i++){
+            angeboteSuchenRohstoff.get(i).setText(" " + result4.get(i) +
+                        Lagerbestand.getRohstoff(Integer.parseInt(result2.get(i))).getName());
+        }
 
 
     }
 
     public void setLokaleHaendlerButtonsEk(){
 
-        for(int i = 0; i < lokaleHaendlerButtonsEk.size(); i ++){
+        for(int i = 0; i < lokaleHaendlerButtonsEk.size(); i ++) {
 
             final String name = lokaleHaendlerTxts.get(i).getText().toString();
             final String kosten = lokaleHaendlerButtonsEk.get(i).getText().toString();
             final String TitelS = "kaufen";
             final int rohstoffId = i + 1;
-            lokaleHaendlerButtonsEk.get(i).setOnClickListener(new View.OnClickListener(){
+            lokaleHaendlerButtonsEk.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), PopUpMarktLokaleHaendler.class);
 
-                    intent.putExtra("Rohstoffname",name);
+                    intent.putExtra("Rohstoffname", name);
                     intent.putExtra("Kosten", kosten);
-                    intent.putExtra("RohstoffkostenK",TitelS);
+                    intent.putExtra("RohstoffkostenK", TitelS);
                     intent.putExtra("RohstoffId", rohstoffId);
 
                     startActivity(intent);
                 }
             });
         }
-
-
-
     }
 
     public void setLokaleHaendlerButtonsVk(){

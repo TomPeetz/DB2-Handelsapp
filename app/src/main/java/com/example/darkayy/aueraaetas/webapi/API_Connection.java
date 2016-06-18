@@ -31,6 +31,9 @@ public class API_Connection {
     public static final String PWGEN                = "player.php/pwgen/";       //APIKEY - PW - SALT
     public static final String NEWRESOURCE          = "lager.php/new/";
     public static final String GETBESITZ            = "gebaeude.php/besitz/";
+    public static final String TRANSAKTIONVEROEFFENTLICHEN = "market.php/market/new/";
+    public static final String GETTRANSAKTION       = "market.php/market/get/";
+    public static final String BUY                  = "market.php/market/buy/";
     /**
      * Sendet eine Abfrage an die Webapi.
      * @param TYPE Typ der Abfrage. Typen stehen als Static Variablen in der Klasse bereit.

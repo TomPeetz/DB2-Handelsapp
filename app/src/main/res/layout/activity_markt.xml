@@ -1179,40 +1179,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Biete an:"
-                        android:id="@+id/txtBieteAn"
-                        android:layout_alignParentTop="true"
+                        android:id="@+id/txtbieteAn"
+                        android:clickable="false"
+                        android:textColor="#f1fcead3"
+                        android:textSize="15dp"
+                        android:elegantTextHeight="false"
+                        android:textAlignment="center"
+                        android:layout_below="@+id/textView2"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:textColor="#f1fcead3" />
+                        android:layout_marginTop="10dp" />
 
-                    <EditText
+                    <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editTextBieteAn"
-                        android:hint="Rohstoffname"
-                        android:textColor="#f1fcead3"
-                        android:layout_below="@+id/txtBieteAn"
+                        android:id="@+id/spinner"
+                        android:layout_below="@+id/txtbieteAn"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
+                        android:layout_alignParentStart="true"
+                        android:background="#ffe5c7"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="70dp" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:inputType="numberSigned"
                         android:ems="10"
                         android:id="@+id/editTextMengeBieteAn"
+                        android:layout_marginTop="10dp"
                         android:hint="Menge"
-                        android:textColor="#f1fcead3"
-                        android:layout_alignTop="@+id/editText8"
-                        android:layout_toRightOf="@+id/editText8"
-                        android:maxWidth="60dp"
-                        android:layout_marginRight="80dp" />
+                        android:layout_below="@+id/txtMoechteHaben"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1220,35 +1225,39 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Möchte haben:"
                         android:id="@+id/txtMoechteHaben"
-                        android:layout_marginTop="20dp"
+                        android:clickable="false"
                         android:textColor="#f1fcead3"
-                        android:layout_below="@+id/editText8"
+                        android:textSize="15dp"
+                        android:elegantTextHeight="false"
+                        android:textAlignment="center"
+                        android:layout_below="@+id/spinner"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="30dp" />
 
-                    <EditText
+
+
+                    <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editTextRohstoffMochteHaben"
-                        android:hint="Rohstoffname"
-                        android:textColor="#f1fcead3"
+                        android:id="@+id/spinner2"
+                        android:background="#ffe5c7"
                         android:layout_below="@+id/txtMoechteHaben"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="70dp" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:inputType="numberSigned"
                         android:ems="10"
-                        android:id="@+id/editMochteHaben"
+                        android:id="@+id/editTextMoechte"
                         android:hint="Menge"
-                        android:textColor="#f1fcead3"
-                        android:maxWidth="60dp"
-                        android:layout_below="@+id/txtMoechteHaben"
-                        android:layout_toRightOf="@+id/editText10"
-                        android:layout_toEndOf="@+id/editText10"
-                        android:layout_marginRight="80dp" />
+                        android:layout_below="@+id/spinner2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
@@ -1256,194 +1265,15 @@
                         android:layout_height="wrap_content"
                         android:text="Transaktion veröffentlichen"
                         android:id="@+id/btnTransaktionVeroeffentlichen"
-                        android:layout_below="@+id/editText11"
-                        android:layout_alignRight="@+id/editText11"
-                        android:layout_alignEnd="@+id/editText11"
-                        android:textColor="#471d01"
-                        android:background="#aefad7a2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Meine Angebote:"
-                        android:id="@+id/txtMeineAngebote"
-                        android:layout_below="@+id/btntransaktion"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="25dp"
-                        android:textColor="#fdf4ef" />
-
-                    <ScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/scrollView4"
-                        android:layout_below="@+id/txtMeineAngebote"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_alignRight="@+id/btntransaktion"
-                        android:layout_alignEnd="@+id/btntransaktion" >
-                        <HorizontalScrollView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="30dp"
+                        android:layout_alignRight="@+id/spinner2"
+                        android:layout_alignEnd="@+id/spinner2"
+                        android:background="#ffe5c7"
+                        android:layout_marginTop="20dp"/>
 
-                        <TableLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff angebot"
-                                    android:id="@+id/textView59"
-                                    android:layout_column="1"
-                                    android:textColor="#f1fcead3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff ford."
-                                    android:id="@+id/textView60"
-                                    android:layout_column="2"
-                                    android:textColor="#f1fcead3"
-                                    android:layout_marginLeft="10dp" />
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff angebot"
-                                    android:id="@+id/textView61"
-                                    android:layout_column="1"
-                                    android:textColor="#f1fcead3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff ford."
-                                    android:id="@+id/textView62"
-                                    android:layout_column="2"
-                                    android:textColor="#f1fcead3"
-                                    android:layout_marginLeft="10dp" />
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff angebot"
-                                    android:id="@+id/textView63"
-                                    android:layout_column="1"
-                                    android:textColor="#f1fcead3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff ford."
-                                    android:id="@+id/textView64"
-                                    android:layout_column="2"
-                                    android:textColor="#f1fcead3"
-                                    android:layout_marginLeft="10dp" />
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff angebot"
-                                    android:id="@+id/textView65"
-                                    android:layout_column="1"
-                                    android:textColor="#f1fcead3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff ford."
-                                    android:id="@+id/textView66"
-                                    android:layout_column="2"
-                                    android:textColor="#f1fcead3"
-                                    android:layout_marginLeft="10dp" />
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff angebot"
-                                    android:id="@+id/textView67"
-                                    android:layout_column="1"
-                                    android:textColor="#f1fcead3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff ford."
-                                    android:id="@+id/textView68"
-                                    android:layout_column="2"
-                                    android:textColor="#f1fcead3"
-                                    android:layout_marginLeft="10dp" />
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent" >
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff angebot"
-                                    android:id="@+id/textView69"
-                                    android:layout_column="1"
-                                    android:textColor="#f1fcead3" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:text="Rohstoff ford."
-                                    android:id="@+id/textView70"
-                                    android:layout_column="2"
-                                    android:textColor="#f1fcead3"
-                                    android:layout_marginLeft="10dp" />
-                            </TableRow>
-                        </TableLayout>
-                        </HorizontalScrollView>
-                    </ScrollView>
                 </LinearLayout>
 
                 <LinearLayout
