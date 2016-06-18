@@ -31,10 +31,14 @@ public class PopupMarkt extends Activity {
 
         getWindow().setLayout((int)(width *.9),(int)(height*.9));
 
-
+        /**TODO
+         * ALLES" KEVIN IST SCHEIßE
+         * Id wird nicht übergeben
+         */
         Intent i = getIntent();
         String id = i.getStringExtra("ID");
         String spielerId = i.getStringExtra("SpielerID");
+        System.out.println("SPID" + spielerId + " ID " + id);
 
         final API_Connection con2 = new API_Connection();
         final String [] s = {API_Connection.APIKEY, id, spielerId};
@@ -44,6 +48,7 @@ public class PopupMarkt extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 con2.query(API_Connection.BUY, s);
                 finish();
             }

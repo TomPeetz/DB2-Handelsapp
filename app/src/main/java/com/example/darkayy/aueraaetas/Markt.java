@@ -148,6 +148,7 @@ public class Markt extends AppCompatActivity {
 
 
         fillArrays();
+        setAngeboteSuchenText();
 
         transaktion = (Button)findViewById(R.id.btnTransaktionVeroeffentlichen);
         transaktion.setOnClickListener(new View.OnClickListener(){
@@ -168,14 +169,18 @@ public class Markt extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), PopupKevin.class);
                     startActivity(i);
                 }
+                else {
 
-                API_Connection con = new API_Connection();
-                String [] s = {API_Connection.APIKEY, "" + Playerdata.getId(), "" + rohstoffBiete, "" +rohstoffMoechte, mengeBieteAn, mengeMoechte};
-                JsonResult res = con.query(API_Connection.TRANSAKTIONVEROEFFENTLICHEN, s);
-                System.out.println(res.isEmpty());
-                con.query(API_Connection.TRANSAKTIONVEROEFFENTLICHEN, s);
+                    API_Connection con = new API_Connection();
+                    String[] s = {API_Connection.APIKEY, "" + Playerdata.getId(), "" + rohstoffBiete, "" + rohstoffMoechte, mengeBieteAn, mengeMoechte};
+                    JsonResult res = con.query(API_Connection.TRANSAKTIONVEROEFFENTLICHEN, s);
+                    System.out.println(res.isEmpty());
 
-                setAngeboteSuchenText();
+                }
+                    setAngeboteSuchenText();
+                    editText.setText("");
+                    editText2.setText("");
+
             }
         });
 
@@ -188,22 +193,26 @@ public class Markt extends AppCompatActivity {
         if(res == null){
             System.out.println("Keine Transaktionen vorhanden");
         }
-        String[] exp1 = {"Transaktion_id"};
+        String[] exp1 = {"Transaktions_ID" , "Spieler_ID_Verkaeufer", "Charaktername", "Rohstoff_ID_Angebot", "Rohstoff_ID_Gefordert", "Gefordert_Menge","Angebot_Menge" , "erstellt_am"};
         ArrayList<String> result = new ArrayList<String>();
-        while(!res.isEmpty()) {
-            result.add(res.parseResult(exp1).toString());
-        }
-
-        res = con2.query(API_Connection.GETTRANSAKTION, s);
-        String[] exp = {"Spieler_ID_Verkaeufer"};
         ArrayList<String> result1 = new ArrayList<String>();
+        ArrayList<String> result2 = new ArrayList<String>();
         while(!res.isEmpty()) {
-            result1.add(res.parseResult(exp).toString());
+            result = res.parseResult(exp1);
+            result1.add(result.get(0));
+            result2.add(result.get(1));
         }
 
-        for(int i = 0; i < angeboteSuchenRohstoff.size(); i++){
-            final String temp = result.get(i);
-            final String temp2 = result1.get(i);
+
+        for(int i = 0; i < angeboteSuchenBtns.size(); i++){
+            System.out.println("BLALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA:" + result1.size() +" " + result2.size() + "  " + i );
+            if(i == result1.size() &&  i == result2.size() ){
+                System.out.println("ICH heiße KEVIN und ich bin scheiße und ich BREAKE JETZT!");
+               break;
+            }
+
+            final String temp = result1.get(i);
+            final String temp2 = result2.get(i);
             angeboteSuchenBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -352,51 +361,56 @@ public class Markt extends AppCompatActivity {
         JsonResult res = con2.query(API_Connection.GETTRANSAKTION, s);
         System.out.println(res.isEmpty());
 
-        String[] exp = {"Spieler_ID_Verkaeufer"};
-        ArrayList<String> result1 = new ArrayList<String>();
-        while(!res.isEmpty()) {
-            result1.add(res.parseResult(exp).toString());
-        }
+        String[] exp = {"Charaktername", "Rohstoff_ID_Angebot", "Rohstoff_ID_Gefordert", "Gefordert_Menge","Angebot_Menge" , "erstellt_am", "Spieler_ID_Verkaeufer", "Transaktions_ID" };
+        ArrayList<String> temp = new ArrayList<String>();
+        ArrayList<String> spieler_id = new ArrayList<String>();
+        ArrayList<String> rohstoff_angebot = new ArrayList<String>();
+        ArrayList<String> rohstoff_gefordert = new ArrayList<String>();
+        ArrayList<String> gefordert_menge = new ArrayList<String>();
+        ArrayList<String> angebot_menge = new ArrayList<String>();
 
-        res = con2.query(API_Connection.GETTRANSAKTION, s);
         if(res == null){
             System.out.println("Keine Transaktionen vorhanden");
         }
-        String[] exp1 = {"Rohstoff_ID_Angebot"};
-        ArrayList<String> result2 = new ArrayList<String>();
+
         while(!res.isEmpty()) {
-            result1.add(res.parseResult(exp1).toString());
+            temp = res.parseResult(exp);
+            for(String s5 : temp){
+                System.out.println("PARSE:!!!! X;X;X;X Q_Q:" + s5);
+            }
+            spieler_id.add(temp.get(0));
+            rohstoff_angebot.add(temp.get(1));
+            rohstoff_gefordert.add(temp.get(2));
+            gefordert_menge.add(temp.get(3));
+            angebot_menge.add(temp.get(4));
         }
 
-        res = con2.query(API_Connection.GETTRANSAKTION, s);
-        if(res == null){
-            System.out.println("Keine Transaktionen vorhanden");
-        }
-        String[] exp2 = {"Rohstoff_ID_Gefordert"};
-        ArrayList<String> result3 = new ArrayList<String>();
-        while(!res.isEmpty()) {
-            result1.add(res.parseResult(exp2).toString());
+
+        int count = 0;
+        int count1 = 0;
+        int count2 = 0;
+
+        for(int i = 0 ; i < angeboteSuchenName.size(); i ++ ){
+            angeboteSuchenName.get(i).setText("");
         }
 
-        res = con2.query(API_Connection.GETTRANSAKTION, s);
-        if(res == null){
-            System.out.println("Keine Transaktionen vorhanden");
+        for(String s1 : spieler_id){
+            angeboteSuchenName.get(count).setText(s1);
+            count +=1;
+            System.out.println("Spieler id: " + s1);
         }
-        String[] exp3 = {"Gefordert_Menge"};
-        ArrayList<String> result4 = new ArrayList<String>();
-        while(!res.isEmpty()) {
-            result1.add(res.parseResult(exp3).toString());
+        for(String s2 : rohstoff_gefordert){
+            angeboteSuchenBtns.get(count1).setText("" +  gefordert_menge.get(count1) + " " +
+            Lagerbestand.getRohstoff(Integer.parseInt(s2)).getName());
+            System.out.println("Rohstoff gefordert ID: " + s2);
+            count1 +=1;
         }
 
-        for(int i = 0 ; i< result1.size(); i++){
-            angeboteSuchenName.get(i).setText(result1.get(i));
-        }
-        for(int i = 0 ; i< result3.size(); i++){
-            angeboteSuchenBtns.get(i).setText(result3.get(i));
-        }
-        for(int i = 0 ; i< result4.size(); i++){
-            angeboteSuchenRohstoff.get(i).setText(" " + result4.get(i) +
-                        Lagerbestand.getRohstoff(Integer.parseInt(result2.get(i))).getName());
+        for(String s3 : rohstoff_angebot){
+            angeboteSuchenRohstoff.get(count2).setText("" + gefordert_menge.get(count2) +
+            Lagerbestand.getRohstoff(Integer.parseInt(s3)).getName());
+            System.out.println("Rohstoff angebot id: " + s3);
+            count2 +=1;
         }
 
 
