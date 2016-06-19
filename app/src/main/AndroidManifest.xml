@@ -38,6 +38,13 @@
         <activity
             android:name=".PopUpMarktLokaleHaendler"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".PopupKevin"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".PopupMarkt"
+            android:theme="@style/AppTheme.CustomTheme"/>
+
         <activity android:name=".angeboteerstellen"></activity>
     </application>
 
