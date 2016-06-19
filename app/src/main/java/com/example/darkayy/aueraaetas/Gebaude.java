@@ -202,6 +202,7 @@ public class Gebaude extends AppCompatActivity {
             final String s = gebaeudeinfos.get(i).toString();
 
 
+
             temp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

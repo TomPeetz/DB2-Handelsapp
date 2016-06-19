@@ -77,6 +77,25 @@ public class Gebaeudeverwaltung {
         return null;
     }
 
+    public static int getIDbyName(String name) {
+        for(Gebaeude g: gebaeude) {
+            if(g.getName().equals(name)) {
+                return g.getId();
+            }
+        }
+        return -1;
+    }
+
+    public static int getLevelbyID(int id) {
+        getBesitz();
+        for(Besitz b : besitz) {
+            if(b.getId() == id) {
+                return b.getLevel();
+            }
+        }
+        return 0;
+    }
+
     public static void geb4PlayerAnlegen() {
         Gebaeudeverwaltung.getGebaeude();
         API_Connection con = new API_Connection();

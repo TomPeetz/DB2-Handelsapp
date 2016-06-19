@@ -29,6 +29,19 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hier steht das ausgebaute Level drin"
+        android:id="@+id/txtLevel"
+        android:textColor="#925c4d"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/txtGebaeudename"
+        android:layout_alignEnd="@+id/txtGebaeudename"
+        android:layout_alignLeft="@+id/btnGebaeudekaufen"
+        android:layout_alignStart="@+id/btnGebaeudekaufen" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,4 +55,5 @@
         android:layout_alignEnd="@+id/txtBeschreibung"
         android:layout_alignLeft="@+id/txtBeschreibung"
         android:layout_alignStart="@+id/txtBeschreibung" />
+
 </RelativeLayout>

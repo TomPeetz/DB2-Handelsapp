@@ -1,15 +1,15 @@
 package com.example.darkayy.aueraaetas;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.darkayy.aueraaetas.util.Gebaeude;
+import com.example.darkayy.aueraaetas.util.Gebaeudeverwaltung;
 import com.example.darkayy.aueraaetas.util.Playerdata;
 import com.example.darkayy.aueraaetas.webapi.API_Connection;
 
@@ -45,6 +45,12 @@ public class PopGebaeude extends Activity {
         name.setText(gebaeudename);
         TextView beschr = (TextView)findViewById(R.id.txtBeschreibung);
         beschr.setText(gebaeudeinfo);
+        TextView level = (TextView)findViewById(R.id.txtLevel);
+        level.setText("Ausgebautes Level: " + Integer.toString(Gebaeudeverwaltung.getLevelbyID(Gebaeudeverwaltung.getIDbyName(gebaeudename))));
+        ArrayList<Gebaeude> gebaeude = Gebaeudeverwaltung.getGebaeudeList();
+        /*for (Gebaeude g : gebaeude) {
+            System.out.println(g.getLevel());
+        }*/
         buy = (Button)findViewById(R.id.btnGebaeudekaufen);
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +63,9 @@ public class PopGebaeude extends Activity {
 
     protected void buyGebaeude(String name) {
         API_Connection con = new API_Connection();
-        con.query(API_Connection.HIGHERGEBLVL, new String[]{Integer.toString(Playerdata.getId()), name, "1"});
-
+        int playerID = Playerdata.getId();
+        int gebID = Gebaeudeverwaltung.getIDbyName(name);
+        con.query(API_Connection.HIGHERGEBLVL, new String[]{API_Connection.APIKEY,Integer.toString(playerID), Integer.toString(gebID), "1"});
+        this.recreate();
     }
 }
