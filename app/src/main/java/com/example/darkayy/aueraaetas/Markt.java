@@ -41,10 +41,10 @@ public class Markt extends AppCompatActivity {
     private ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
     private ArrayList<Button> lokaleHaendlerButtonsEk = new ArrayList<Button>();
     private ArrayList<TextView> lokaleHaendlerTxts = new ArrayList<TextView>();
-    private ArrayList<TextView> angeboteSuchenName = new ArrayList<TextView>();
-    private ArrayList<TextView> angeboteSuchenMenge = new ArrayList<TextView>();
-    private ArrayList<TextView> angeboteSuchenRohstoff = new ArrayList<TextView>();
-    private ArrayList<Button> angeboteSuchenBtns= new ArrayList<Button>();
+    private static ArrayList<TextView> angeboteSuchenName = new ArrayList<TextView>();
+    private static ArrayList<TextView> angeboteSuchenMenge = new ArrayList<TextView>();
+    private static ArrayList<TextView> angeboteSuchenRohstoff = new ArrayList<TextView>();
+    private static ArrayList<Button> angeboteSuchenBtns= new ArrayList<Button>();
 
     private Button transaktion;
     private int counter = 0;
@@ -350,14 +350,12 @@ public class Markt extends AppCompatActivity {
 
     }
 
-    public void setAngeboteSuchenText(){
+    public static void setAngeboteSuchenText(){
 
 
         API_Connection con2 = new API_Connection();
         String [] s = {API_Connection.APIKEY, "" + Playerdata.getId()};
 
-
-        con2.query(API_Connection.GETTRANSAKTION, s);
         JsonResult res = con2.query(API_Connection.GETTRANSAKTION, s);
         System.out.println(res.isEmpty());
 
