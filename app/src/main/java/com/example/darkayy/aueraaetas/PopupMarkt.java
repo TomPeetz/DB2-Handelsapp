@@ -37,18 +37,16 @@ public class PopupMarkt extends Activity {
          */
         Intent i = getIntent();
         String id = i.getStringExtra("ID");
-        String spielerId = i.getStringExtra("SpielerID");
-        System.out.println("SPID" + spielerId + " ID " + id);
+        System.out.println("SPID" + " ID " + id);
 
         final API_Connection con2 = new API_Connection();
-        final String [] s = {API_Connection.APIKEY, id, spielerId};
+        final String [] s = {API_Connection.APIKEY, id, "" + Playerdata.getId()};
 
 
         button = (Button)findViewById(R.id.btnJa);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 con2.query(API_Connection.BUY, s);
                 finish();
             }

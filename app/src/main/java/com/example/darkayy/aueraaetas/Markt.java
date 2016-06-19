@@ -39,6 +39,9 @@ public class Markt extends AppCompatActivity {
     private EditText editText2;
     private Button btn;
 
+    private String mengeBieteAn;
+    private String rohstoffBiete;
+
     private ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
     private ArrayList<Button> lokaleHaendlerButtonsEk = new ArrayList<Button>();
     private ArrayList<TextView> lokaleHaendlerTxts = new ArrayList<TextView>();
@@ -228,20 +231,33 @@ public class Markt extends AppCompatActivity {
 
             for (int i = 0; i < angeboteSuchenBtns.size(); i++) {
                 System.out.println("BLALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA:" + result1.size() + " " + result2.size() + "  " + i);
-                if (i == result1.size() && i == result2.size()) {
+                if (i == result1.size()) {
                     System.out.println("ICH heiße KEVIN und ich bin scheiße und ich BREAKE JETZT!");
                     break;
                 }
 
                 final String temp = result1.get(i);
-                final String temp2 = result2.get(i);
+                Button temp1 = angeboteSuchenBtns.get(i);
+
+                String komplett = temp1.getText().toString();
+                String[] te = komplett.split(" ");
+                final String rohstoffname = te[1];
+                final String menge = te[0];
+
+                System.out.println(" NAMEEEEEEEEEEEEEEEEEEEEEEE: " + rohstoffname + "MENGEEEEEEEEEEEEE" + menge);
+
                 angeboteSuchenBtns.get(i).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent i = new Intent(getApplicationContext(), PopupMarkt.class);
-                        i.putExtra("ID", temp);
-                        i.putExtra("SpielerID", temp2);
-                        startActivity(i);
+                        if(Lagerbestand.getRohstoff(rohstoffname).getMenge() < Integer.parseInt(menge)){
+                            Intent j = new Intent(getApplicationContext(), PopupKevin.class);
+                            startActivity(j);
+                        }
+                        else {
+                            i.putExtra("ID", temp);
+                            startActivity(i);
+                        }
                     }
                 });
 

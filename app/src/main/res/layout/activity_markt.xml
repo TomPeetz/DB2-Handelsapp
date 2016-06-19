@@ -271,7 +271,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnGolderzEinkauf"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -281,7 +281,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnGolderzVerkauf"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                             </TableRow>
@@ -314,7 +314,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnKohleEinkauf"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -324,7 +324,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnKohleVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -356,7 +356,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnEisenerzEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -366,7 +366,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnEisenerzVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -398,7 +398,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnBaumstammEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -408,7 +408,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnBaumstammVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -440,7 +440,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnSteinEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -450,7 +450,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnSteinVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -482,7 +482,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnLehmEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -492,7 +492,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnLehmVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -524,7 +524,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnGetreideEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -534,7 +534,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnGetreideVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -566,7 +566,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnFischEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -576,7 +576,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnFischVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -608,7 +608,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnFleischEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -618,7 +618,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnFleischVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -650,7 +650,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnWolleEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -660,7 +660,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnWolleVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -692,7 +692,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnGoldbarrenEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -702,7 +702,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnGoldbarrenVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -734,7 +734,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnEisenbarrenEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -744,7 +744,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnEisenbarrenVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -776,7 +776,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnBrettEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -786,7 +786,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnBrettVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -818,7 +818,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnZiegelsteinEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -828,7 +828,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnZiegelsteinVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -860,7 +860,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnMehlEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -870,7 +870,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnMehlVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -902,7 +902,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnLeinenEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -912,7 +912,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnLeinenVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -944,7 +944,7 @@
                                     android:text="22Gold"
                                     android:id="@+id/btnWaffenEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -954,7 +954,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnWaffenVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -986,7 +986,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnWerkzeugeEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -996,7 +996,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnWerkzeugeVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -1028,7 +1028,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnFassEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -1038,7 +1038,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnFassVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -1070,7 +1070,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnBrotEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -1080,7 +1080,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnBrotVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -1112,7 +1112,7 @@
                                     android:text="12Gold"
                                     android:id="@+id/btnTuecherEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -1122,7 +1122,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnTuecherVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -1154,7 +1154,7 @@
                                     android:text="2Gold"
                                     android:id="@+id/btnKleidungEk"
                                     android:layout_column="3"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
 
                                 <Button
@@ -1164,7 +1164,7 @@
                                     android:text="10Gold"
                                     android:id="@+id/btnKleidungVk"
                                     android:layout_column="6"
-                                    android:background="@android:color/transparent"
+                                    android:background="@drawable/my_button_bg"
                                     android:textColor="#f1fcead3" />
                             </TableRow>
 
@@ -1407,7 +1407,7 @@
                                     android:id="@+id/btnPreis1"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
                             </TableRow>
 
@@ -1452,7 +1452,7 @@
                                     android:id="@+id/btnPreis2"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
 
                             </TableRow>
@@ -1498,7 +1498,7 @@
                                     android:id="@+id/btnPreis3"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
                             </TableRow>
 
@@ -1543,7 +1543,7 @@
                                     android:id="@+id/btnPreis4"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
 
                             </TableRow>
@@ -1589,7 +1589,7 @@
                                     android:id="@+id/btnPreis5"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
                             </TableRow>
 
@@ -1634,7 +1634,7 @@
                                     android:id="@+id/btnPreis6"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
 
                             </TableRow>
@@ -1680,7 +1680,7 @@
                                     android:id="@+id/btnPreis7"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
 
                             </TableRow>
@@ -1727,7 +1727,7 @@
                                     android:id="@+id/btnPreis8"
                                     android:layout_column="3"
                                     android:textColor="#f1fcead3"
-                                    android:background="@android:color/transparent" />
+                                    android:background="@drawable/my_button_bg" />
 
                             </TableRow>
                         </TableLayout>

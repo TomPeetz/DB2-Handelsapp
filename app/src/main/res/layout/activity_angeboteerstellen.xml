@@ -115,5 +115,6 @@
         android:layout_marginBottom="30dp"
         android:layout_alignRight="@+id/spinner2"
         android:layout_alignEnd="@+id/spinner2"
-        android:background="#ffe5c7" />
+        android:background="@drawable/my_button_bg"
+        android:textColor="#ffe5c7" />
 </RelativeLayout>

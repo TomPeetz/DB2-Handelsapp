@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="OK"
         android:id="@+id/btnOK"
-        android:background="#7a5343"
+        android:background="@drawable/my_button_bg"
         android:textColor="#f1fcead3"
         android:layout_marginTop="116dp"
         android:layout_below="@+id/txtzuWenigKevin"
