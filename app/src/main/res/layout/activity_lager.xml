@@ -595,7 +595,7 @@
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
+                    android:text="Ziegelstein"
                     android:id="@+id/txtZiegelstein"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"
@@ -929,14 +929,14 @@
         android:text="Lager erweitern"
         android:id="@+id/btnLagerErweitern"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtGroesse"
-        android:layout_alignEnd="@+id/txtGroesse"
         android:textSize="16dp"
         android:clickable="true"
-        android:layout_below="@+id/txtGroesse"
-        android:background="@android:color/transparent"
+        android:background="@drawable/my_button_bg"
         android:textColor="#f1fcead3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnForschung"
+        android:layout_alignRight="@+id/txtGroesse"
+        android:layout_alignEnd="@+id/txtGroesse" />
 
 </RelativeLayout>

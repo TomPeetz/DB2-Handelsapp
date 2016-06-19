@@ -192,7 +192,7 @@
                     android:text="Goldmine"
                     android:id="@+id/btnGoldmine"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:layout_marginRight="0dp"
@@ -229,7 +229,7 @@
                     android:text="Goldschmelze"
                     android:id="@+id/btnGoldschmelze"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -265,7 +265,7 @@
                     android:text="Kohlemine"
                     android:id="@+id/btnKohlemine"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -301,7 +301,7 @@
                     android:text="Eisenmine"
                     android:id="@+id/btnEisenmine"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -337,7 +337,7 @@
                     android:text="Eisenschmelze"
                     android:id="@+id/btnEisenschmelze"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -373,7 +373,7 @@
                     android:text="Waffenschmiede"
                     android:id="@+id/btnWaffenschmiede"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -409,7 +409,7 @@
                     android:text="Werkzeugschmiede"
                     android:id="@+id/btnWerkzeugschmiede"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -445,7 +445,7 @@
                     android:text="Holzfällerlager"
                     android:id="@+id/btnHolzfaellerlager"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -481,7 +481,7 @@
                     android:text="Sägemühle"
                     android:id="@+id/btnSaegemuehle"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -517,7 +517,7 @@
                     android:text="Schreiner"
                     android:id="@+id/btnSchreiner"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -553,7 +553,7 @@
                     android:text="Steinbruch"
                     android:id="@+id/btnSteinbruch"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -589,7 +589,7 @@
                     android:text="Lehmgrube"
                     android:id="@+id/btnLehmgrube"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -625,7 +625,7 @@
                     android:text="Ziegelei"
                     android:id="@+id/btnZiegelei"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -661,7 +661,7 @@
                     android:text="Bauernhof"
                     android:id="@+id/btnBauernhof"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -697,7 +697,7 @@
                     android:text="Windmühle"
                     android:id="@+id/btnWindmuehle"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -733,7 +733,7 @@
                     android:text="Bäcker"
                     android:id="@+id/btnBaecker"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -769,7 +769,7 @@
                     android:text="Fischer"
                     android:id="@+id/btnFischer"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -805,7 +805,7 @@
                     android:text="Jäger"
                     android:id="@+id/btnJaeger"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -841,7 +841,7 @@
                     android:text="Schafsfarm"
                     android:id="@+id/btnSchafsfarm"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -877,7 +877,7 @@
                     android:text="Weberei(einfach)"
                     android:id="@+id/btnWebereiE"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -913,7 +913,7 @@
                     android:text="Weberei(mittel)"
                     android:id="@+id/btnWEbereiM"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />
@@ -949,7 +949,7 @@
                     android:text="Weberei(fortg)"
                     android:id="@+id/btnWebereiF"
                     android:layout_column="0"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/my_button_bg"
                     android:textColor="#f1fcead3"
                     android:textAlignment="center"
                     android:textSize="12dp" />

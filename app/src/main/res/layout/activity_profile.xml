@@ -159,7 +159,7 @@
         android:text="Profilbild ändern"
         android:id="@+id/btnChangeProfilepic"
         android:clickable="true"
-        android:background="@android:color/transparent"
+        android:background="@drawable/my_button_bg"
         android:textColor="#f1fcead3"
         android:textSize="12dp"
         android:layout_alignTop="@+id/btnGebaude"
@@ -233,16 +233,6 @@
         android:textColor="#f1fcead3"
         android:textAlignment="center" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listCharacter"
-        android:layout_toLeftOf="@+id/txtProfil"
-        android:layout_toStartOf="@+id/txtProfil"
-        android:layout_above="@+id/txtForschung"
-        android:smoothScrollbar="true"
-        android:layout_below="@+id/btnGebaude" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -259,5 +249,15 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/txtForschung"
         android:layout_toStartOf="@+id/txtForschung" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Profilinformationen"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/txtGebaude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
