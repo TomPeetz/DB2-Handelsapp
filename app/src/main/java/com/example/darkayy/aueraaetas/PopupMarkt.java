@@ -50,7 +50,6 @@ public class PopupMarkt extends Activity {
             public void onClick(View v) {
 
                 con2.query(API_Connection.BUY, s);
-                Markt.setAngeboteSuchenText();
                 finish();
             }
         });

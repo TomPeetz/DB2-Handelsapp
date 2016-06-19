@@ -595,7 +595,7 @@
 
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Getreide"
+                    android:text="Ziegelstein"
                     android:id="@+id/txtZiegelstein"
                     android:layout_column="1"
                     android:layout_marginRight="40dp"

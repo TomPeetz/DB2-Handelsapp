@@ -30,6 +30,7 @@ public class Markt extends AppCompatActivity {
     private ImageButton buttonG;
     private ImageButton buttonM;
     private ImageButton buttonH;
+    private Button btnAktualisieren;
 
     //Transaktion erstellen
     private Spinner spinner;
@@ -41,10 +42,10 @@ public class Markt extends AppCompatActivity {
     private ArrayList<Button> lokaleHaendlerButtons = new ArrayList<Button>();
     private ArrayList<Button> lokaleHaendlerButtonsEk = new ArrayList<Button>();
     private ArrayList<TextView> lokaleHaendlerTxts = new ArrayList<TextView>();
-    private static ArrayList<TextView> angeboteSuchenName = new ArrayList<TextView>();
-    private static ArrayList<TextView> angeboteSuchenMenge = new ArrayList<TextView>();
-    private static ArrayList<TextView> angeboteSuchenRohstoff = new ArrayList<TextView>();
-    private static ArrayList<Button> angeboteSuchenBtns= new ArrayList<Button>();
+    private ArrayList<TextView> angeboteSuchenName = new ArrayList<TextView>();
+    private ArrayList<TextView> angeboteSuchenMenge = new ArrayList<TextView>();
+    private ArrayList<TextView> angeboteSuchenRohstoff = new ArrayList<TextView>();
+    private ArrayList<Button> angeboteSuchenBtns= new ArrayList<Button>();
 
     private Button transaktion;
     private int counter = 0;
@@ -128,6 +129,14 @@ public class Markt extends AppCompatActivity {
             }
         });
 
+
+        btnAktualisieren = (Button)findViewById(R.id.btnAktualisieren);
+        btnAktualisieren.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setAngeboteSuchenText();
+            }
+        });
 
 
         spinner = (Spinner) findViewById(R.id.spinner);
@@ -364,7 +373,7 @@ public class Markt extends AppCompatActivity {
 
     }
 
-    public static void setAngeboteSuchenText(){
+    public void setAngeboteSuchenText(){
 
 
         API_Connection con2 = new API_Connection();

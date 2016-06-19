@@ -1281,24 +1281,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/editText12"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:hint="Rohstoffname"
-                        android:textColor="#f1fcead3"
-                        android:layout_toLeftOf="@+id/btnSuchen"
-                        android:layout_toStartOf="@+id/btnSuchen" />
 
                     <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Suchen"
-                        android:id="@+id/btnSuchen"
+                        android:text="Aktualisieren"
+                        android:id="@+id/btnAktualisieren"
                         android:layout_alignTop="@+id/editText12"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
