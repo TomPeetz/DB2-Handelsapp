@@ -206,6 +206,7 @@ public class Gebaude extends AppCompatActivity {
             temp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Gebaeudeverwaltung.securePlayerHasGeb(Gebaeudeverwaltung.getIDbyName(temp.getText().toString()));
                     Intent intent = new Intent(getApplicationContext(), PopGebaeude.class);
 
                     intent.putExtra("Gebäudename",temp.getText().toString());

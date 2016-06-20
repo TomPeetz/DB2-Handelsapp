@@ -96,6 +96,20 @@ public class Gebaeudeverwaltung {
         return 0;
     }
 
+    public static void securePlayerHasGeb(int id) {
+        boolean hatGeb = false;
+        for (Besitz bes : besitz) {
+            if(bes.getId() == id) {
+                hatGeb = true;
+            }
+        }
+        if(!hatGeb) {
+            API_Connection con = new API_Connection();
+            con.query(API_Connection.NEWGEBAEUDE, new String[]{API_Connection.APIKEY, Integer.toString(Playerdata.getId()),Integer.toString(id)});
+            Gebaeudeverwaltung.getBesitz();
+        }
+    }
+
     public static void geb4PlayerAnlegen() {
         Gebaeudeverwaltung.getGebaeude();
         API_Connection con = new API_Connection();
