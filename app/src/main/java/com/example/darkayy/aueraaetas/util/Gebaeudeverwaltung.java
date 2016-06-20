@@ -43,12 +43,15 @@ public class Gebaeudeverwaltung {
         String[] params = {API_Connection.APIKEY, id};
         JsonResult res = con.query(API_Connection.GETBESITZ, params);
         String[] exp = {"id", "level"};
-        besitz.clear();
-        while(!res.isEmpty()) {
-            ArrayList<String> r = res.parseResult(exp);
-            Besitz b = new Besitz(Integer.parseInt(r.get(0)), Integer.parseInt(r.get(1)));
-            besitz.add(b);
+        if (res != null) {
+            besitz.clear();
+            while(!res.isEmpty()) {
+                ArrayList<String> r = res.parseResult(exp);
+                Besitz b = new Besitz(Integer.parseInt(r.get(0)), Integer.parseInt(r.get(1)));
+                besitz.add(b);
+            }
         }
+
     }
 
     public static void produziereRohstoffe(int time){
@@ -106,6 +109,11 @@ public class Gebaeudeverwaltung {
         if(!hatGeb) {
             API_Connection con = new API_Connection();
             con.query(API_Connection.NEWGEBAEUDE, new String[]{API_Connection.APIKEY, Integer.toString(Playerdata.getId()),Integer.toString(id)});
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Gebaeudeverwaltung.getBesitz();
         }
     }
