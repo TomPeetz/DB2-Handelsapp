@@ -444,7 +444,7 @@ public class Markt extends AppCompatActivity {
         }
 
         for(String s3 : rohstoff_angebot){
-            angeboteSuchenRohstoff.get(count2).setText("" + gefordert_menge.get(count2) +
+            angeboteSuchenRohstoff.get(count2).setText("" + angebot_menge.get(count2) +
             Lagerbestand.getRohstoff(Integer.parseInt(s3)).getName());
             System.out.println("Rohstoff angebot id: " + s3);
             count2 +=1;
