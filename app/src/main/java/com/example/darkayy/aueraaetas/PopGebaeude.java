@@ -56,6 +56,8 @@ public class PopGebaeude extends Activity {
             @Override
             public void onClick(View v) {
                 buyGebaeude(gebaeudename);
+                TextView level = (TextView)findViewById(R.id.txtLevel);
+                level.setText("Ausgebautes Level: " + Integer.toString(Gebaeudeverwaltung.getLevelbyID(Gebaeudeverwaltung.getIDbyName(gebaeudename))));
             }
         });
     }
@@ -66,6 +68,6 @@ public class PopGebaeude extends Activity {
         int playerID = Playerdata.getId();
         int gebID = Gebaeudeverwaltung.getIDbyName(name);
         con.query(API_Connection.HIGHERGEBLVL, new String[]{API_Connection.APIKEY,Integer.toString(playerID), Integer.toString(gebID), "1"});
-        this.recreate();
+        //this.recreate();
     }
 }
